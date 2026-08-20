@@ -1,0 +1,36 @@
+,metric,split,group,value
+0,mean_travel_users,use,past_user,15.989944792178674
+1,mean_travel_users,use,user,22.14206295956689
+2,mean_travel_nonusers,use,future_user,15.961334048691944
+3,mean_travel_nonusers,use,nonuser,21.836257872081895
+4,travel_gap_rate,use,past_user,0.12009562110314684
+5,travel_gap_rate,use,user,0.22471099992635896
+6,mean_travel_users,gender,Femme Nyɔnu,21.46928856035808
+7,mean_travel_users,gender,Homme Sunnu,15.605421481373579
+8,mean_travel_nonusers,gender,Femme Nyɔnu,23.890734275166903
+9,mean_travel_nonusers,gender,Homme Sunnu,16.251683688772665
+10,travel_gap_rate,gender,Femme Nyɔnu,0.2412995527207177
+11,travel_gap_rate,gender,Homme Sunnu,0.09347546174477928
+12,mean_travel_users,age_group,16-20,26.14593888207986
+13,mean_travel_users,age_group,21-30,25.354180178579924
+14,mean_travel_users,age_group,31-45,17.238813373617617
+15,mean_travel_nonusers,age_group,16-20,16.18933546854604
+16,mean_travel_nonusers,age_group,21-30,25.776766792646377
+17,mean_travel_nonusers,age_group,31-45,18.378016030861318
+18,travel_gap_rate,age_group,16-20,0.5683235909716071
+19,travel_gap_rate,age_group,21-30,0.2795948011347387
+20,travel_gap_rate,age_group,31-45,0.13420580042243216
+21,travel_gap_rate_overall,all,all,0.1761394172853778
+22,transport_mode_users,mode,Moto,0.41217798594847777
+23,transport_mode_users,mode,Je marche,0.3231850117096019
+24,transport_mode_users,mode,"Taxi moto (ou Adedeta, ou équivalent)",0.09133489461358314
+25,transport_mode_users,mode,Je ne sais pas,0.07728337236533958
+26,transport_mode_users,mode,Je préfère ne pas répondre,0.053864168618266976
+27,transport_mode_users,mode,Autre : veuillez préciser,0.03044496487119438
+28,transport_mode_users,mode,Voiture,0.0117096018735363
+29,transport_mode_nonusers,mode,Moto,0.48
+30,transport_mode_nonusers,mode,Je marche,0.275
+31,transport_mode_nonusers,mode,"Taxi moto (ou Adedeta, ou équivalent)",0.1475
+32,transport_mode_nonusers,mode,Je préfère ne pas répondre,0.06
+33,transport_mode_nonusers,mode,Je ne sais pas,0.0325
+34,transport_mode_nonusers,mode,Voiture,0.005

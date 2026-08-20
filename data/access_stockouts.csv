@@ -1,0 +1,21 @@
+,metric,split,group,value
+0,stockout_users,use,past_user,0.7697198182399758
+1,stockout_users,use,user,0.8430221250916907
+2,stockout_users,gender,Femme Nyɔnu,0.790322201029549
+3,stockout_users,gender,Homme Sunnu,0.8326697683990046
+4,stockout_users,age_group,16-20,0.28021471785112384
+5,stockout_users,age_group,21-30,0.7525569314066669
+6,stockout_users,age_group,31-45,0.8406687984509681
+7,stockout_nonusers_sought,use,future_user,0.40479983727231944
+8,stockout_nonusers_sought,use,nonuser,0.011657565489747812
+9,stockout_nonusers_sought,gender,Femme Nyɔnu,0.22479774576709574
+10,stockout_nonusers_sought,gender,Homme Sunnu,0.057477866345265805
+11,stockout_nonusers_sought,age_group,21-30,0.18164459562532312
+12,stockout_nonusers_sought,age_group,31-45,0.007435197238564831
+13,sought_contraceptives,use,future_user,0.06081465413178224
+14,sought_contraceptives,use,nonuser,0.05234224179622852
+15,sought_contraceptives,gender,Femme Nyɔnu,0.02959866100127804
+16,sought_contraceptives,gender,Homme Sunnu,0.07665871588873009
+17,sought_contraceptives,age_group,16-20,0.0
+18,sought_contraceptives,age_group,21-30,0.07088098498545614
+19,sought_contraceptives,age_group,31-45,0.04834258490091898

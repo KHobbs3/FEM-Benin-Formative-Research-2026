@@ -1,0 +1,371 @@
+,label,proportion,split,group,question
+0,Je ne sais pas,0.041112454655380895,none,all,role_models
+1,Préfère ne pas répondre,0.007255139056831923,none,all,role_models
+2,Autre,0.10640870616686819,none,all,role_models
+3,Le prophète Mahomet,0.0048367593712212815,none,all,role_models
+4,Dieu,0.12454655380894801,none,all,role_models
+5,Le chef religieux,0.03385731559854897,none,all,role_models
+6,Malama (prédicatrices),0.0012091898428053204,none,all,role_models
+7,Chef traditionnel,0.009673518742442563,none,all,role_models
+8,Jésus-Christ,0.04836759371221282,none,all,role_models
+9,Croyant fervent,0.008464328899637243,none,all,role_models
+10,Conjoint,0.2007255139056832,none,all,role_models
+11,Mère,0.37122128174123337,none,all,role_models
+12,Père,0.25272067714631197,none,all,role_models
+13,Frère,0.19347037484885127,none,all,role_models
+14,Sœur,0.10157194679564692,none,all,role_models
+15,Ami,0.2720677146311971,none,all,role_models
+16,Enfants,0.030229746070133012,none,all,role_models
+17,Dirigeant politique,0.02539298669891173,none,all,role_models
+18,Voisin,0.03869407496977025,none,all,role_models
+19,Collègue,0.012091898428053204,none,all,role_models
+20,"Les anciens, les personnes âgées",0.05804111245465538,none,all,role_models
+21,Officiers militaires,0.0036275695284159614,none,all,role_models
+22,Hommes d'affaires,0.02176541717049577,none,all,role_models
+23,Commerçants,0.022974607013301087,none,all,role_models
+24,Enseignants,0.007255139056831923,none,all,role_models
+25,Professionnel de santé,0.045949214026602174,none,all,role_models
+26,Superstars,0.010882708585247884,none,all,role_models
+27,Les personnes qui ont réussi,0.06650544135429262,none,all,role_models
+28,Mon patron,0.014510278113663845,none,all,role_models
+29,Les gens riches,0.02781136638452237,none,all,role_models
+30,Oncle,0.1124546553808948,none,all,role_models
+31,Tante,0.056831922611850064,none,all,role_models
+32,Grand-mère,0.026602176541717048,none,all,role_models
+33,Grand-père,0.013301088270858524,none,all,role_models
+34,Un membre de la famille,0.07376058041112454,none,all,role_models
+35,Personnages de radio ou de télévision,0.006045949214026602,none,all,role_models
+36,Aucune personne,0.03869407496977025,none,all,role_models
+37,Je ne sais pas,0.061224489795918366,use,future_user,role_models
+38,Je ne sais pas,0.033112582781456956,use,nonuser,role_models
+39,Je ne sais pas,0.046875,use,past_user,role_models
+40,Je ne sais pas,0.04013377926421405,use,user,role_models
+41,Préfère ne pas répondre,0.02040816326530612,use,future_user,role_models
+42,Préfère ne pas répondre,0.009933774834437087,use,nonuser,role_models
+43,Préfère ne pas répondre,0.0078125,use,past_user,role_models
+44,Préfère ne pas répondre,0.0,use,user,role_models
+45,Autre,0.1326530612244898,use,future_user,role_models
+46,Autre,0.0728476821192053,use,nonuser,role_models
+47,Autre,0.1171875,use,past_user,role_models
+48,Autre,0.12709030100334448,use,user,role_models
+49,Le prophète Mahomet,0.01020408163265306,use,future_user,role_models
+50,Le prophète Mahomet,0.0033112582781456954,use,nonuser,role_models
+51,Le prophète Mahomet,0.0,use,past_user,role_models
+52,Le prophète Mahomet,0.006688963210702341,use,user,role_models
+53,Dieu,0.10204081632653061,use,future_user,role_models
+54,Dieu,0.11258278145695365,use,nonuser,role_models
+55,Dieu,0.125,use,past_user,role_models
+56,Dieu,0.14381270903010032,use,user,role_models
+57,Le chef religieux,0.04081632653061224,use,future_user,role_models
+58,Le chef religieux,0.04304635761589404,use,nonuser,role_models
+59,Le chef religieux,0.03125,use,past_user,role_models
+60,Le chef religieux,0.023411371237458192,use,user,role_models
+61,Malama (prédicatrices),0.0,use,future_user,role_models
+62,Malama (prédicatrices),0.0,use,nonuser,role_models
+63,Malama (prédicatrices),0.0,use,past_user,role_models
+64,Malama (prédicatrices),0.0033444816053511705,use,user,role_models
+65,Chef traditionnel,0.01020408163265306,use,future_user,role_models
+66,Chef traditionnel,0.009933774834437087,use,nonuser,role_models
+67,Chef traditionnel,0.0,use,past_user,role_models
+68,Chef traditionnel,0.013377926421404682,use,user,role_models
+69,Jésus-Christ,0.02040816326530612,use,future_user,role_models
+70,Jésus-Christ,0.06622516556291391,use,nonuser,role_models
+71,Jésus-Christ,0.0234375,use,past_user,role_models
+72,Jésus-Christ,0.05016722408026756,use,user,role_models
+73,Croyant fervent,0.0,use,future_user,role_models
+74,Croyant fervent,0.009933774834437087,use,nonuser,role_models
+75,Croyant fervent,0.0078125,use,past_user,role_models
+76,Croyant fervent,0.010033444816053512,use,user,role_models
+77,Conjoint,0.17346938775510204,use,future_user,role_models
+78,Conjoint,0.2185430463576159,use,nonuser,role_models
+79,Conjoint,0.2890625,use,past_user,role_models
+80,Conjoint,0.15384615384615385,use,user,role_models
+81,Mère,0.3469387755102041,use,future_user,role_models
+82,Mère,0.3741721854304636,use,nonuser,role_models
+83,Mère,0.453125,use,past_user,role_models
+84,Mère,0.3411371237458194,use,user,role_models
+85,Père,0.2857142857142857,use,future_user,role_models
+86,Père,0.23841059602649006,use,nonuser,role_models
+87,Père,0.3203125,use,past_user,role_models
+88,Père,0.22742474916387959,use,user,role_models
+89,Frère,0.20408163265306123,use,future_user,role_models
+90,Frère,0.19205298013245034,use,nonuser,role_models
+91,Frère,0.2265625,use,past_user,role_models
+92,Frère,0.17725752508361203,use,user,role_models
+93,Sœur,0.04081632653061224,use,future_user,role_models
+94,Sœur,0.11589403973509933,use,nonuser,role_models
+95,Sœur,0.109375,use,past_user,role_models
+96,Sœur,0.10367892976588629,use,user,role_models
+97,Ami,0.2857142857142857,use,future_user,role_models
+98,Ami,0.2847682119205298,use,nonuser,role_models
+99,Ami,0.2421875,use,past_user,role_models
+100,Ami,0.26755852842809363,use,user,role_models
+101,Enfants,0.02040816326530612,use,future_user,role_models
+102,Enfants,0.046357615894039736,use,nonuser,role_models
+103,Enfants,0.046875,use,past_user,role_models
+104,Enfants,0.010033444816053512,use,user,role_models
+105,Dirigeant politique,0.02040816326530612,use,future_user,role_models
+106,Dirigeant politique,0.023178807947019868,use,nonuser,role_models
+107,Dirigeant politique,0.03125,use,past_user,role_models
+108,Dirigeant politique,0.026755852842809364,use,user,role_models
+109,Voisin,0.02040816326530612,use,future_user,role_models
+110,Voisin,0.04966887417218543,use,nonuser,role_models
+111,Voisin,0.0546875,use,past_user,role_models
+112,Voisin,0.026755852842809364,use,user,role_models
+113,Collègue,0.0,use,future_user,role_models
+114,Collègue,0.026490066225165563,use,nonuser,role_models
+115,Collègue,0.0,use,past_user,role_models
+116,Collègue,0.006688963210702341,use,user,role_models
+117,"Les anciens, les personnes âgées",0.04081632653061224,use,future_user,role_models
+118,"Les anciens, les personnes âgées",0.059602649006622516,use,nonuser,role_models
+119,"Les anciens, les personnes âgées",0.0546875,use,past_user,role_models
+120,"Les anciens, les personnes âgées",0.06354515050167224,use,user,role_models
+121,Officiers militaires,0.0,use,future_user,role_models
+122,Officiers militaires,0.006622516556291391,use,nonuser,role_models
+123,Officiers militaires,0.0078125,use,past_user,role_models
+124,Officiers militaires,0.0,use,user,role_models
+125,Hommes d'affaires,0.01020408163265306,use,future_user,role_models
+126,Hommes d'affaires,0.029801324503311258,use,nonuser,role_models
+127,Hommes d'affaires,0.0234375,use,past_user,role_models
+128,Hommes d'affaires,0.016722408026755852,use,user,role_models
+129,Commerçants,0.0,use,future_user,role_models
+130,Commerçants,0.039735099337748346,use,nonuser,role_models
+131,Commerçants,0.0078125,use,past_user,role_models
+132,Commerçants,0.020066889632107024,use,user,role_models
+133,Enseignants,0.0,use,future_user,role_models
+134,Enseignants,0.013245033112582781,use,nonuser,role_models
+135,Enseignants,0.015625,use,past_user,role_models
+136,Enseignants,0.0,use,user,role_models
+137,Professionnel de santé,0.061224489795918366,use,future_user,role_models
+138,Professionnel de santé,0.04304635761589404,use,nonuser,role_models
+139,Professionnel de santé,0.0625,use,past_user,role_models
+140,Professionnel de santé,0.03678929765886288,use,user,role_models
+141,Superstars,0.0,use,future_user,role_models
+142,Superstars,0.009933774834437087,use,nonuser,role_models
+143,Superstars,0.0078125,use,past_user,role_models
+144,Superstars,0.016722408026755852,use,user,role_models
+145,Les personnes qui ont réussi,0.07142857142857142,use,future_user,role_models
+146,Les personnes qui ont réussi,0.059602649006622516,use,nonuser,role_models
+147,Les personnes qui ont réussi,0.0546875,use,past_user,role_models
+148,Les personnes qui ont réussi,0.07692307692307693,use,user,role_models
+149,Mon patron,0.01020408163265306,use,future_user,role_models
+150,Mon patron,0.023178807947019868,use,nonuser,role_models
+151,Mon patron,0.0234375,use,past_user,role_models
+152,Mon patron,0.0033444816053511705,use,user,role_models
+153,Les gens riches,0.02040816326530612,use,future_user,role_models
+154,Les gens riches,0.033112582781456956,use,nonuser,role_models
+155,Les gens riches,0.0234375,use,past_user,role_models
+156,Les gens riches,0.026755852842809364,use,user,role_models
+157,Oncle,0.11224489795918367,use,future_user,role_models
+158,Oncle,0.18211920529801323,use,nonuser,role_models
+159,Oncle,0.0625,use,past_user,role_models
+160,Oncle,0.06354515050167224,use,user,role_models
+161,Tante,0.08163265306122448,use,future_user,role_models
+162,Tante,0.06622516556291391,use,nonuser,role_models
+163,Tante,0.03125,use,past_user,role_models
+164,Tante,0.05016722408026756,use,user,role_models
+165,Grand-mère,0.04081632653061224,use,future_user,role_models
+166,Grand-mère,0.026490066225165563,use,nonuser,role_models
+167,Grand-mère,0.0234375,use,past_user,role_models
+168,Grand-mère,0.023411371237458192,use,user,role_models
+169,Grand-père,0.030612244897959183,use,future_user,role_models
+170,Grand-père,0.009933774834437087,use,nonuser,role_models
+171,Grand-père,0.0078125,use,past_user,role_models
+172,Grand-père,0.013377926421404682,use,user,role_models
+173,Un membre de la famille,0.1326530612244898,use,future_user,role_models
+174,Un membre de la famille,0.056291390728476824,use,nonuser,role_models
+175,Un membre de la famille,0.0546875,use,past_user,role_models
+176,Un membre de la famille,0.0802675585284281,use,user,role_models
+177,Personnages de radio ou de télévision,0.0,use,future_user,role_models
+178,Personnages de radio ou de télévision,0.006622516556291391,use,nonuser,role_models
+179,Personnages de radio ou de télévision,0.0,use,past_user,role_models
+180,Personnages de radio ou de télévision,0.010033444816053512,use,user,role_models
+181,Aucune personne,0.05102040816326531,use,future_user,role_models
+182,Aucune personne,0.029801324503311258,use,nonuser,role_models
+183,Aucune personne,0.015625,use,past_user,role_models
+184,Aucune personne,0.05351170568561873,use,user,role_models
+185,Je ne sais pas,0.072992700729927,gender,Femme Nyɔnu,role_models
+186,Je ne sais pas,0.009615384615384616,gender,Homme Sunnu,role_models
+187,Préfère ne pas répondre,0.0072992700729927005,gender,Femme Nyɔnu,role_models
+188,Préfère ne pas répondre,0.007211538461538462,gender,Homme Sunnu,role_models
+189,Autre,0.12652068126520682,gender,Femme Nyɔnu,role_models
+190,Autre,0.08653846153846154,gender,Homme Sunnu,role_models
+191,Le prophète Mahomet,0.0,gender,Femme Nyɔnu,role_models
+192,Le prophète Mahomet,0.009615384615384616,gender,Homme Sunnu,role_models
+193,Dieu,0.13138686131386862,gender,Femme Nyɔnu,role_models
+194,Dieu,0.11778846153846154,gender,Homme Sunnu,role_models
+195,Le chef religieux,0.029197080291970802,gender,Femme Nyɔnu,role_models
+196,Le chef religieux,0.038461538461538464,gender,Homme Sunnu,role_models
+197,Malama (prédicatrices),0.0024330900243309003,gender,Femme Nyɔnu,role_models
+198,Malama (prédicatrices),0.0,gender,Homme Sunnu,role_models
+199,Chef traditionnel,0.009732360097323601,gender,Femme Nyɔnu,role_models
+200,Chef traditionnel,0.009615384615384616,gender,Homme Sunnu,role_models
+201,Jésus-Christ,0.0535279805352798,gender,Femme Nyɔnu,role_models
+202,Jésus-Christ,0.04326923076923077,gender,Homme Sunnu,role_models
+203,Croyant fervent,0.009732360097323601,gender,Femme Nyɔnu,role_models
+204,Croyant fervent,0.007211538461538462,gender,Homme Sunnu,role_models
+205,Conjoint,0.40389294403892945,gender,Femme Nyɔnu,role_models
+206,Conjoint,0.0,gender,Homme Sunnu,role_models
+207,Mère,0.4768856447688564,gender,Femme Nyɔnu,role_models
+208,Mère,0.2668269230769231,gender,Homme Sunnu,role_models
+209,Père,0.26034063260340634,gender,Femme Nyɔnu,role_models
+210,Père,0.24519230769230768,gender,Homme Sunnu,role_models
+211,Frère,0.0827250608272506,gender,Femme Nyɔnu,role_models
+212,Frère,0.30288461538461536,gender,Homme Sunnu,role_models
+213,Sœur,0.1411192214111922,gender,Femme Nyɔnu,role_models
+214,Sœur,0.0625,gender,Homme Sunnu,role_models
+215,Ami,0.15328467153284672,gender,Femme Nyɔnu,role_models
+216,Ami,0.3894230769230769,gender,Homme Sunnu,role_models
+217,Enfants,0.05596107055961071,gender,Femme Nyɔnu,role_models
+218,Enfants,0.004807692307692308,gender,Homme Sunnu,role_models
+219,Dirigeant politique,0.009732360097323601,gender,Femme Nyɔnu,role_models
+220,Dirigeant politique,0.040865384615384616,gender,Homme Sunnu,role_models
+221,Voisin,0.029197080291970802,gender,Femme Nyɔnu,role_models
+222,Voisin,0.04807692307692308,gender,Homme Sunnu,role_models
+223,Collègue,0.012165450121654502,gender,Femme Nyɔnu,role_models
+224,Collègue,0.01201923076923077,gender,Homme Sunnu,role_models
+225,"Les anciens, les personnes âgées",0.0681265206812652,gender,Femme Nyɔnu,role_models
+226,"Les anciens, les personnes âgées",0.04807692307692308,gender,Homme Sunnu,role_models
+227,Officiers militaires,0.004866180048661801,gender,Femme Nyɔnu,role_models
+228,Officiers militaires,0.002403846153846154,gender,Homme Sunnu,role_models
+229,Hommes d'affaires,0.0072992700729927005,gender,Femme Nyɔnu,role_models
+230,Hommes d'affaires,0.036057692307692304,gender,Homme Sunnu,role_models
+231,Commerçants,0.0170316301703163,gender,Femme Nyɔnu,role_models
+232,Commerçants,0.028846153846153848,gender,Homme Sunnu,role_models
+233,Enseignants,0.0072992700729927005,gender,Femme Nyɔnu,role_models
+234,Enseignants,0.007211538461538462,gender,Homme Sunnu,role_models
+235,Professionnel de santé,0.051094890510948905,gender,Femme Nyɔnu,role_models
+236,Professionnel de santé,0.040865384615384616,gender,Homme Sunnu,role_models
+237,Superstars,0.004866180048661801,gender,Femme Nyɔnu,role_models
+238,Superstars,0.016826923076923076,gender,Homme Sunnu,role_models
+239,Les personnes qui ont réussi,0.0705596107055961,gender,Femme Nyɔnu,role_models
+240,Les personnes qui ont réussi,0.0625,gender,Homme Sunnu,role_models
+241,Mon patron,0.014598540145985401,gender,Femme Nyɔnu,role_models
+242,Mon patron,0.014423076923076924,gender,Homme Sunnu,role_models
+243,Les gens riches,0.014598540145985401,gender,Femme Nyɔnu,role_models
+244,Les gens riches,0.040865384615384616,gender,Homme Sunnu,role_models
+245,Oncle,0.0413625304136253,gender,Femme Nyɔnu,role_models
+246,Oncle,0.18269230769230768,gender,Homme Sunnu,role_models
+247,Tante,0.08759124087591241,gender,Femme Nyɔnu,role_models
+248,Tante,0.026442307692307692,gender,Homme Sunnu,role_models
+249,Grand-mère,0.04866180048661801,gender,Femme Nyɔnu,role_models
+250,Grand-mère,0.004807692307692308,gender,Homme Sunnu,role_models
+251,Grand-père,0.0170316301703163,gender,Femme Nyɔnu,role_models
+252,Grand-père,0.009615384615384616,gender,Homme Sunnu,role_models
+253,Un membre de la famille,0.07785888077858881,gender,Femme Nyɔnu,role_models
+254,Un membre de la famille,0.06971153846153846,gender,Homme Sunnu,role_models
+255,Personnages de radio ou de télévision,0.009732360097323601,gender,Femme Nyɔnu,role_models
+256,Personnages de radio ou de télévision,0.002403846153846154,gender,Homme Sunnu,role_models
+257,Aucune personne,0.043795620437956206,gender,Femme Nyɔnu,role_models
+258,Aucune personne,0.03365384615384615,gender,Homme Sunnu,role_models
+259,Je ne sais pas,0.13793103448275862,age_group,16-20,role_models
+260,Je ne sais pas,0.04242424242424243,age_group,21-30,role_models
+261,Je ne sais pas,0.03418803418803419,age_group,31-45,role_models
+262,Préfère ne pas répondre,0.0,age_group,16-20,role_models
+263,Préfère ne pas répondre,0.006060606060606061,age_group,21-30,role_models
+264,Préfère ne pas répondre,0.008547008547008548,age_group,31-45,role_models
+265,Autre,0.06896551724137931,age_group,16-20,role_models
+266,Autre,0.14242424242424243,age_group,21-30,role_models
+267,Autre,0.08333333333333333,age_group,31-45,role_models
+268,Le prophète Mahomet,0.0,age_group,16-20,role_models
+269,Le prophète Mahomet,0.0,age_group,21-30,role_models
+270,Le prophète Mahomet,0.008547008547008548,age_group,31-45,role_models
+271,Dieu,0.06896551724137931,age_group,16-20,role_models
+272,Dieu,0.10909090909090909,age_group,21-30,role_models
+273,Dieu,0.1388888888888889,age_group,31-45,role_models
+274,Le chef religieux,0.0,age_group,16-20,role_models
+275,Le chef religieux,0.02727272727272727,age_group,21-30,role_models
+276,Le chef religieux,0.0405982905982906,age_group,31-45,role_models
+277,Malama (prédicatrices),0.0,age_group,16-20,role_models
+278,Malama (prédicatrices),0.0,age_group,21-30,role_models
+279,Malama (prédicatrices),0.002136752136752137,age_group,31-45,role_models
+280,Chef traditionnel,0.0,age_group,16-20,role_models
+281,Chef traditionnel,0.00909090909090909,age_group,21-30,role_models
+282,Chef traditionnel,0.010683760683760684,age_group,31-45,role_models
+283,Jésus-Christ,0.0,age_group,16-20,role_models
+284,Jésus-Christ,0.048484848484848485,age_group,21-30,role_models
+285,Jésus-Christ,0.05128205128205128,age_group,31-45,role_models
+286,Croyant fervent,0.0,age_group,16-20,role_models
+287,Croyant fervent,0.006060606060606061,age_group,21-30,role_models
+288,Croyant fervent,0.010683760683760684,age_group,31-45,role_models
+289,Conjoint,0.3448275862068966,age_group,16-20,role_models
+290,Conjoint,0.22727272727272727,age_group,21-30,role_models
+291,Conjoint,0.17307692307692307,age_group,31-45,role_models
+292,Mère,0.6206896551724138,age_group,16-20,role_models
+293,Mère,0.43333333333333335,age_group,21-30,role_models
+294,Mère,0.31196581196581197,age_group,31-45,role_models
+295,Père,0.3448275862068966,age_group,16-20,role_models
+296,Père,0.2818181818181818,age_group,21-30,role_models
+297,Père,0.2264957264957265,age_group,31-45,role_models
+298,Frère,0.06896551724137931,age_group,16-20,role_models
+299,Frère,0.18484848484848485,age_group,21-30,role_models
+300,Frère,0.20726495726495728,age_group,31-45,role_models
+301,Sœur,0.10344827586206896,age_group,16-20,role_models
+302,Sœur,0.11515151515151516,age_group,21-30,role_models
+303,Sœur,0.09188034188034189,age_group,31-45,role_models
+304,Ami,0.06896551724137931,age_group,16-20,role_models
+305,Ami,0.25757575757575757,age_group,21-30,role_models
+306,Ami,0.2948717948717949,age_group,31-45,role_models
+307,Enfants,0.0,age_group,16-20,role_models
+308,Enfants,0.01818181818181818,age_group,21-30,role_models
+309,Enfants,0.0405982905982906,age_group,31-45,role_models
+310,Dirigeant politique,0.0,age_group,16-20,role_models
+311,Dirigeant politique,0.021212121212121213,age_group,21-30,role_models
+312,Dirigeant politique,0.029914529914529916,age_group,31-45,role_models
+313,Voisin,0.034482758620689655,age_group,16-20,role_models
+314,Voisin,0.04242424242424243,age_group,21-30,role_models
+315,Voisin,0.03632478632478633,age_group,31-45,role_models
+316,Collègue,0.034482758620689655,age_group,16-20,role_models
+317,Collègue,0.00909090909090909,age_group,21-30,role_models
+318,Collègue,0.01282051282051282,age_group,31-45,role_models
+319,"Les anciens, les personnes âgées",0.0,age_group,16-20,role_models
+320,"Les anciens, les personnes âgées",0.05454545454545454,age_group,21-30,role_models
+321,"Les anciens, les personnes âgées",0.0641025641025641,age_group,31-45,role_models
+322,Officiers militaires,0.0,age_group,16-20,role_models
+323,Officiers militaires,0.006060606060606061,age_group,21-30,role_models
+324,Officiers militaires,0.002136752136752137,age_group,31-45,role_models
+325,Hommes d'affaires,0.0,age_group,16-20,role_models
+326,Hommes d'affaires,0.01818181818181818,age_group,21-30,role_models
+327,Hommes d'affaires,0.02564102564102564,age_group,31-45,role_models
+328,Commerçants,0.034482758620689655,age_group,16-20,role_models
+329,Commerçants,0.024242424242424242,age_group,21-30,role_models
+330,Commerçants,0.021367521367521368,age_group,31-45,role_models
+331,Enseignants,0.0,age_group,16-20,role_models
+332,Enseignants,0.00909090909090909,age_group,21-30,role_models
+333,Enseignants,0.00641025641025641,age_group,31-45,role_models
+334,Professionnel de santé,0.0,age_group,16-20,role_models
+335,Professionnel de santé,0.024242424242424242,age_group,21-30,role_models
+336,Professionnel de santé,0.0641025641025641,age_group,31-45,role_models
+337,Superstars,0.0,age_group,16-20,role_models
+338,Superstars,0.012121212121212121,age_group,21-30,role_models
+339,Superstars,0.010683760683760684,age_group,31-45,role_models
+340,Les personnes qui ont réussi,0.0,age_group,16-20,role_models
+341,Les personnes qui ont réussi,0.05454545454545454,age_group,21-30,role_models
+342,Les personnes qui ont réussi,0.07905982905982906,age_group,31-45,role_models
+343,Mon patron,0.0,age_group,16-20,role_models
+344,Mon patron,0.01818181818181818,age_group,21-30,role_models
+345,Mon patron,0.01282051282051282,age_group,31-45,role_models
+346,Les gens riches,0.0,age_group,16-20,role_models
+347,Les gens riches,0.024242424242424242,age_group,21-30,role_models
+348,Les gens riches,0.03205128205128205,age_group,31-45,role_models
+349,Oncle,0.034482758620689655,age_group,16-20,role_models
+350,Oncle,0.13636363636363635,age_group,21-30,role_models
+351,Oncle,0.10042735042735043,age_group,31-45,role_models
+352,Tante,0.2413793103448276,age_group,16-20,role_models
+353,Tante,0.0696969696969697,age_group,21-30,role_models
+354,Tante,0.03632478632478633,age_group,31-45,role_models
+355,Grand-mère,0.1724137931034483,age_group,16-20,role_models
+356,Grand-mère,0.01818181818181818,age_group,21-30,role_models
+357,Grand-mère,0.023504273504273504,age_group,31-45,role_models
+358,Grand-père,0.034482758620689655,age_group,16-20,role_models
+359,Grand-père,0.00909090909090909,age_group,21-30,role_models
+360,Grand-père,0.014957264957264958,age_group,31-45,role_models
+361,Un membre de la famille,0.034482758620689655,age_group,16-20,role_models
+362,Un membre de la famille,0.07878787878787878,age_group,21-30,role_models
+363,Un membre de la famille,0.07264957264957266,age_group,31-45,role_models
+364,Personnages de radio ou de télévision,0.0,age_group,16-20,role_models
+365,Personnages de radio ou de télévision,0.006060606060606061,age_group,21-30,role_models
+366,Personnages de radio ou de télévision,0.00641025641025641,age_group,31-45,role_models
+367,Aucune personne,0.034482758620689655,age_group,16-20,role_models
+368,Aucune personne,0.03333333333333333,age_group,21-30,role_models
+369,Aucune personne,0.042735042735042736,age_group,31-45,role_models

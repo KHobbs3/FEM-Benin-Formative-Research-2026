@@ -1,0 +1,221 @@
+,label,proportion,split,group,question
+0,Préfère ne pas répondre,0.0036275695284159614,none,all,single
+1,Je ne sais pas,0.0,none,all,single
+2,Autre,0.0471584038694075,none,all,single
+3,Mon mari,0.21765417170495768,none,all,single
+4,Ma femme,0.04836759371221282,none,all,single
+5,Amis,0.02539298669891173,none,all,single
+6,Sœurs,0.02781136638452237,none,all,single
+7,Beaux-parents,0.022974607013301087,none,all,single
+8,Mère,0.13905683192261184,none,all,single
+9,Père,0.06408706166868199,none,all,single
+10,Frères,0.041112454655380895,none,all,single
+11,Autorités gouvernementales,0.0024183796856106408,none,all,single
+12,Membre de ma famille,0.02176541717049577,none,all,single
+13,Voisins,0.0036275695284159614,none,all,single
+14,Personnel de santé,0.19951632406287786,none,all,single
+15,Chefs religieux,0.015719467956469165,none,all,single
+16,Dirigeants,0.0012091898428053204,none,all,single
+17,Moi-même,0.04353083434099154,none,all,single
+18,Mes enfants,0.008464328899637243,none,all,single
+19,"La divinité (Dieu, Jésus, le Prophète…)",0.06650544135429262,none,all,single
+20,Radio,0.0,none,all,single
+21,Médias,0.0,none,all,single
+22,Préfère ne pas répondre,0.01020408163265306,use,future_user,single
+23,Préfère ne pas répondre,0.006622516556291391,use,nonuser,single
+24,Préfère ne pas répondre,0.0,use,past_user,single
+25,Préfère ne pas répondre,0.0,use,user,single
+26,Je ne sais pas,0.0,use,future_user,single
+27,Je ne sais pas,0.0,use,nonuser,single
+28,Je ne sais pas,0.0,use,past_user,single
+29,Je ne sais pas,0.0,use,user,single
+30,Autre,0.030612244897959183,use,future_user,single
+31,Autre,0.059602649006622516,use,nonuser,single
+32,Autre,0.0703125,use,past_user,single
+33,Autre,0.030100334448160536,use,user,single
+34,Mon mari,0.23469387755102042,use,future_user,single
+35,Mon mari,0.1986754966887417,use,nonuser,single
+36,Mon mari,0.3046875,use,past_user,single
+37,Mon mari,0.1939799331103679,use,user,single
+38,Ma femme,0.07142857142857142,use,future_user,single
+39,Ma femme,0.06291390728476821,use,nonuser,single
+40,Ma femme,0.03125,use,past_user,single
+41,Ma femme,0.033444816053511704,use,user,single
+42,Amis,0.01020408163265306,use,future_user,single
+43,Amis,0.026490066225165563,use,nonuser,single
+44,Amis,0.015625,use,past_user,single
+45,Amis,0.033444816053511704,use,user,single
+46,Sœurs,0.01020408163265306,use,future_user,single
+47,Sœurs,0.013245033112582781,use,nonuser,single
+48,Sœurs,0.0234375,use,past_user,single
+49,Sœurs,0.05016722408026756,use,user,single
+50,Beaux-parents,0.04081632653061224,use,future_user,single
+51,Beaux-parents,0.019867549668874173,use,nonuser,single
+52,Beaux-parents,0.015625,use,past_user,single
+53,Beaux-parents,0.023411371237458192,use,user,single
+54,Mère,0.15306122448979592,use,future_user,single
+55,Mère,0.12251655629139073,use,nonuser,single
+56,Mère,0.1796875,use,past_user,single
+57,Mère,0.13377926421404682,use,user,single
+58,Père,0.061224489795918366,use,future_user,single
+59,Père,0.076158940397351,use,nonuser,single
+60,Père,0.0390625,use,past_user,single
+61,Père,0.06354515050167224,use,user,single
+62,Frères,0.02040816326530612,use,future_user,single
+63,Frères,0.06291390728476821,use,nonuser,single
+64,Frères,0.03125,use,past_user,single
+65,Frères,0.030100334448160536,use,user,single
+66,Autorités gouvernementales,0.0,use,future_user,single
+67,Autorités gouvernementales,0.006622516556291391,use,nonuser,single
+68,Autorités gouvernementales,0.0,use,past_user,single
+69,Autorités gouvernementales,0.0,use,user,single
+70,Membre de ma famille,0.05102040816326531,use,future_user,single
+71,Membre de ma famille,0.009933774834437087,use,nonuser,single
+72,Membre de ma famille,0.0234375,use,past_user,single
+73,Membre de ma famille,0.023411371237458192,use,user,single
+74,Voisins,0.0,use,future_user,single
+75,Voisins,0.0,use,nonuser,single
+76,Voisins,0.0078125,use,past_user,single
+77,Voisins,0.006688963210702341,use,user,single
+78,Personnel de santé,0.19387755102040816,use,future_user,single
+79,Personnel de santé,0.19205298013245034,use,nonuser,single
+80,Personnel de santé,0.171875,use,past_user,single
+81,Personnel de santé,0.22073578595317725,use,user,single
+82,Chefs religieux,0.01020408163265306,use,future_user,single
+83,Chefs religieux,0.009933774834437087,use,nonuser,single
+84,Chefs religieux,0.03125,use,past_user,single
+85,Chefs religieux,0.016722408026755852,use,user,single
+86,Dirigeants,0.0,use,future_user,single
+87,Dirigeants,0.0,use,nonuser,single
+88,Dirigeants,0.0,use,past_user,single
+89,Dirigeants,0.0033444816053511705,use,user,single
+90,Moi-même,0.01020408163265306,use,future_user,single
+91,Moi-même,0.052980132450331126,use,nonuser,single
+92,Moi-même,0.015625,use,past_user,single
+93,Moi-même,0.056856187290969896,use,user,single
+94,Mes enfants,0.0,use,future_user,single
+95,Mes enfants,0.009933774834437087,use,nonuser,single
+96,Mes enfants,0.0,use,past_user,single
+97,Mes enfants,0.013377926421404682,use,user,single
+98,"La divinité (Dieu, Jésus, le Prophète…)",0.09183673469387756,use,future_user,single
+99,"La divinité (Dieu, Jésus, le Prophète…)",0.0695364238410596,use,nonuser,single
+100,"La divinité (Dieu, Jésus, le Prophète…)",0.0390625,use,past_user,single
+101,"La divinité (Dieu, Jésus, le Prophète…)",0.06688963210702341,use,user,single
+102,Radio,0.0,use,future_user,single
+103,Radio,0.0,use,nonuser,single
+104,Radio,0.0,use,past_user,single
+105,Radio,0.0,use,user,single
+106,Médias,0.0,use,future_user,single
+107,Médias,0.0,use,nonuser,single
+108,Médias,0.0,use,past_user,single
+109,Médias,0.0,use,user,single
+110,Préfère ne pas répondre,0.0,gender,Femme Nyɔnu,single
+111,Préfère ne pas répondre,0.007211538461538462,gender,Homme Sunnu,single
+112,Je ne sais pas,0.0,gender,Femme Nyɔnu,single
+113,Je ne sais pas,0.0,gender,Homme Sunnu,single
+114,Autre,0.046228710462287104,gender,Femme Nyɔnu,single
+115,Autre,0.04807692307692308,gender,Homme Sunnu,single
+116,Mon mari,0.43795620437956206,gender,Femme Nyɔnu,single
+117,Mon mari,0.0,gender,Homme Sunnu,single
+118,Ma femme,0.0,gender,Femme Nyɔnu,single
+119,Ma femme,0.09615384615384616,gender,Homme Sunnu,single
+120,Amis,0.012165450121654502,gender,Femme Nyɔnu,single
+121,Amis,0.038461538461538464,gender,Homme Sunnu,single
+122,Sœurs,0.0413625304136253,gender,Femme Nyɔnu,single
+123,Sœurs,0.014423076923076924,gender,Homme Sunnu,single
+124,Beaux-parents,0.046228710462287104,gender,Femme Nyɔnu,single
+125,Beaux-parents,0.0,gender,Homme Sunnu,single
+126,Mère,0.1678832116788321,gender,Femme Nyɔnu,single
+127,Mère,0.11057692307692307,gender,Homme Sunnu,single
+128,Père,0.014598540145985401,gender,Femme Nyɔnu,single
+129,Père,0.11298076923076923,gender,Homme Sunnu,single
+130,Frères,0.012165450121654502,gender,Femme Nyɔnu,single
+131,Frères,0.06971153846153846,gender,Homme Sunnu,single
+132,Autorités gouvernementales,0.0,gender,Femme Nyɔnu,single
+133,Autorités gouvernementales,0.004807692307692308,gender,Homme Sunnu,single
+134,Membre de ma famille,0.0267639902676399,gender,Femme Nyɔnu,single
+135,Membre de ma famille,0.016826923076923076,gender,Homme Sunnu,single
+136,Voisins,0.0024330900243309003,gender,Femme Nyɔnu,single
+137,Voisins,0.004807692307692308,gender,Homme Sunnu,single
+138,Personnel de santé,0.12165450121654502,gender,Femme Nyɔnu,single
+139,Personnel de santé,0.2764423076923077,gender,Homme Sunnu,single
+140,Chefs religieux,0.014598540145985401,gender,Femme Nyɔnu,single
+141,Chefs religieux,0.016826923076923076,gender,Homme Sunnu,single
+142,Dirigeants,0.0,gender,Femme Nyɔnu,single
+143,Dirigeants,0.002403846153846154,gender,Homme Sunnu,single
+144,Moi-même,0.004866180048661801,gender,Femme Nyɔnu,single
+145,Moi-même,0.08173076923076923,gender,Homme Sunnu,single
+146,Mes enfants,0.009732360097323601,gender,Femme Nyɔnu,single
+147,Mes enfants,0.007211538461538462,gender,Homme Sunnu,single
+148,"La divinité (Dieu, Jésus, le Prophète…)",0.0413625304136253,gender,Femme Nyɔnu,single
+149,"La divinité (Dieu, Jésus, le Prophète…)",0.09134615384615384,gender,Homme Sunnu,single
+150,Radio,0.0,gender,Femme Nyɔnu,single
+151,Radio,0.0,gender,Homme Sunnu,single
+152,Médias,0.0,gender,Femme Nyɔnu,single
+153,Médias,0.0,gender,Homme Sunnu,single
+154,Préfère ne pas répondre,0.0,age_group,16-20,single
+155,Préfère ne pas répondre,0.0,age_group,21-30,single
+156,Préfère ne pas répondre,0.00641025641025641,age_group,31-45,single
+157,Je ne sais pas,0.0,age_group,16-20,single
+158,Je ne sais pas,0.0,age_group,21-30,single
+159,Je ne sais pas,0.0,age_group,31-45,single
+160,Autre,0.13793103448275862,age_group,16-20,single
+161,Autre,0.05454545454545454,age_group,21-30,single
+162,Autre,0.03632478632478633,age_group,31-45,single
+163,Mon mari,0.3793103448275862,age_group,16-20,single
+164,Mon mari,0.25757575757575757,age_group,21-30,single
+165,Mon mari,0.1794871794871795,age_group,31-45,single
+166,Ma femme,0.034482758620689655,age_group,16-20,single
+167,Ma femme,0.03636363636363636,age_group,21-30,single
+168,Ma femme,0.057692307692307696,age_group,31-45,single
+169,Amis,0.0,age_group,16-20,single
+170,Amis,0.030303030303030304,age_group,21-30,single
+171,Amis,0.023504273504273504,age_group,31-45,single
+172,Sœurs,0.034482758620689655,age_group,16-20,single
+173,Sœurs,0.03333333333333333,age_group,21-30,single
+174,Sœurs,0.023504273504273504,age_group,31-45,single
+175,Beaux-parents,0.10344827586206896,age_group,16-20,single
+176,Beaux-parents,0.024242424242424242,age_group,21-30,single
+177,Beaux-parents,0.017094017094017096,age_group,31-45,single
+178,Mère,0.1724137931034483,age_group,16-20,single
+179,Mère,0.1696969696969697,age_group,21-30,single
+180,Mère,0.11538461538461539,age_group,31-45,single
+181,Père,0.034482758620689655,age_group,16-20,single
+182,Père,0.08787878787878788,age_group,21-30,single
+183,Père,0.049145299145299144,age_group,31-45,single
+184,Frères,0.0,age_group,16-20,single
+185,Frères,0.02727272727272727,age_group,21-30,single
+186,Frères,0.053418803418803416,age_group,31-45,single
+187,Autorités gouvernementales,0.0,age_group,16-20,single
+188,Autorités gouvernementales,0.0,age_group,21-30,single
+189,Autorités gouvernementales,0.004273504273504274,age_group,31-45,single
+190,Membre de ma famille,0.0,age_group,16-20,single
+191,Membre de ma famille,0.030303030303030304,age_group,21-30,single
+192,Membre de ma famille,0.017094017094017096,age_group,31-45,single
+193,Voisins,0.0,age_group,16-20,single
+194,Voisins,0.0030303030303030303,age_group,21-30,single
+195,Voisins,0.004273504273504274,age_group,31-45,single
+196,Personnel de santé,0.06896551724137931,age_group,16-20,single
+197,Personnel de santé,0.15757575757575756,age_group,21-30,single
+198,Personnel de santé,0.23717948717948717,age_group,31-45,single
+199,Chefs religieux,0.0,age_group,16-20,single
+200,Chefs religieux,0.00909090909090909,age_group,21-30,single
+201,Chefs religieux,0.021367521367521368,age_group,31-45,single
+202,Dirigeants,0.0,age_group,16-20,single
+203,Dirigeants,0.0,age_group,21-30,single
+204,Dirigeants,0.002136752136752137,age_group,31-45,single
+205,Moi-même,0.0,age_group,16-20,single
+206,Moi-même,0.030303030303030304,age_group,21-30,single
+207,Moi-même,0.05555555555555555,age_group,31-45,single
+208,Mes enfants,0.0,age_group,16-20,single
+209,Mes enfants,0.0,age_group,21-30,single
+210,Mes enfants,0.014957264957264958,age_group,31-45,single
+211,"La divinité (Dieu, Jésus, le Prophète…)",0.034482758620689655,age_group,16-20,single
+212,"La divinité (Dieu, Jésus, le Prophète…)",0.048484848484848485,age_group,21-30,single
+213,"La divinité (Dieu, Jésus, le Prophète…)",0.0811965811965812,age_group,31-45,single
+214,Radio,0.0,age_group,16-20,single
+215,Radio,0.0,age_group,21-30,single
+216,Radio,0.0,age_group,31-45,single
+217,Médias,0.0,age_group,16-20,single
+218,Médias,0.0,age_group,21-30,single
+219,Médias,0.0,age_group,31-45,single

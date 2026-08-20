@@ -1,0 +1,491 @@
+,method,proportion,method_type,split,group,label
+0,Injectables,0.6616884877522332,known,none,all,
+1,Implants,0.6122221333996685,known,none,all,
+2,Pilules contraceptives orales,0.3318084022302655,known,none,all,
+3,Préservatifs,0.2943127093850685,known,none,all,
+4,Dispositifs intra-utérins DIU (aussi appelés “stérilets”),0.17485975196830725,known,none,all,
+5,Pilules contraceptives d'urgence,0.1038338345633264,known,none,all,
+6,Abstinence,0.07573266904197574,known,none,all,
+7,Méthode des jours fixes (collier de perles),0.07538584683775469,known,none,all,
+8,Retrait,0.06078427603801212,known,none,all,
+9,Méthode du calendrier (aussi appelée “méthode Ogino”),0.049515162617182924,known,none,all,
+10,Autre : veuillez préciser,0.0457562026258418,known,none,all,
+11,Stérilisation,0.031653951649560204,known,none,all,
+12,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”),0.021790151143786223,known,none,all,
+13,Anneau vaginal,0.018792334756586548,known,none,all,
+14,Je ne sais pas,0.006732167736456791,known,none,all,
+15,Patch contraceptif,0.0037344554819201303,known,none,all,
+16,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)",0.00339231946984067,known,none,all,
+17,Je préfère ne pas répondre,0.0011553045875487005,known,none,all,
+18,,0.06819516022227075,known,use,future_user,Abstinence
+19,,0.018299333470667783,known,use,future_user,Anneau vaginal
+20,,0.0006458006734854504,known,use,future_user,Autre : veuillez préciser
+21,,0.18813592521100683,known,use,future_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+22,,0.5849467135054222,known,use,future_user,Implants
+23,,0.5049085794425394,known,use,future_user,Injectables
+24,,0.0017951852011621062,known,use,future_user,Je ne sais pas
+25,,0.0,known,use,future_user,Je préfère ne pas répondre
+26,,0.003340514891330998,known,use,future_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+27,,0.027166280478569615,known,use,future_user,Méthode des jours fixes (collier de perles)
+28,,0.1230622271732948,known,use,future_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+29,,0.0,known,use,future_user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+30,,0.0,known,use,future_user,Patch contraceptif
+31,,0.10239096780221302,known,use,future_user,Pilules contraceptives d'urgence
+32,,0.4198278367664394,known,use,future_user,Pilules contraceptives orales
+33,,0.14297895398653387,known,use,future_user,Préservatifs
+34,,0.07184703232122042,known,use,future_user,Retrait
+35,,0.05416925926634386,known,use,future_user,Stérilisation
+36,,0.08878278216271455,known,use,nonuser,Abstinence
+37,,0.015113143396540584,known,use,nonuser,Anneau vaginal
+38,,0.04003186830669892,known,use,nonuser,Autre : veuillez préciser
+39,,0.02248374696626782,known,use,nonuser,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+40,,0.3715364844558348,known,use,nonuser,Implants
+41,,0.4148082327521838,known,use,nonuser,Injectables
+42,,0.016995317684865365,known,use,nonuser,Je ne sais pas
+43,,0.003252359737850968,known,use,nonuser,Je préfère ne pas répondre
+44,,0.03621726442532514,known,use,nonuser,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+45,,0.016167932332897587,known,use,nonuser,Méthode des jours fixes (collier de perles)
+46,,0.02130497063407421,known,use,nonuser,Méthode du calendrier (aussi appelée “méthode Ogino”)
+47,,0.0005922126140093111,known,use,nonuser,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+48,,0.002828975562578447,known,use,nonuser,Patch contraceptif
+49,,0.05964672547132445,known,use,nonuser,Pilules contraceptives d'urgence
+50,,0.16362848342777908,known,use,nonuser,Pilules contraceptives orales
+51,,0.24222068667220406,known,use,nonuser,Préservatifs
+52,,0.05699969622674816,known,use,nonuser,Retrait
+53,,0.01690192241347357,known,use,nonuser,Stérilisation
+54,,0.043198486384158186,known,use,past_user,Abstinence
+55,,0.0022039263803374305,known,use,past_user,Anneau vaginal
+56,,0.0539819472700798,known,use,past_user,Autre : veuillez préciser
+57,,0.17605751340280296,known,use,past_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+58,,0.8009011433190485,known,use,past_user,Implants
+59,,0.8511406738988698,known,use,past_user,Injectables
+60,,0.0,known,use,past_user,Je ne sais pas
+61,,0.0,known,use,past_user,Je préfère ne pas répondre
+62,,0.0016996821336221824,known,use,past_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+63,,0.13063217077335648,known,use,past_user,Méthode des jours fixes (collier de perles)
+64,,0.025686275659871936,known,use,past_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+65,,0.00760058748054413,known,use,past_user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+66,,0.006467582353260138,known,use,past_user,Patch contraceptif
+67,,0.04331387770167911,known,use,past_user,Pilules contraceptives d'urgence
+68,,0.5754296770410754,known,use,past_user,Pilules contraceptives orales
+69,,0.4133068308937644,known,use,past_user,Préservatifs
+70,,0.008816157666388522,known,use,past_user,Retrait
+71,,0.06266542496454296,known,use,past_user,Stérilisation
+72,,0.09061469838110041,known,use,user,Abstinence
+73,,0.03772082419300443,known,use,user,Anneau vaginal
+74,,0.059226610733774956,known,use,user,Autre : veuillez préciser
+75,,0.35206539646351415,known,use,user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+76,,0.7449514138250067,known,use,user,Implants
+77,,0.8406360751855603,known,use,user,Injectables
+78,,0.0017936869785895161,known,use,user,Je ne sais pas
+79,,0.0,known,use,user,Je préfère ne pas répondre
+80,,0.027566639325554684,known,use,user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+81,,0.1130481738981554,known,use,user,Méthode des jours fixes (collier de perles)
+82,,0.08149565643253268,known,use,user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+83,,0.004129063059056647,known,use,user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+84,,0.0035873739571790323,known,use,user,Patch contraceptif
+85,,0.20958662899189714,known,use,user,Pilules contraceptives d'urgence
+86,,0.2950345223949465,known,use,user,Pilules contraceptives orales
+87,,0.29963468667160853,known,use,user,Préservatifs
+88,,0.1069788310582078,known,use,user,Retrait
+89,,0.015561876429513196,known,use,user,Stérilisation
+90,,0.024128008929499328,known,gender,Femme Nyɔnu,Abstinence
+91,,0.011892757606703764,known,gender,Femme Nyɔnu,Anneau vaginal
+92,,0.033502828023571046,known,gender,Femme Nyɔnu,Autre : veuillez préciser
+93,,0.2844714175588062,known,gender,Femme Nyɔnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+94,,0.6041485891960393,known,gender,Femme Nyɔnu,Implants
+95,,0.6236125562489104,known,gender,Femme Nyɔnu,Injectables
+96,,0.012848420182506917,known,gender,Femme Nyɔnu,Je ne sais pas
+97,,0.0,known,gender,Femme Nyɔnu,Je préfère ne pas répondre
+98,,0.016180525734419204,known,gender,Femme Nyɔnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+99,,0.09193484962919622,known,gender,Femme Nyɔnu,Méthode des jours fixes (collier de perles)
+100,,0.021590666509798507,known,gender,Femme Nyɔnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+101,,0.0008428376172007892,known,gender,Femme Nyɔnu,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+102,,0.0031764447699441215,known,gender,Femme Nyɔnu,Patch contraceptif
+103,,0.06883564321952781,known,gender,Femme Nyɔnu,Pilules contraceptives d'urgence
+104,,0.247567620678082,known,gender,Femme Nyɔnu,Pilules contraceptives orales
+105,,0.08939418922350803,known,gender,Femme Nyɔnu,Préservatifs
+106,,0.012000028869987432,known,gender,Femme Nyɔnu,Retrait
+107,,0.040531323483435605,known,gender,Femme Nyɔnu,Stérilisation
+108,,0.13253399157149143,known,gender,Homme Sunnu,Abstinence
+109,,0.026386709104825268,known,gender,Homme Sunnu,Anneau vaginal
+110,,0.05924350941832049,known,gender,Homme Sunnu,Autre : veuillez préciser
+111,,0.05421003629082572,known,gender,Homme Sunnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+112,,0.6211086949479301,known,gender,Homme Sunnu,Implants
+113,,0.7035987195262255,known,gender,Homme Sunnu,Injectables
+114,,0.0,known,gender,Homme Sunnu,Je ne sais pas
+115,,0.0024269499845758816,known,gender,Homme Sunnu,Je préfère ne pas répondre
+116,,0.027964673782879947,known,gender,Homme Sunnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+117,,0.057170336008893305,known,gender,Homme Sunnu,Méthode des jours fixes (collier de perles)
+118,,0.08025169506236544,known,gender,Homme Sunnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+119,,0.0061985377586407835,known,gender,Homme Sunnu,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+120,,0.0043486586635085875,known,gender,Homme Sunnu,Patch contraceptif
+121,,0.14235639338138523,known,gender,Homme Sunnu,Pilules contraceptives d'urgence
+122,,0.42453234988644206,known,gender,Homme Sunnu,Pilules contraceptives orales
+123,,0.5198668149755004,known,gender,Homme Sunnu,Préservatifs
+124,,0.1144811660419565,known,gender,Homme Sunnu,Retrait
+125,,0.021882615889352693,known,gender,Homme Sunnu,Stérilisation
+126,,0.002265461445512509,known,age_group,16-20,Abstinence
+127,,0.0,known,age_group,16-20,Anneau vaginal
+128,,0.0,known,age_group,16-20,Autre : veuillez préciser
+129,,0.004442374944493043,known,age_group,16-20,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+130,,0.4322917701327539,known,age_group,16-20,Implants
+131,,0.5819805018852291,known,age_group,16-20,Injectables
+132,,0.0,known,age_group,16-20,Je ne sais pas
+133,,0.0,known,age_group,16-20,Je préfère ne pas répondre
+134,,0.0,known,age_group,16-20,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+135,,0.0,known,age_group,16-20,Méthode des jours fixes (collier de perles)
+136,,0.002265461445512509,known,age_group,16-20,Méthode du calendrier (aussi appelée “méthode Ogino”)
+137,,0.0,known,age_group,16-20,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+138,,0.0,known,age_group,16-20,Patch contraceptif
+139,,0.03407312852532789,known,age_group,16-20,Pilules contraceptives d'urgence
+140,,0.3479639675130242,known,age_group,16-20,Pilules contraceptives orales
+141,,0.004671651965395047,known,age_group,16-20,Préservatifs
+142,,0.0,known,age_group,16-20,Retrait
+143,,0.042031076997468296,known,age_group,16-20,Stérilisation
+144,,0.1366591366767108,known,age_group,21-30,Abstinence
+145,,0.02126934245970535,known,age_group,21-30,Anneau vaginal
+146,,0.00579258478712072,known,age_group,21-30,Autre : veuillez préciser
+147,,0.08931878514751805,known,age_group,21-30,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+148,,0.421037171031679,known,age_group,21-30,Implants
+149,,0.49546639765121236,known,age_group,21-30,Injectables
+150,,0.021823477335395122,known,age_group,21-30,Je ne sais pas
+151,,0.0,known,age_group,21-30,Je préfère ne pas répondre
+152,,0.033666762115123726,known,age_group,21-30,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+153,,0.030350077597629834,known,age_group,21-30,Méthode des jours fixes (collier de perles)
+154,,0.0676950090620184,known,age_group,21-30,Méthode du calendrier (aussi appelée “méthode Ogino”)
+155,,0.010715274910231557,known,age_group,21-30,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+156,,0.0,known,age_group,21-30,Patch contraceptif
+157,,0.12507406490389636,known,age_group,21-30,Pilules contraceptives d'urgence
+158,,0.29888208353885326,known,age_group,21-30,Pilules contraceptives orales
+159,,0.23790855976100928,known,age_group,21-30,Préservatifs
+160,,0.10338240237799408,known,age_group,21-30,Retrait
+161,,0.09333388744394129,known,age_group,21-30,Stérilisation
+162,,0.0517363575469222,known,age_group,31-45,Abstinence
+163,,0.01890351426714712,known,age_group,31-45,Anneau vaginal
+164,,0.06795574767592394,known,age_group,31-45,Autre : veuillez préciser
+165,,0.22736070790973806,known,age_group,31-45,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+166,,0.715744939933189,known,age_group,31-45,Implants
+167,,0.7464186037423526,known,age_group,31-45,Injectables
+168,,0.0,known,age_group,31-45,Je ne sais pas
+169,,0.001785555042342671,known,age_group,31-45,Je préfère ne pas répondre
+170,,0.017626020569521877,known,age_group,31-45,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+171,,0.10204093491366632,known,age_group,31-45,Méthode des jours fixes (collier de perles)
+172,,0.04409641599133882,known,age_group,31-45,Méthode du calendrier (aussi appelée “méthode Ogino”)
+173,,0.0001342156114483686,known,age_group,31-45,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+174,,0.005771703746364318,known,age_group,31-45,Patch contraceptif
+175,,0.09850382340634363,known,age_group,31-45,Pilules contraceptives d'urgence
+176,,0.3463958018477506,known,age_group,31-45,Pilules contraceptives orales
+177,,0.3411198257833297,known,age_group,31-45,Préservatifs
+178,,0.04465427997822896,known,age_group,31-45,Retrait
+179,,0.00153337073277575,known,age_group,31-45,Stérilisation
+180,Implants,0.2188373482673789,ever,none,all,
+181,Injectables,0.20798735747929153,ever,none,all,
+182,Préservatifs,0.055494253866099644,ever,none,all,
+183,Autre : veuillez préciser,0.03171186029836587,ever,none,all,
+184,Méthode du calendrier (aussi appelée “méthode Ogino”),0.029237592711747088,ever,none,all,
+185,Pilules contraceptives orales,0.026322107374101636,ever,none,all,
+186,Retrait,0.020368261440708954,ever,none,all,
+187,Abstinence,0.019307133534202277,ever,none,all,
+188,Dispositifs intra-utérins DIU (aussi appelés “stérilets”),0.01499568017468409,ever,none,all,
+189,Pilules contraceptives d'urgence,0.014849274628221753,ever,none,all,
+190,Méthode des jours fixes (collier de perles),0.0077157202718222215,ever,none,all,
+191,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”),0.004305467969287259,ever,none,all,
+192,Patch contraceptif,0.00166435707216125,ever,none,all,
+193,Anneau vaginal,0.0016563480883397756,ever,none,all,
+194,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)",0.0015158765428917216,ever,none,all,
+195,Je préfère ne pas répondre,0.0009901176848764832,ever,none,all,
+196,Stérilisation,0.0003530349313562049,ever,none,all,
+197,Je ne sais pas,0.00019576512104652969,ever,none,all,
+198,,0.0,ever,use,future_user,Abstinence
+199,,0.0,ever,use,future_user,Anneau vaginal
+200,,0.0,ever,use,future_user,Autre : veuillez préciser
+201,,0.0,ever,use,future_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+202,,0.0,ever,use,future_user,Implants
+203,,0.0,ever,use,future_user,Injectables
+204,,0.0,ever,use,future_user,Je ne sais pas
+205,,0.0,ever,use,future_user,Je préfère ne pas répondre
+206,,0.0,ever,use,future_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+207,,0.0,ever,use,future_user,Méthode des jours fixes (collier de perles)
+208,,0.0,ever,use,future_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+209,,0.0,ever,use,future_user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+210,,0.0,ever,use,future_user,Patch contraceptif
+211,,0.0,ever,use,future_user,Pilules contraceptives d'urgence
+212,,0.0,ever,use,future_user,Pilules contraceptives orales
+213,,0.0,ever,use,future_user,Préservatifs
+214,,0.0,ever,use,future_user,Retrait
+215,,0.0,ever,use,future_user,Stérilisation
+216,,0.0,ever,use,nonuser,Abstinence
+217,,0.0,ever,use,nonuser,Anneau vaginal
+218,,0.0,ever,use,nonuser,Autre : veuillez préciser
+219,,0.0,ever,use,nonuser,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+220,,0.0,ever,use,nonuser,Implants
+221,,0.0,ever,use,nonuser,Injectables
+222,,0.0,ever,use,nonuser,Je ne sais pas
+223,,0.0,ever,use,nonuser,Je préfère ne pas répondre
+224,,0.0,ever,use,nonuser,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+225,,0.0,ever,use,nonuser,Méthode des jours fixes (collier de perles)
+226,,0.0,ever,use,nonuser,Méthode du calendrier (aussi appelée “méthode Ogino”)
+227,,0.0,ever,use,nonuser,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+228,,0.0,ever,use,nonuser,Patch contraceptif
+229,,0.0,ever,use,nonuser,Pilules contraceptives d'urgence
+230,,0.0,ever,use,nonuser,Pilules contraceptives orales
+231,,0.0,ever,use,nonuser,Préservatifs
+232,,0.0,ever,use,nonuser,Retrait
+233,,0.0,ever,use,nonuser,Stérilisation
+234,,0.03163643663205228,ever,use,past_user,Abstinence
+235,,0.0,ever,use,past_user,Anneau vaginal
+236,,0.05435132499732534,ever,use,past_user,Autre : veuillez préciser
+237,,0.0023750272538199924,ever,use,past_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+238,,0.4106079511070092,ever,use,past_user,Implants
+239,,0.5255251868044295,ever,use,past_user,Injectables
+240,,0.0,ever,use,past_user,Je ne sais pas
+241,,0.0,ever,use,past_user,Je préfère ne pas répondre
+242,,0.006925409937585898,ever,use,past_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+243,,0.0002620462369383367,ever,use,past_user,Méthode des jours fixes (collier de perles)
+244,,0.012233736642231282,ever,use,past_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+245,,0.005890596761064276,ever,use,past_user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+246,,0.006467582353260138,ever,use,past_user,Patch contraceptif
+247,,0.0005874828830290199,ever,use,past_user,Pilules contraceptives d'urgence
+248,,0.04905841751473556,ever,use,past_user,Pilules contraceptives orales
+249,,0.025510901524609247,ever,use,past_user,Préservatifs
+250,,0.002477974197282858,ever,use,past_user,Retrait
+251,,0.0,ever,use,past_user,Stérilisation
+252,,0.037604734774137186,ever,use,user,Abstinence
+253,,0.00557829891148437,ever,use,user,Anneau vaginal
+254,,0.0596953914969592,ever,use,user,Autre : veuillez préciser
+255,,0.04844453337796413,ever,use,user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+256,,0.3811446355134374,ever,use,user,Implants
+257,,0.2450081725803612,ever,use,user,Injectables
+258,,0.0006593036628762343,ever,use,user,Je ne sais pas
+259,,0.0033345481198484126,ever,use,user,Je préfère ne pas répondre
+260,,0.008498026421743056,ever,use,user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+261,,0.025758126697700393,ever,use,user,Méthode des jours fixes (collier de perles)
+262,,0.0878646085103054,ever,use,user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+263,,0.0,ever,use,user,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+264,,0.0,ever,use,user,Patch contraceptif
+265,,0.0495006788295031,ever,use,user,Pilules contraceptives d'urgence
+266,,0.04613083360613044,ever,use,user,Pilules contraceptives orales
+267,,0.16478563613852268,ever,use,user,Préservatifs
+268,,0.06644925294013197,ever,use,user,Retrait
+269,,0.0011889616603924242,ever,use,user,Stérilisation
+270,,0.01560482172665026,ever,gender,Femme Nyɔnu,Abstinence
+271,,0.0031611595314590558,ever,gender,Femme Nyɔnu,Anneau vaginal
+272,,0.000959794008900742,ever,gender,Femme Nyɔnu,Autre : veuillez préciser
+273,,0.02683800932282003,ever,gender,Femme Nyɔnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+274,,0.31183907522732923,ever,gender,Femme Nyɔnu,Implants
+275,,0.20743422746549683,ever,gender,Femme Nyɔnu,Injectables
+276,,0.00037362000335555446,ever,gender,Femme Nyɔnu,Je ne sais pas
+277,,0.0,ever,gender,Femme Nyɔnu,Je préfère ne pas répondre
+278,,0.0017487497336738903,ever,gender,Femme Nyɔnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+279,,0.002860118239513038,ever,gender,Femme Nyɔnu,Méthode des jours fixes (collier de perles)
+280,,0.013641233047985845,ever,gender,Femme Nyɔnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+281,,0.0,ever,gender,Femme Nyɔnu,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+282,,0.0031764447699441215,ever,gender,Femme Nyɔnu,Patch contraceptif
+283,,0.00485879670355165,ever,gender,Femme Nyɔnu,Pilules contraceptives d'urgence
+284,,0.03842113127239048,ever,gender,Femme Nyɔnu,Pilules contraceptives orales
+285,,0.006036136353110546,ever,gender,Femme Nyɔnu,Préservatifs
+286,,0.006723950104252785,ever,gender,Femme Nyɔnu,Retrait
+287,,0.0006737712598281634,ever,gender,Femme Nyɔnu,Stérilisation
+288,,0.02338227338837899,ever,gender,Homme Sunnu,Abstinence
+289,,0.0,ever,gender,Homme Sunnu,Anneau vaginal
+290,,0.06556070325072245,ever,gender,Homme Sunnu,Autre : veuillez préciser
+291,,0.0019608116961815905,ever,gender,Homme Sunnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+292,,0.11647021558323366,ever,gender,Homme Sunnu,Implants
+293,,0.20859618846947392,ever,gender,Homme Sunnu,Injectables
+294,,0.0,ever,gender,Homme Sunnu,Je ne sais pas
+295,,0.0020799416239987833,ever,gender,Homme Sunnu,Je préfère ne pas répondre
+296,,0.007119651355083037,ever,gender,Homme Sunnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+297,,0.013060288311046352,ever,gender,Homme Sunnu,Méthode des jours fixes (collier de perles)
+298,,0.046404527899707934,ever,gender,Homme Sunnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+299,,0.0031844040022345386,ever,gender,Homme Sunnu,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+300,,0.0,ever,gender,Homme Sunnu,Patch contraceptif
+301,,0.025845807840267767,ever,gender,Homme Sunnu,Pilules contraceptives d'urgence
+302,,0.013004694620270337,ever,gender,Homme Sunnu,Pilules contraceptives orales
+303,,0.10993287391388061,ever,gender,Homme Sunnu,Préservatifs
+304,,0.035386574267999515,ever,gender,Homme Sunnu,Retrait
+305,,0.0,ever,gender,Homme Sunnu,Stérilisation
+306,,0.0,ever,age_group,16-20,Abstinence
+307,,0.0,ever,age_group,16-20,Anneau vaginal
+308,,0.0,ever,age_group,16-20,Autre : veuillez préciser
+309,,0.0,ever,age_group,16-20,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+310,,0.042031076997468296,ever,age_group,16-20,Implants
+311,,0.18417603183426567,ever,age_group,16-20,Injectables
+312,,0.0,ever,age_group,16-20,Je ne sais pas
+313,,0.0,ever,age_group,16-20,Je préfère ne pas répondre
+314,,0.002265461445512509,ever,age_group,16-20,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+315,,0.0,ever,age_group,16-20,Méthode des jours fixes (collier de perles)
+316,,0.0,ever,age_group,16-20,Méthode du calendrier (aussi appelée “méthode Ogino”)
+317,,0.0,ever,age_group,16-20,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+318,,0.0,ever,age_group,16-20,Patch contraceptif
+319,,0.0,ever,age_group,16-20,Pilules contraceptives d'urgence
+320,,0.036338589970840406,ever,age_group,16-20,Pilules contraceptives orales
+321,,0.0,ever,age_group,16-20,Préservatifs
+322,,0.0,ever,age_group,16-20,Retrait
+323,,0.0,ever,age_group,16-20,Stérilisation
+324,,0.023809216526818545,ever,age_group,21-30,Abstinence
+325,,0.0,ever,age_group,21-30,Anneau vaginal
+326,,0.0007888826849254157,ever,age_group,21-30,Autre : veuillez préciser
+327,,0.0,ever,age_group,21-30,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+328,,0.11191381781179559,ever,age_group,21-30,Implants
+329,,0.19657336855961363,ever,age_group,21-30,Injectables
+330,,0.0,ever,age_group,21-30,Je ne sais pas
+331,,0.0,ever,age_group,21-30,Je préfère ne pas répondre
+332,,0.0,ever,age_group,21-30,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+333,,0.0039004271799212135,ever,age_group,21-30,Méthode des jours fixes (collier de perles)
+334,,0.027418137081007425,ever,age_group,21-30,Méthode du calendrier (aussi appelée “méthode Ogino”)
+335,,0.0,ever,age_group,21-30,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+336,,0.0,ever,age_group,21-30,Patch contraceptif
+337,,0.014718852974258831,ever,age_group,21-30,Pilules contraceptives d'urgence
+338,,0.016694444626154933,ever,age_group,21-30,Pilules contraceptives orales
+339,,0.0689178101806654,ever,age_group,21-30,Préservatifs
+340,,0.029836337259590756,ever,age_group,21-30,Retrait
+341,,0.0,ever,age_group,21-30,Stérilisation
+342,,0.01848821753417605,ever,age_group,31-45,Abstinence
+343,,0.002559931565133736,ever,age_group,31-45,Anneau vaginal
+344,,0.04863543847047886,ever,age_group,31-45,Autre : veuillez préciser
+345,,0.02317623649887611,ever,age_group,31-45,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+346,,0.28197213390070974,ever,age_group,31-45,Implants
+347,,0.21506642917044588,ever,age_group,31-45,Injectables
+348,,0.00030256038344063065,ever,age_group,31-45,Je ne sais pas
+349,,0.0015302541371318948,ever,age_group,31-45,Je préfère ne pas répondre
+350,,0.006498448754104558,ever,age_group,31-45,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+351,,0.01006525654128182,ever,age_group,31-45,Méthode des jours fixes (collier de perles)
+352,,0.03211539524991071,ever,age_group,31-45,Méthode du calendrier (aussi appelée “méthode Ogino”)
+353,,0.00234282892485718,ever,age_group,31-45,"Méthodes de barrière vaginale (y compris le diaphragme, la cape cervicale et les agents spermicides)"
+354,,0.0025723096700946252,ever,age_group,31-45,Patch contraceptif
+355,,0.01593247454438459,ever,age_group,31-45,Pilules contraceptives d'urgence
+356,,0.03022355370262755,ever,age_group,31-45,Pilules contraceptives orales
+357,,0.05291004333467832,ever,age_group,31-45,Préservatifs
+358,,0.01725467750766349,ever,age_group,31-45,Retrait
+359,,0.0005456252044698111,ever,age_group,31-45,Stérilisation
+360,Implants,0.10664405197737216,current,none,all,
+361,Injectables,0.06738614425324813,current,none,all,
+362,Préservatifs,0.04983616432103075,current,none,all,
+363,Méthode du calendrier (aussi appelée “méthode Ogino”),0.024426346430922237,current,none,all,
+364,Autre : veuillez préciser,0.019234181116669163,current,none,all,
+365,Pilules contraceptives d'urgence,0.017004908741495562,current,none,all,
+366,Retrait,0.016511734092999688,current,none,all,
+367,Pilules contraceptives orales,0.014675184919491758,current,none,all,
+368,Dispositifs intra-utérins DIU (aussi appelés “stérilets”),0.014289082908225557,current,none,all,
+369,Abstinence,0.009361428622721829,current,none,all,
+370,Méthode des jours fixes (collier de perles),0.0035071433059610598,current,none,all,
+371,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”),0.0013681241770186793,current,none,all,
+372,Je préfère ne pas répondre,0.0003401592411054265,current,none,all,
+373,,0.0,current,use,future_user,Implants
+374,,0.0,current,use,future_user,Injectables
+375,,0.0,current,use,future_user,Préservatifs
+376,,0.0,current,use,future_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+377,,0.0,current,use,future_user,Autre : veuillez préciser
+378,,0.0,current,use,future_user,Pilules contraceptives d'urgence
+379,,0.0,current,use,future_user,Retrait
+380,,0.0,current,use,future_user,Pilules contraceptives orales
+381,,0.0,current,use,future_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+382,,0.0,current,use,future_user,Abstinence
+383,,0.0,current,use,future_user,Méthode des jours fixes (collier de perles)
+384,,0.0,current,use,future_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+385,,0.0,current,use,future_user,Je préfère ne pas répondre
+386,,0.0,current,use,nonuser,Implants
+387,,0.0,current,use,nonuser,Injectables
+388,,0.0,current,use,nonuser,Préservatifs
+389,,0.0,current,use,nonuser,Méthode du calendrier (aussi appelée “méthode Ogino”)
+390,,0.0,current,use,nonuser,Autre : veuillez préciser
+391,,0.0,current,use,nonuser,Pilules contraceptives d'urgence
+392,,0.0,current,use,nonuser,Retrait
+393,,0.0,current,use,nonuser,Pilules contraceptives orales
+394,,0.0,current,use,nonuser,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+395,,0.0,current,use,nonuser,Abstinence
+396,,0.0,current,use,nonuser,Méthode des jours fixes (collier de perles)
+397,,0.0,current,use,nonuser,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+398,,0.0,current,use,nonuser,Je préfère ne pas répondre
+399,,0.0,current,use,past_user,Implants
+400,,0.0,current,use,past_user,Injectables
+401,,0.0,current,use,past_user,Préservatifs
+402,,0.0,current,use,past_user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+403,,0.0,current,use,past_user,Autre : veuillez préciser
+404,,0.0,current,use,past_user,Pilules contraceptives d'urgence
+405,,0.0,current,use,past_user,Retrait
+406,,0.0,current,use,past_user,Pilules contraceptives orales
+407,,0.0,current,use,past_user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+408,,0.0,current,use,past_user,Abstinence
+409,,0.0,current,use,past_user,Méthode des jours fixes (collier de perles)
+410,,0.0,current,use,past_user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+411,,0.0,current,use,past_user,Je préfère ne pas répondre
+412,,0.3591590458850605,current,use,user,Implants
+413,,0.22694508345392697,current,use,user,Injectables
+414,,0.16783973317058837,current,use,user,Préservatifs
+415,,0.08226378420476217,current,use,user,Méthode du calendrier (aussi appelée “méthode Ogino”)
+416,,0.06477745368967337,current,use,user,Autre : veuillez préciser
+417,,0.05726964313259552,current,use,user,Pilules contraceptives d'urgence
+418,,0.05560871471770313,current,use,user,Retrait
+419,,0.04942352917150819,current,use,user,Pilules contraceptives orales
+420,,0.04812320320480453,current,use,user,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+421,,0.03152770088829025,current,use,user,Abstinence
+422,,0.011811462713536232,current,use,user,Méthode des jours fixes (collier de perles)
+423,,0.004607609753749537,current,use,user,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+424,,0.0011455985234913397,current,use,user,Je préfère ne pas répondre
+425,,0.0040083472510910115,current,gender,Femme Nyɔnu,Abstinence
+426,,0.0006496807023978497,current,gender,Femme Nyɔnu,Autre : veuillez préciser
+427,,0.026655915111708894,current,gender,Femme Nyɔnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+428,,0.16136443765728178,current,gender,Femme Nyɔnu,Implants
+429,,0.06210264319122192,current,gender,Femme Nyɔnu,Injectables
+430,,0.0,current,gender,Femme Nyɔnu,Je préfère ne pas répondre
+431,,0.002178282284369191,current,gender,Femme Nyɔnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+432,,0.006693423663708402,current,gender,Femme Nyɔnu,Méthode des jours fixes (collier de perles)
+433,,0.010731982007064433,current,gender,Femme Nyɔnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+434,,0.008972849402670006,current,gender,Femme Nyɔnu,Pilules contraceptives d'urgence
+435,,0.019447504343384922,current,gender,Femme Nyɔnu,Pilules contraceptives orales
+436,,0.0050154482279415775,current,gender,Femme Nyɔnu,Préservatifs
+437,,0.006819132188357865,current,gender,Femme Nyɔnu,Retrait
+438,,0.015253572875857435,current,gender,Homme Sunnu,Abstinence
+439,,0.03969016706406474,current,gender,Homme Sunnu,Autre : veuillez préciser
+440,,0.0006768931732789899,current,gender,Homme Sunnu,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+441,,0.04641324589959754,current,gender,Homme Sunnu,Implants
+442,,0.07320170136097981,current,gender,Homme Sunnu,Injectables
+443,,0.0007145729999270504,current,gender,Homme Sunnu,Je préfère ne pas répondre
+444,,0.0004763819999513669,current,gender,Homme Sunnu,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+445,,0.0,current,gender,Homme Sunnu,Méthode des jours fixes (collier de perles)
+446,,0.03949975276246031,current,gender,Homme Sunnu,Méthode du calendrier (aussi appelée “méthode Ogino”)
+447,,0.025845807840267767,current,gender,Homme Sunnu,Pilules contraceptives d'urgence
+448,,0.009422286165394728,current,gender,Homme Sunnu,Pilules contraceptives orales
+449,,0.09917039005294093,current,gender,Homme Sunnu,Préservatifs
+450,,0.027180394747595326,current,gender,Homme Sunnu,Retrait
+451,,0.0,current,age_group,16-20,Abstinence
+452,,0.0,current,age_group,16-20,Autre : veuillez préciser
+453,,0.0,current,age_group,16-20,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+454,,0.0,current,age_group,16-20,Implants
+455,,0.18417603183426567,current,age_group,16-20,Injectables
+456,,0.0,current,age_group,16-20,Je préfère ne pas répondre
+457,,0.0,current,age_group,16-20,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+458,,0.0,current,age_group,16-20,Méthode des jours fixes (collier de perles)
+459,,0.0,current,age_group,16-20,Méthode du calendrier (aussi appelée “méthode Ogino”)
+460,,0.0,current,age_group,16-20,Pilules contraceptives d'urgence
+461,,0.036338589970840406,current,age_group,16-20,Pilules contraceptives orales
+462,,0.0,current,age_group,16-20,Préservatifs
+463,,0.0,current,age_group,16-20,Retrait
+464,,0.017411586236285893,current,age_group,21-30,Abstinence
+465,,0.000262144718721245,current,age_group,21-30,Autre : veuillez préciser
+466,,0.0,current,age_group,21-30,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+467,,0.06119620203732398,current,age_group,21-30,Implants
+468,,0.07004731323520223,current,age_group,21-30,Injectables
+469,,0.0,current,age_group,21-30,Je préfère ne pas répondre
+470,,0.0036998863197007037,current,age_group,21-30,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+471,,0.004885046743660088,current,age_group,21-30,Méthode des jours fixes (collier de perles)
+472,,0.01987826953840475,current,age_group,21-30,Méthode du calendrier (aussi appelée “méthode Ogino”)
+473,,0.020429824460950187,current,age_group,21-30,Pilules contraceptives d'urgence
+474,,0.012596690127323206,current,age_group,21-30,Pilules contraceptives orales
+475,,0.06783819233467941,current,age_group,21-30,Préservatifs
+476,,0.026826120631861128,current,age_group,21-30,Retrait
+477,,0.006167046586088852,current,age_group,31-45,Abstinence
+478,,0.029601973986344603,current,age_group,31-45,Autre : veuillez préciser
+479,,0.02208417097292891,current,age_group,31-45,Dispositifs intra-utérins DIU (aussi appelés “stérilets”)
+480,,0.13564488527324,current,age_group,31-45,Implants
+481,,0.058087044574445565,current,age_group,31-45,Injectables
+482,,0.0005257254707556916,current,age_group,31-45,Je préfère ne pas répondre
+483,,0.00035048364717046106,current,age_group,31-45,Méthode de l'allaitement (aussi appelée “aménorrhée de lactation”)
+484,,0.0030913492172952085,current,age_group,31-45,Méthode des jours fixes (collier de perles)
+485,,0.028274254403399496,current,age_group,31-45,Méthode du calendrier (aussi appelée “méthode Ogino”)
+486,,0.016541254048890265,current,age_group,31-45,Pilules contraceptives d'urgence
+487,,0.014176595458924416,current,age_group,31-45,Pilules contraceptives orales
+488,,0.04468003817038539,current,age_group,31-45,Préservatifs
+489,,0.012729485350493147,current,age_group,31-45,Retrait

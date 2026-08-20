@@ -1,0 +1,211 @@
+,label,proportion,question,split,group
+0,5,0.2851421758480635,happiness,none,all
+1,9,0.14290434132607877,happiness,none,all
+2,10,0.12279261037597254,happiness,none,all
+3,4,0.12184385478853418,happiness,none,all
+4,6,0.1018119805684359,happiness,none,all
+5,7,0.09823362156390643,happiness,none,all
+6,8,0.07109608863844484,happiness,none,all
+7,3,0.0399663924749353,happiness,none,all
+8,Je ne sais pas / Un tùun ǎ,0.009760060556909877,happiness,none,all
+9,2,0.006448873858718832,happiness,none,all
+10,10,0.23284153493005708,happiness,use,future_user
+11,2,0.0,happiness,use,future_user
+12,3,0.04874668530683745,happiness,use,future_user
+13,4,0.05664522623594613,happiness,use,future_user
+14,5,0.3043171404481564,happiness,use,future_user
+15,6,0.08162538068672796,happiness,use,future_user
+16,7,0.05447871114738174,happiness,use,future_user
+17,8,0.13818678503959983,happiness,use,future_user
+18,9,0.08315853620529368,happiness,use,future_user
+19,Je ne sais pas / Un tùun ǎ,0.0,happiness,use,future_user
+20,10,0.16523230559118732,happiness,use,nonuser
+21,2,0.0,happiness,use,nonuser
+22,3,0.06942822040544587,happiness,use,nonuser
+23,4,0.08128658512218688,happiness,use,nonuser
+24,5,0.3168284867357762,happiness,use,nonuser
+25,6,0.1146517113076605,happiness,use,nonuser
+26,7,0.09047336573938827,happiness,use,nonuser
+27,8,0.03540892099053037,happiness,use,nonuser
+28,9,0.12324719907033839,happiness,use,nonuser
+29,Je ne sais pas / Un tùun ǎ,0.00344320503748613,happiness,use,nonuser
+30,10,0.02142338618775177,happiness,use,past_user
+31,2,0.00012263291638030236,happiness,use,past_user
+32,3,0.026737565495024353,happiness,use,past_user
+33,4,0.2509636263285163,happiness,use,past_user
+34,5,0.3191769766627337,happiness,use,past_user
+35,6,0.08514311057236734,happiness,use,past_user
+36,7,0.16109252619122932,happiness,use,past_user
+37,8,0.0651790362771315,happiness,use,past_user
+38,9,0.0639515572236282,happiness,use,past_user
+39,Je ne sais pas / Un tùun ǎ,0.006209582145237433,happiness,use,past_user
+40,10,0.1263280320151892,happiness,use,user
+41,2,0.021612428849216492,happiness,use,user
+42,3,0.013509060790923955,happiness,use,user
+43,4,0.07833383386556735,happiness,use,user
+44,5,0.21189291667864898,happiness,use,user
+45,6,0.10705157510443844,happiness,use,user
+46,7,0.06637742061460797,happiness,use,user
+47,8,0.09846590411088782,happiness,use,user
+48,9,0.25305945471659885,happiness,use,user
+49,Je ne sais pas / Un tùun ǎ,0.023369373253921005,happiness,use,user
+50,10,0.04640151904000964,happiness,gender,Femme Nyɔnu
+51,2,0.008862091669995138,happiness,gender,Femme Nyɔnu
+52,3,0.07095807853667602,happiness,gender,Femme Nyɔnu
+53,4,0.1444776690040768,happiness,gender,Femme Nyɔnu
+54,5,0.2876117492762997,happiness,gender,Femme Nyɔnu
+55,6,0.13189750213530405,happiness,gender,Femme Nyɔnu
+56,7,0.11370130146913458,happiness,gender,Femme Nyɔnu
+57,8,0.059881206674270215,happiness,gender,Femme Nyɔnu
+58,9,0.1360750535361399,happiness,gender,Femme Nyɔnu
+59,Je ne sais pas / Un tùun ǎ,0.00013382865809400486,happiness,gender,Femme Nyɔnu
+60,10,0.2068763928851156,happiness,gender,Homme Sunnu
+61,2,0.003792641593386323,happiness,gender,Homme Sunnu
+62,3,0.0058537996996012994,happiness,gender,Homme Sunnu
+63,4,0.09693078340063936,happiness,gender,Homme Sunnu
+64,5,0.2824239128752656,happiness,gender,Homme Sunnu
+65,6,0.0686968043369928,happiness,gender,Homme Sunnu
+66,7,0.08120832436855178,happiness,gender,Homme Sunnu
+67,8,0.08344032511222636,happiness,gender,Homme Sunnu
+68,9,0.15042134807619997,happiness,gender,Homme Sunnu
+69,Je ne sais pas / Un tùun ǎ,0.020355667652020983,happiness,gender,Homme Sunnu
+70,10,0.09721970726635998,happiness,age_group,16-20
+71,2,0.0,happiness,age_group,16-20
+72,3,0.31064924346418904,happiness,age_group,16-20
+73,4,0.02674308051480238,happiness,age_group,16-20
+74,5,0.4647280304445071,happiness,age_group,16-20
+75,6,0.09763659651116494,happiness,age_group,16-20
+76,7,0.0,happiness,age_group,16-20
+77,8,0.0030233417989765005,happiness,age_group,16-20
+78,9,0.0,happiness,age_group,16-20
+79,Je ne sais pas / Un tùun ǎ,0.0,happiness,age_group,16-20
+80,10,0.20334984036297069,happiness,age_group,21-30
+81,2,0.020248323639130542,happiness,age_group,21-30
+82,3,0.03478538067196848,happiness,age_group,21-30
+83,4,0.05244770329463291,happiness,age_group,21-30
+84,5,0.23051216678630956,happiness,age_group,21-30
+85,6,0.17642508804202564,happiness,age_group,21-30
+86,7,0.10466626446759017,happiness,age_group,21-30
+87,8,0.0562721205350815,happiness,age_group,21-30
+88,9,0.11381798119179595,happiness,age_group,21-30
+89,Je ne sais pas / Un tùun ǎ,0.0074751310084944815,happiness,age_group,21-30
+90,10,0.08614380915688571,happiness,age_group,31-45
+91,2,0.0003131454674437258,happiness,age_group,31-45
+92,3,0.023824696757618013,happiness,age_group,31-45
+93,4,0.16146878585411423,happiness,age_group,31-45
+94,5,0.29883993759771,happiness,age_group,31-45
+95,6,0.0665258821414818,happiness,age_group,31-45
+96,7,0.10192116912565734,happiness,age_group,31-45
+97,8,0.08284429576502401,happiness,age_group,31-45
+98,9,0.16659774424479692,happiness,age_group,31-45
+99,Je ne sais pas / Un tùun ǎ,0.011520533889268264,happiness,age_group,31-45
+100,5,0.2832635230518771,satisfaction,none,all
+101,8,0.14347367777756925,satisfaction,none,all
+102,6,0.13221111192237625,satisfaction,none,all
+103,10,0.1115802056868838,satisfaction,none,all
+104,4,0.10154039037526034,satisfaction,none,all
+105,7,0.0811816694581194,satisfaction,none,all
+106,9,0.06394001165926816,satisfaction,none,all
+107,3,0.061189032873892796,satisfaction,none,all
+108,Je ne sais pas / Un tùun ǎ,0.011064337908507088,satisfaction,none,all
+109,2,0.009531556336652352,satisfaction,none,all
+110,1,0.0010244829495935875,satisfaction,none,all
+111,1,0.0010064377977737939,satisfaction,use,future_user
+112,10,0.22449993107201321,satisfaction,use,future_user
+113,2,0.0026686886241268403,satisfaction,use,future_user
+114,3,0.07046789575683633,satisfaction,use,future_user
+115,4,0.056601367129299245,satisfaction,use,future_user
+116,5,0.2569393159097299,satisfaction,use,future_user
+117,6,0.10561948440432678,satisfaction,use,future_user
+118,7,0.08260138467249484,satisfaction,use,future_user
+119,8,0.14785758058834547,satisfaction,use,future_user
+120,9,0.04536903949620108,satisfaction,use,future_user
+121,Je ne sais pas / Un tùun ǎ,0.006368874548852698,satisfaction,use,future_user
+122,1,0.00021280010525220397,satisfaction,use,nonuser
+123,10,0.10884762084674274,satisfaction,use,nonuser
+124,2,0.0063892274643820215,satisfaction,use,nonuser
+125,3,0.09022547192228376,satisfaction,use,nonuser
+126,4,0.06333048043655957,satisfaction,use,nonuser
+127,5,0.3480796051208782,satisfaction,use,nonuser
+128,6,0.1137437053638683,satisfaction,use,nonuser
+129,7,0.06226182394647016,satisfaction,use,nonuser
+130,8,0.07567419383843173,satisfaction,use,nonuser
+131,9,0.12574298519344304,satisfaction,use,nonuser
+132,Je ne sais pas / Un tùun ǎ,0.005492085761688115,satisfaction,use,nonuser
+133,1,0.0008076398947551825,satisfaction,use,past_user
+134,10,0.06543956012307119,satisfaction,use,past_user
+135,2,0.0020938402228227043,satisfaction,use,past_user
+136,3,0.014885953904064508,satisfaction,use,past_user
+137,4,0.1048960714031579,satisfaction,use,past_user
+138,5,0.41477028280908956,satisfaction,use,past_user
+139,6,0.20299534614684484,satisfaction,use,past_user
+140,7,0.08091368236916334,satisfaction,use,past_user
+141,8,0.09391327224326365,satisfaction,use,past_user
+142,9,0.013074768738529897,satisfaction,use,past_user
+143,Je ne sais pas / Un tùun ǎ,0.006209582145237433,satisfaction,use,past_user
+144,1,0.0021889495963570726,satisfaction,use,user
+145,10,0.12041603974276069,satisfaction,use,user
+146,2,0.02182890337261221,satisfaction,use,user
+147,3,0.06375314549477998,satisfaction,use,user
+148,4,0.1580425124058891,satisfaction,use,user
+149,5,0.09977397646345582,satisfaction,use,user
+150,6,0.10106346110282204,satisfaction,use,user
+151,7,0.10361537338508518,satisfaction,use,user
+152,8,0.2661999307294012,satisfaction,use,user
+153,9,0.03974833445291573,satisfaction,use,user
+154,Je ne sais pas / Un tùun ǎ,0.023369373253921005,satisfaction,use,user
+155,1,0.0,satisfaction,gender,Femme Nyɔnu
+156,10,0.06288869361894647,satisfaction,gender,Femme Nyɔnu
+157,2,0.002543436989052061,satisfaction,gender,Femme Nyɔnu
+158,3,0.06945964942762906,satisfaction,gender,Femme Nyɔnu
+159,4,0.12983540398678872,satisfaction,gender,Femme Nyɔnu
+160,5,0.2999544054683696,satisfaction,gender,Femme Nyɔnu
+161,6,0.15243690047783523,satisfaction,gender,Femme Nyɔnu
+162,7,0.10819139425836673,satisfaction,gender,Femme Nyɔnu
+163,8,0.16611619197816752,satisfaction,gender,Femme Nyɔnu
+164,9,0.008440095136750574,satisfaction,gender,Femme Nyɔnu
+165,Je ne sais pas / Un tùun ǎ,0.00013382865809400486,satisfaction,gender,Femme Nyɔnu
+166,1,0.0021521327842988426,satisfaction,gender,Homme Sunnu
+167,10,0.16517502203472056,satisfaction,gender,Homme Sunnu
+168,2,0.01722338920741718,satisfaction,gender,Homme Sunnu
+169,3,0.05208555351054076,satisfaction,gender,Homme Sunnu
+170,4,0.07039602878810033,satisfaction,gender,Homme Sunnu
+171,5,0.2648918451186239,satisfaction,gender,Homme Sunnu
+172,6,0.10994855779163686,satisfaction,gender,Homme Sunnu
+173,7,0.051452027087286537,satisfaction,gender,Homme Sunnu
+174,8,0.11855103030379238,satisfaction,gender,Homme Sunnu
+175,9,0.12502884844039727,satisfaction,gender,Homme Sunnu
+176,Je ne sais pas / Un tùun ǎ,0.02309556493318545,satisfaction,gender,Homme Sunnu
+177,1,0.0,satisfaction,age_group,16-20
+178,10,0.09948516871187249,satisfaction,age_group,16-20
+179,2,0.0008047509073341981,satisfaction,age_group,16-20
+180,3,0.28473324366530606,satisfaction,age_group,16-20
+181,4,0.07856206912695977,satisfaction,age_group,16-20
+182,5,0.3224073589639154,satisfaction,age_group,16-20
+183,6,0.06433178256777763,satisfaction,age_group,16-20
+184,7,0.0,satisfaction,age_group,16-20
+185,8,0.14967562605683438,satisfaction,age_group,16-20
+186,9,0.0,satisfaction,age_group,16-20
+187,Je ne sais pas / Un tùun ǎ,0.0,satisfaction,age_group,16-20
+188,1,0.0021069518648166824,satisfaction,age_group,21-30
+189,10,0.16725160940880274,satisfaction,age_group,21-30
+190,2,0.007267662116447669,satisfaction,age_group,21-30
+191,3,0.0707845782606162,satisfaction,age_group,21-30
+192,4,0.11794530361171209,satisfaction,age_group,21-30
+193,5,0.18737109776289426,satisfaction,age_group,21-30
+194,6,0.1622998086489697,satisfaction,age_group,21-30
+195,7,0.0984201510110367,satisfaction,age_group,21-30
+196,8,0.062159546583338644,satisfaction,age_group,21-30
+197,9,0.11504942326899377,satisfaction,age_group,21-30
+198,Je ne sais pas / Un tùun ǎ,0.0093438674623715,satisfaction,age_group,21-30
+199,1,0.0005788379333550661,satisfaction,age_group,31-45
+200,10,0.08586946459574553,satisfaction,age_group,31-45
+201,2,0.01121095525526808,satisfaction,age_group,31-45
+202,3,0.04124353584365294,satisfaction,age_group,31-45
+203,4,0.09529900429517127,satisfaction,age_group,31-45
+204,5,0.3262905434934198,satisfaction,age_group,31-45
+205,6,0.1225330678116004,satisfaction,age_group,31-45
+206,7,0.07854485904233462,satisfaction,age_group,31-45
+207,8,0.1818152702476528,satisfaction,age_group,31-45
+208,9,0.043969086061109885,satisfaction,age_group,31-45
+209,Je ne sais pas / Un tùun ǎ,0.012645375420689659,satisfaction,age_group,31-45

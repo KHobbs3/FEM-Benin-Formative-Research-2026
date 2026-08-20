@@ -1,0 +1,81 @@
+,response,proportion,question,split,group,label
+0,Non / Eo,0.46973500217383524,future_intent,none,all,
+1,Oui / Ɛɛn,0.45966449039187546,future_intent,none,all,
+2,Je ne sais pas / Un tùun ǎ,0.059265893172558676,future_intent,none,all,
+3,Je préfère ne pas répondre / Un jló na yigbe ǎ,0.011334614261730762,future_intent,none,all,
+4,,0.0,future_intent,use,future_user,Je ne sais pas / Un tùun ǎ
+5,,0.0,future_intent,use,future_user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+6,,0.0,future_intent,use,future_user,Non / Eo
+7,,1.0000000000000002,future_intent,use,future_user,Oui / Ɛɛn
+8,,0.13914314944503714,future_intent,use,nonuser,Je ne sais pas / Un tùun ǎ
+9,,0.02970424340707369,future_intent,use,nonuser,Je préfère ne pas répondre / Un jló na yigbe ǎ
+10,,0.8311526071478891,future_intent,use,nonuser,Non / Eo
+11,,0.0,future_intent,use,nonuser,Oui / Ɛɛn
+12,,0.019968578976142792,future_intent,use,past_user,Je ne sais pas / Un tùun ǎ
+13,,0.0,future_intent,use,past_user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+14,,0.6515921397797698,future_intent,use,past_user,Non / Eo
+15,,0.32843928124408756,future_intent,use,past_user,Oui / Ɛɛn
+16,,0.01583123934864416,future_intent,use,user,Je ne sais pas / Un tùun ǎ
+17,,0.0026372146515049374,future_intent,use,user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+18,,0.022944921401519148,future_intent,use,user,Non / Eo
+19,,0.9585866245983317,future_intent,use,user,Oui / Ɛɛn
+20,,0.025182211742165336,future_intent,gender,Femme Nyɔnu,Je ne sais pas / Un tùun ǎ
+21,,0.0,future_intent,gender,Femme Nyɔnu,Je préfère ne pas répondre / Un jló na yigbe ǎ
+22,,0.4771794654226064,future_intent,gender,Femme Nyɔnu,Non / Eo
+23,,0.4976383228352283,future_intent,gender,Femme Nyɔnu,Oui / Ɛɛn
+24,,0.09678184963271895,future_intent,gender,Homme Sunnu,Je ne sais pas / Un tùun ǎ
+25,,0.023810640245139205,future_intent,gender,Homme Sunnu,Je préfère ne pas répondre / Un jló na yigbe ǎ
+26,,0.4615408709242362,future_intent,gender,Homme Sunnu,Non / Eo
+27,,0.4178666391979058,future_intent,gender,Homme Sunnu,Oui / Ɛɛn
+28,,0.08426479817293826,future_intent,age_group,16-20,Je ne sais pas / Un tùun ǎ
+29,,0.0,future_intent,age_group,16-20,Je préfère ne pas répondre / Un jló na yigbe ǎ
+30,,0.3255836730632139,future_intent,age_group,16-20,Non / Eo
+31,,0.5901515287638478,future_intent,age_group,16-20,Oui / Ɛɛn
+32,,0.11428577183329063,future_intent,age_group,21-30,Je ne sais pas / Un tùun ǎ
+33,,0.030227922012052336,future_intent,age_group,21-30,Je préfère ne pas répondre / Un jló na yigbe ǎ
+34,,0.40405151082616725,future_intent,age_group,21-30,Non / Eo
+35,,0.45143479532848974,future_intent,age_group,21-30,Oui / Ɛɛn
+36,,0.03131524226171507,future_intent,age_group,31-45,Je ne sais pas / Un tùun ǎ
+37,,0.003106231774818265,future_intent,age_group,31-45,Je préfère ne pas répondre / Un jló na yigbe ǎ
+38,,0.5109625125923093,future_intent,age_group,31-45,Non / Eo
+39,,0.45461601337115737,future_intent,age_group,31-45,Oui / Ɛɛn
+40,Oui / Ɛɛn,0.6381950498334038,considered_use,none,all,
+41,Non / Eo,0.31491723165306207,considered_use,none,all,
+42,Je ne sais pas / Un tùun ǎ,0.03055974077659912,considered_use,none,all,
+43,Je préfère ne pas répondre / Un jló na yigbe ǎ,0.016327977736935156,considered_use,none,all,
+44,,0.08973475281310718,considered_use,use,future_user,Je ne sais pas / Un tùun ǎ
+45,,0.0,considered_use,use,future_user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+46,,0.23862452630507455,considered_use,use,future_user,Non / Eo
+47,,0.6716407208818185,considered_use,use,future_user,Oui / Ɛɛn
+48,,0.05962226839941815,considered_use,use,nonuser,Je ne sais pas / Un tùun ǎ
+49,,0.03070527560927424,considered_use,use,nonuser,Je préfère ne pas répondre / Un jló na yigbe ǎ
+50,,0.6892627048648119,considered_use,use,nonuser,Non / Eo
+51,,0.2204097511264956,considered_use,use,nonuser,Oui / Ɛɛn
+52,,0.0010348131765216223,considered_use,use,past_user,Je ne sais pas / Un tùun ǎ
+53,,0.008891205020200936,considered_use,use,past_user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+54,,0.17150354855334,considered_use,use,past_user,Non / Eo
+55,,0.8185704332499377,considered_use,use,past_user,Oui / Ɛɛn
+56,,0.00334133943502435,considered_use,use,user,Je ne sais pas / Un tùun ǎ
+57,,0.010550700056832075,considered_use,use,user,Je préfère ne pas répondre / Un jló na yigbe ǎ
+58,,0.014628887006982706,considered_use,use,user,Non / Eo
+59,,0.9714790735011608,considered_use,use,user,Oui / Ɛɛn
+60,,0.0012242638495188678,considered_use,gender,Femme Nyɔnu,Je ne sais pas / Un tùun ǎ
+61,,0.007558005659973431,considered_use,gender,Femme Nyɔnu,Je préfère ne pas répondre / Un jló na yigbe ǎ
+62,,0.41005657489569003,considered_use,gender,Femme Nyɔnu,Non / Eo
+63,,0.5811611555948176,considered_use,gender,Femme Nyɔnu,Oui / Ɛɛn
+64,,0.06284934180992502,considered_use,gender,Homme Sunnu,Je ne sais pas / Un tùun ǎ
+65,,0.025981098432480886,considered_use,gender,Homme Sunnu,Je préfère ne pas répondre / Un jló na yigbe ǎ
+66,,0.2101972216967465,considered_use,gender,Homme Sunnu,Non / Eo
+67,,0.7009723380608477,considered_use,gender,Homme Sunnu,Oui / Ɛɛn
+68,,0.02864617296360079,considered_use,age_group,16-20,Je ne sais pas / Un tùun ǎ
+69,,0.0,considered_use,age_group,16-20,Je préfère ne pas répondre / Un jló na yigbe ǎ
+70,,0.3819583943254164,considered_use,age_group,16-20,Non / Eo
+71,,0.5893954327109828,considered_use,age_group,16-20,Oui / Ɛɛn
+72,,0.03709962941608458,considered_use,age_group,21-30,Je ne sais pas / Un tùun ǎ
+73,,0.014904186505013505,considered_use,age_group,21-30,Je préfère ne pas répondre / Un jló na yigbe ǎ
+74,,0.4001727298328104,considered_use,age_group,21-30,Non / Eo
+75,,0.5478234542460915,considered_use,age_group,21-30,Oui / Ɛɛn
+76,,0.027573301391500927,considered_use,age_group,31-45,Je ne sais pas / Un tùun ǎ
+77,,0.018129489680008857,considered_use,age_group,31-45,Je préfère ne pas répondre / Un jló na yigbe ǎ
+78,,0.2696604072034883,considered_use,age_group,31-45,Non / Eo
+79,,0.684636801725002,considered_use,age_group,31-45,Oui / Ɛɛn

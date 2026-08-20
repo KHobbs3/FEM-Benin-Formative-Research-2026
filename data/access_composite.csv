@@ -1,0 +1,21 @@
+,barrier,use_group,rate
+0,Supply (stockout),user,0.8430221250916907
+1,Supply (stockout),past_user,0.8250521680032201
+2,Supply (stockout),future_user,0.02461776209631784
+3,Supply (stockout),non_user,
+4,Supply (stockout),all,0.46507869129878937
+5,Geographic (travel gap),user,0.22471099992635896
+6,Geographic (travel gap),past_user,0.12009562110314684
+7,Geographic (travel gap),future_user,0.0
+8,Geographic (travel gap),non_user,
+9,Geographic (travel gap),all,0.09762799517262966
+10,Cost (paid > 0),user,0.7421470676072269
+11,Cost (paid > 0),past_user,0.47758050029577975
+12,Cost (paid > 0),future_user,0.0
+13,Cost (paid > 0),non_user,
+14,Cost (paid > 0),all,0.34326335790404866
+15,Any barrier,user,0.9229760366918317
+16,Any barrier,past_user,0.8915685312528563
+17,Any barrier,future_user,0.02461776209631784
+18,Any barrier,non_user,
+19,Any barrier,all,0.5059363861726451

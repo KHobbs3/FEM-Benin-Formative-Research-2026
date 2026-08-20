@@ -1,0 +1,16 @@
+,metric,split,group,value
+0,mean_cost_users,use,past_user,1836.0740909880635
+1,mean_cost_users,use,user,1489.808566555753
+2,mean_cost_nonusers,use,future_user,10206.264341925464
+3,mean_cost_nonusers,use,nonuser,6372.242458713359
+4,mean_cost_users,gender,Femme Nyɔnu,1616.666880157248
+5,mean_cost_users,gender,Homme Sunnu,1644.134142278092
+6,mean_cost_nonusers,gender,Femme Nyɔnu,9238.658551568866
+7,mean_cost_nonusers,gender,Homme Sunnu,4616.905594261399
+8,mean_cost_users,age_group,16-20,974.274838323152
+9,mean_cost_users,age_group,21-30,1154.9647073423257
+10,mean_cost_users,age_group,31-45,1818.9677709285468
+11,mean_cost_nonusers,age_group,16-20,4529.179462754711
+12,mean_cost_nonusers,age_group,21-30,10277.060885186438
+13,mean_cost_nonusers,age_group,31-45,6931.2498859160605
+14,cost_barrier_overall,all,all,0.6193121934925485

@@ -1,0 +1,72 @@
+,variable,category,count,proportion
+0,_total,Total,827,1.0
+1,use,Current user,299,0.3615477629987908
+2,use,Future user,98,0.1185006045949214
+3,use,Non-user,302,0.3651753325272068
+4,use,Past user,128,0.154776299879081
+5,gender,Femme,411,0.4969770253929867
+6,gender,Homme,416,0.5030229746070133
+7,age_group,16-20,29,0.03506650544135429
+8,age_group,21-30,330,0.39903264812575573
+9,age_group,31-45,468,0.56590084643289
+10,occupation,Aide ménagère,1,0.0013089005235602095
+11,occupation,Artisan,88,0.11518324607329843
+12,occupation,Artisan|Autre,7,0.009162303664921465
+13,occupation,Artisan|Ouvrier du bâtiment|Autre,1,0.0013089005235602095
+14,occupation,Artisan|Petits boulots,1,0.0013089005235602095
+15,occupation,Autre,63,0.0824607329842932
+16,occupation,Dans les transports,13,0.017015706806282723
+17,occupation,Dans les transports|Autre,1,0.0013089005235602095
+18,occupation,Femme au foyer|Autre,1,0.0013089005235602095
+19,occupation,"Fermier, agriculteur, pêcheur",150,0.19633507853403143
+20,occupation,"Fermier, agriculteur, pêcheur|Artisan",28,0.03664921465968586
+21,occupation,"Fermier, agriculteur, pêcheur|Artisan|Petits boulots|Autre",1,0.0013089005235602095
+22,occupation,"Fermier, agriculteur, pêcheur|Artisan|Petits boulots|Femme au foyer",1,0.0013089005235602095
+23,occupation,"Fermier, agriculteur, pêcheur|Artisan|Professionnel de santé paramédical",1,0.0013089005235602095
+24,occupation,"Fermier, agriculteur, pêcheur|Autre",24,0.031413612565445025
+25,occupation,"Fermier, agriculteur, pêcheur|Dans les transports",3,0.003926701570680628
+26,occupation,"Fermier, agriculteur, pêcheur|Dans les transports|Petits boulots",1,0.0013089005235602095
+27,occupation,"Fermier, agriculteur, pêcheur|Ouvrier du bâtiment",2,0.002617801047120419
+28,occupation,"Fermier, agriculteur, pêcheur|Ouvrier du bâtiment|Autre",1,0.0013089005235602095
+29,occupation,"Fermier, agriculteur, pêcheur|Personnel religieux",2,0.002617801047120419
+30,occupation,"Fermier, agriculteur, pêcheur|Petits boulots",11,0.014397905759162303
+31,occupation,"Fermier, agriculteur, pêcheur|Petits boulots|Autre",1,0.0013089005235602095
+32,occupation,"Fermier, agriculteur, pêcheur|Secteur privé",1,0.0013089005235602095
+33,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant",27,0.03534031413612566
+34,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Artisan",9,0.011780104712041885
+35,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Dans les transports",1,0.0013089005235602095
+36,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Dans les transports|Petits boulots",1,0.0013089005235602095
+37,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Ouvrier du bâtiment|Autre",1,0.0013089005235602095
+38,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Petits boulots",2,0.002617801047120419
+39,occupation,"Fermier, agriculteur, pêcheur|Vendeur ou petit commerçant|Petits boulots|Femme au foyer",2,0.002617801047120419
+40,occupation,Médecine traditionnelle,2,0.002617801047120419
+41,occupation,Ouvrier du bâtiment,5,0.006544502617801047
+42,occupation,Ouvrier du bâtiment|Autre,1,0.0013089005235602095
+43,occupation,Petits boulots,13,0.017015706806282723
+44,occupation,Petits boulots|Autre,1,0.0013089005235602095
+45,occupation,Professionnel de santé paramédical,2,0.002617801047120419
+46,occupation,Retraité(e),1,0.0013089005235602095
+47,occupation,Secteur privé,1,0.0013089005235602095
+48,occupation,Secteur public,3,0.003926701570680628
+49,occupation,Secteur public|Petits boulots,1,0.0013089005235602095
+50,occupation,Vendeur ou petit commerçant,229,0.299738219895288
+51,occupation,Vendeur ou petit commerçant|Aide ménagère|Petits boulots|Femme au foyer,2,0.002617801047120419
+52,occupation,Vendeur ou petit commerçant|Artisan,18,0.02356020942408377
+53,occupation,Vendeur ou petit commerçant|Autre,16,0.020942408376963352
+54,occupation,Vendeur ou petit commerçant|Petits boulots,11,0.014397905759162303
+55,occupation,Vendeur ou petit commerçant|Petits boulots|Autre,2,0.002617801047120419
+56,occupation,Vendeur ou petit commerçant|Petits boulots|Femme au foyer,3,0.003926701570680628
+57,occupation,Vendeur ou petit commerçant|Petits boulots|Femme au foyer|Autre,1,0.0013089005235602095
+58,occupation,Vendeur ou petit commerçant|Professionnel de santé paramédical,2,0.002617801047120419
+59,occupation,Vendeur ou petit commerçant|Secteur public,1,0.0013089005235602095
+60,occupation,Vendeur ou petit commerçant|Secteur public|Petits boulots,1,0.0013089005235602095
+61,occupation,Étudiant(e),2,0.002617801047120419
+62,religion,Aucune,28,0.03385731559854897
+63,religion,Autre,86,0.10399032648125756
+64,religion,Christianisme,427,0.5163240628778718
+65,religion,Islam,184,0.22249093107617895
+66,religion,Préfère ne pas répondre,4,0.0048367593712212815
+67,religion,Traditionnelle,98,0.1185006045949214
+68,urban_rural,Rural,524,0.6336154776299879
+69,urban_rural,Semi-urbain,260,0.3143893591293833
+70,urban_rural,Urbain,43,0.05199516324062878
