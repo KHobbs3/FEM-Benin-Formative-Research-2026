@@ -12,27 +12,23 @@ from src.data_loader import (
     load_pp_radio_stations,
 )
 
-FEM_ORANGE = "#C1693A"
-FEM_NAVY   = "#2E3F52"
-FEM_TAUPE  = "#7A7068"
-FEM_BROWN  = "#8B5E45"
-FEM_STEEL  = "#5A6E7F"
+from src.fem_colours import FEM_ORANGE, FEM_NAVY, FEM_TAUPE, FEM_BROWN, FEM_STEEL
 
 SPLIT_OPTIONS = {
     "FP use status": {
         "split_by": "fp_use",
         "order":  ["Using FP", "Not using FP", "All"],
-        "colors": {"Using FP": FEM_NAVY, "Not using FP": FEM_ORANGE, "All": FEM_TAUPE},
+        "colors": {"Using FP": FEM_STEEL, "Not using FP": FEM_BROWN, "All": FEM_TAUPE},
     },
     "Gender": {
         "split_by": "gender",
         "order":  ["Male", "Female", "All"],
-        "colors": {"Male": FEM_STEEL, "Female": FEM_BROWN, "All": FEM_TAUPE},
+        "colors": {"Male": FEM_NAVY, "Female": FEM_ORANGE, "All": FEM_TAUPE},
     },
     "Treatment / Comparison": {
         "split_by": "treatment_arm",
         "order":  ["Treatment", "Comparison", "All"],
-        "colors": {"Treatment": FEM_NAVY, "Comparison": FEM_ORANGE, "All": FEM_TAUPE},
+        "colors": {"Treatment": FEM_STEEL, "Comparison": FEM_BROWN, "All": FEM_TAUPE},
     },
 }
 

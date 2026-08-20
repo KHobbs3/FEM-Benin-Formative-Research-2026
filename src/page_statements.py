@@ -14,16 +14,18 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from src.data_loader import load_statements_heatmap
-from src.fem_colours import FEM_ORANGE, FEM_BROWN
+from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_STEEL, FEM_NAVY
 
 # ── Colour scale ──────────────────────────────────────────────────────────────
+# Cool-to-warm, matching fem_colours.FEM_SCALE's direction (niger_app's
+# statements page instead ramps warm-to-cool, ending on navy).
 FEM_SCALE_HC = [
-    [0.0,  "#f8f3ee"],
-    [0.15, "#f0d5b8"],
-    [0.35, "#d9935e"],
-    [0.55, FEM_ORANGE],
+    [0.0,  "#f4f7f9"],
+    [0.15, "#c3d0d8"],
+    [0.35, FEM_STEEL],
+    [0.55, FEM_NAVY],
     [0.75, FEM_BROWN],
-    [1.0,  "#2E3F52"],
+    [1.0,  FEM_ORANGE],
 ]
 
 USE_GROUP_LABELS = {

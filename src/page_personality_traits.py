@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY
+from src.fem_colours import FEM_PALETTE
 from src.data_loader import (
     load_personality_life_goals,
     load_personality_goals_achievable,
@@ -11,8 +11,6 @@ from src.data_loader import (
     load_personality_decision_confident,
     load_personality_wellbeing,
 )
-
-FEM_PALETTE = [FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY]
 
 SPLIT_MAP = {
     "User group": "use",

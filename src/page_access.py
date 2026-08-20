@@ -15,7 +15,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
-from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY
+from src.fem_colours import FEM_PALETTE
 from src.data_loader import (
     load_access_stockouts,
     load_access_stockout_responses,
@@ -23,8 +23,6 @@ from src.data_loader import (
     load_access_affordability,
     load_access_composite,
 )
-
-FEM_PALETTE = [FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY]
 
 SPLIT_MAP = {
     "User group": "use",

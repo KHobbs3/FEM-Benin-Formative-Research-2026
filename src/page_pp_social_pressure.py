@@ -5,23 +5,18 @@ import plotly.graph_objects as go
 import pandas as pd
 
 from src.data_loader import load_pp_religious_influence, load_pp_info_sources
-
-FEM_ORANGE = "#C1693A"
-FEM_NAVY   = "#2E3F52"
-FEM_TAUPE  = "#7A7068"
-FEM_BROWN  = "#8B5E45"
-FEM_STEEL  = "#5A6E7F"
+from src.fem_colours import FEM_ORANGE, FEM_NAVY, FEM_TAUPE, FEM_BROWN, FEM_STEEL
 
 SPLIT_OPTIONS = {
     "FP use status": {
         "split_by": "fp_use",
         "order":  ["Using FP", "Not using FP", "All"],
-        "colors": {"Using FP": FEM_NAVY, "Not using FP": FEM_ORANGE, "All": FEM_TAUPE},
+        "colors": {"Using FP": FEM_STEEL, "Not using FP": FEM_BROWN, "All": FEM_TAUPE},
     },
     "Gender": {
         "split_by": "gender",
         "order":  ["Male", "Female", "All"],
-        "colors": {"Male": FEM_STEEL, "Female": FEM_BROWN, "All": FEM_TAUPE},
+        "colors": {"Male": FEM_NAVY, "Female": FEM_ORANGE, "All": FEM_TAUPE},
     },
 }
 

@@ -9,11 +9,11 @@ from src.data_loader import (
     load_pp_exposure_attitudes, load_pp_exposure_partner_norms,
 )
 
-FEM_NAVY   = "#2E3F52"
-FEM_ORANGE = "#C1693A"
+from src.fem_colours import FEM_STEEL, FEM_BROWN
+
 TREATMENT_LABEL = "Heard campaign (Treatment)"
 COMPARISON_LABEL = "Did not hear FP ads (Comparison)"
-GROUP_COLORS = {TREATMENT_LABEL: FEM_NAVY, COMPARISON_LABEL: FEM_ORANGE}
+GROUP_COLORS = {TREATMENT_LABEL: FEM_STEEL, COMPARISON_LABEL: FEM_BROWN}
 GROUP_ORDER = [TREATMENT_LABEL, COMPARISON_LABEL]
 
 _CHART = dict(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
