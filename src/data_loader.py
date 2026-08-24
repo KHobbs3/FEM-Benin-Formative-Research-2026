@@ -156,14 +156,36 @@ def load_personas_elbow():
     return _load("1ld9MIa9rUFEiftaAEBCbjiQ3sRN0e09E", index_col=0)
 
 
+# Region-split personas (added 2026-08-24, mirrors the by-gender split above).
+def load_personas_centroids_by_region():
+    return _load("10COsxcnTE3CduIVpCMsRPic156MxEzPV", index_col=0)
+
+
+def load_personas_profile_by_region():
+    return _load("1p1ew6HVJHBT4inzE80gpmhZtLD2IQC8I", index_col=0)
+
+
+def load_personas_elbow_by_region():
+    return _load("1OPQPHSV1cgZJfHCf3h2LznN3iCoeOY68", index_col=0)
+
+
 # ── Drivers & barriers ──────────────────────────────────────────────────────
 # Unlike the pages above, this doesn't come from pipeline_output/'s ETL
 # modules -- it's produced by table_analysis/03_driver_barrier_table_w_counts.ipynb
 # into data/3_final/Benin_drivers-barriers_table_*.csv, then uploaded to
 # Drive by hand (not wired into run_pipeline.py). Re-upload the latest dated
 # file and paste its file ID here after re-running that notebook.
+#
+# 2026-08-24: regenerated as Benin_drivers-barriers_table_26_08_24.csv (in
+# benin_app/data/) to (1) fix the "Statements" column being blank for every
+# row -- driver_barrier_statement_links.csv had Niger's Hausa/English labels
+# left over from that project, which never matched Benin's French/Fon text,
+# and get_statement_name() also silently failed on Benin's blank `hint` column
+# -- and (2) add a REGION split (North-East/North-West/South-South/Mid-South,
+# mapped from `province`). TODO: upload the new file to Drive and paste its
+# file ID below in place of the 26_08_18 one.
 def load_drivers_barriers():
-    return _load("1c8P4w_I320QgQ1lbqzqLXd-ZsFQN7kLD")  # Benin_drivers-barriers_table_26_08_18.csv
+    return _load("1Lohb9Crv6rrf0zsgQvyHbKF3Ab0Xxk2r")  # Benin_drivers-barriers_table_26_08_24.csv
 
 
 # ── Phone Pulse pages -- NOT COLLECTED FOR BENIN ───────────────────────────
@@ -224,3 +246,14 @@ AGE_GROUPS  = ["16-20", "21-30", "31-45"]
 # against the actual GENDER: columns in Benin_drivers-barriers_table_*.csv.
 GENDERS     = ["Femme Nyɔnu", "Homme Sunnu"]
 URBAN_RURAL = ["Rural", "Semi-urbain", "Urbain"]  # verified against the actual weighted data's urban_rural values
+
+# Region grouping, per user-supplied mapping (2026-08-24). Not a raw survey field --
+# derived from `province`. See PROVINCE_TO_REGION in pipeline_output/pipeline/config.py
+# and table_analysis/03_driver_barrier_table_w_counts.ipynb (same mapping, kept in sync).
+PROVINCE_TO_REGION = {
+    "Borgou": "North-East",
+    "Donga": "North-West",
+    "Littoral": "South-South", "Oueme": "South-South", "Ouémé": "South-South", "Atlantique": "South-South",
+    "Couffo": "Mid-South", "Zou": "Mid-South", "Plateau": "Mid-South",
+}
+REGIONS = ["North-East", "North-West", "South-South", "Mid-South"]

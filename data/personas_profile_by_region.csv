@@ -1,0 +1,239 @@
+,region,persona,variable,value,proportion
+0,North-East,0,age,mean,31.83116883116883
+1,North-East,0,gender,Homme Sunnu,0.974025974025974
+2,North-East,0,gender,Femme Nyɔnu,0.025974025974025976
+3,North-East,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.56
+4,North-East,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Artisan/ Alɔnǔwǎtɔ́",0.13333333333333333
+5,North-East,0,occupation,Artisan/ Alɔnǔwǎtɔ́,0.10666666666666667
+6,North-East,0,religion,Islam / Islam,0.7662337662337663
+7,North-East,0,religion,Christianisme/ Klisanwun,0.23376623376623376
+8,North-East,0,life_goals,Construire / posséder une maison/ xwé gbá/ɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Avoir un travail meilleur / agréable / respecté/ Mi ɖo azɔ ɖagbe/e vivi/e nɔ si,0.025974025974025976
+9,North-East,0,life_goals,Avoir moins d'enfants/ Ðɔ vǐ kpɛɖé|Une longue vie Gbɛ gaga|Prospérité financière/ akwɛ́ ɖiɖó,0.012987012987012988
+10,North-East,0,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Trouver un emploi/Mon Azɔ̌|Prospérité financière/ akwɛ́ ɖiɖó,0.012987012987012988
+11,North-East,0,age_group,21-30,0.5454545454545454
+12,North-East,0,age_group,31-45,0.44155844155844154
+13,North-East,0,age_group,16-20,0.012987012987012988
+14,North-East,0,use,user,0.44155844155844154
+15,North-East,0,use,nonuser,0.44155844155844154
+16,North-East,0,use,future_user,0.07792207792207792
+17,North-East,0,use,past_user,0.03896103896103896
+18,North-East,0,region,North-East,1.0
+19,North-East,0,_count,n,77.0
+20,North-East,0,_count,weighted_n,163260.01253960613
+21,North-East,1,age,mean,31.28767123287671
+22,North-East,1,gender,Femme Nyɔnu,1.0
+23,North-East,1,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.7818181818181819
+24,North-East,1,occupation,Artisan/ Alɔnǔwǎtɔ́,0.16363636363636364
+25,North-East,1,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.01818181818181818
+26,North-East,1,religion,Islam / Islam,0.7397260273972602
+27,North-East,1,religion,Christianisme/ Klisanwun,0.2602739726027397
+28,North-East,1,life_goals,Avoir davantage d'enfants/ Mi ji vi gege|Prospérité financière/ akwɛ́ ɖiɖó|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn,0.0410958904109589
+29,North-East,1,life_goals,Prospérité financière/ akwɛ́ ɖiɖó|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.0410958904109589
+30,North-East,1,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.0410958904109589
+31,North-East,1,age_group,31-45,0.4794520547945205
+32,North-East,1,age_group,21-30,0.4520547945205479
+33,North-East,1,age_group,16-20,0.0684931506849315
+34,North-East,1,use,past_user,0.3150684931506849
+35,North-East,1,use,nonuser,0.2876712328767123
+36,North-East,1,use,user,0.2054794520547945
+37,North-East,1,use,future_user,0.1917808219178082
+38,North-East,1,region,North-East,1.0
+39,North-East,1,_count,n,73.0
+40,North-East,1,_count,weighted_n,147837.70440113245
+41,North-East,2,age,mean,26.22222222222222
+42,North-East,2,gender,Homme Sunnu,0.6666666666666666
+43,North-East,2,gender,Femme Nyɔnu,0.3333333333333333
+44,North-East,2,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Artisan/ Alɔnǔwǎtɔ́",1.0
+45,North-East,2,religion,Islam / Islam,0.7777777777777778
+46,North-East,2,religion,Christianisme/ Klisanwun,0.2222222222222222
+47,North-East,2,life_goals,Une longue vie Gbɛ gaga|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une famille paisible/ Xwédo fífá ɖé .,0.1111111111111111
+48,North-East,2,life_goals,Avoir un revenu stable/ Nɔ ɖó akwɛ e nɔ nɔ ayǐ é ɖé|Trouver un emploi/Mon Azɔ̌,0.1111111111111111
+49,North-East,2,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Construire / posséder une maison/ xwé gbá/ɖó,0.1111111111111111
+50,North-East,2,age_group,21-30,0.6666666666666666
+51,North-East,2,age_group,31-45,0.2222222222222222
+52,North-East,2,age_group,16-20,0.1111111111111111
+53,North-East,2,use,nonuser,0.4444444444444444
+54,North-East,2,use,user,0.3333333333333333
+55,North-East,2,use,past_user,0.2222222222222222
+56,North-East,2,region,North-East,1.0
+57,North-East,2,_count,n,9.0
+58,North-East,2,_count,weighted_n,18275.696404853268
+59,North-West,0,age,mean,29.0
+60,North-West,0,gender,Femme Nyɔnu,0.9615384615384616
+61,North-West,0,gender,Homme Sunnu,0.038461538461538464
+62,North-West,0,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.7142857142857143
+63,North-West,0,occupation,Artisan/ Alɔnǔwǎtɔ́,0.23809523809523808
+64,North-West,0,occupation,Autre,0.047619047619047616
+65,North-West,0,religion,Islam / Islam,1.0
+66,North-West,0,life_goals,Une famille paisible/ Xwédo fífá ɖé .|Avoir un revenu stable/ Nɔ ɖó akwɛ e nɔ nɔ ayǐ é ɖé|Une meilleure éducation pour moi-même/ Azɔmɛyiyi ɖagbe nu nyiɖesu,0.038461538461538464
+67,North-West,0,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Des enfants bien élevés/ Vi e nɔ wa nu ganji|Une famille paisible/ Xwédo fífá ɖé .|Être respecté(e) de ses pairs/ è ni nɔ ɖó sísí nú mɛ ɖò gbɛ̌ mɛtɔn lɛ gɔ́n,0.038461538461538464
+68,North-West,0,life_goals,Avoir un revenu stable/ Nɔ ɖó akwɛ e nɔ nɔ ayǐ é ɖé|Avoir bonne mine et être en forme/ Nɔ ɖagbe bo nɔ ɖo ganji|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.038461538461538464
+69,North-West,0,age_group,21-30,0.7307692307692307
+70,North-West,0,age_group,31-45,0.19230769230769232
+71,North-West,0,age_group,16-20,0.07692307692307693
+72,North-West,0,use,nonuser,0.5769230769230769
+73,North-West,0,use,past_user,0.23076923076923078
+74,North-West,0,use,user,0.15384615384615385
+75,North-West,0,use,future_user,0.038461538461538464
+76,North-West,0,region,North-West,1.0
+77,North-West,0,_count,n,26.0
+78,North-West,0,_count,weighted_n,143042.58374980997
+79,North-West,1,age,mean,33.1578947368421
+80,North-West,1,gender,Homme Sunnu,1.0
+81,North-West,1,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.6111111111111112
+82,North-West,1,occupation,Autre,0.2777777777777778
+83,North-West,1,occupation,Petits boulots / Travail occasionnel/Azɔ̌ kléhun kléhun lɛ / Azɔ̌ hwɛhwɛ tɔn lɛ,0.05555555555555555
+84,North-West,1,religion,Islam / Islam,0.8947368421052632
+85,North-West,1,religion,Christianisme/ Klisanwun,0.10526315789473684
+86,North-West,1,life_goals,Avoir un revenu stable/ Nɔ ɖó akwɛ e nɔ nɔ ayǐ é ɖé|Construire / posséder une maison/ xwé gbá/ɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.05263157894736842
+87,North-West,1,life_goals,Avoir un travail meilleur / agréable / respecté/ Mi ɖo azɔ ɖagbe/e vivi/e nɔ si|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Une longue vie Gbɛ gaga,0.05263157894736842
+88,North-West,1,life_goals,Une famille paisible/ Xwédo fífá ɖé .|Des enfants bien élevés/ Vi e nɔ wa nu ganji|Avoir un revenu stable/ Nɔ ɖó akwɛ e nɔ nɔ ayǐ é ɖé,0.05263157894736842
+89,North-West,1,age_group,31-45,0.6842105263157895
+90,North-West,1,age_group,21-30,0.3157894736842105
+91,North-West,1,use,user,0.5789473684210527
+92,North-West,1,use,nonuser,0.3157894736842105
+93,North-West,1,use,future_user,0.05263157894736842
+94,North-West,1,use,past_user,0.05263157894736842
+95,North-West,1,region,North-West,1.0
+96,North-West,1,_count,n,19.0
+97,North-West,1,_count,weighted_n,35383.49624909775
+98,North-West,2,age,mean,30.8
+99,North-West,2,gender,Homme Sunnu,1.0
+100,North-West,2,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.8
+101,North-West,2,occupation,Autre,0.2
+102,North-West,2,religion,Islam / Islam,1.0
+103,North-West,2,life_goals,Une famille paisible/ Xwédo fífá ɖé .|Vivre à l'étranger/ to ɖevo mɛ ninɔ|Avoir un travail meilleur / agréable / respecté/ Mi ɖo azɔ ɖagbe/e vivi/e nɔ si,0.2
+104,North-West,2,life_goals,Une longue vie Gbɛ gaga|Avoir davantage d'enfants/ Mi ji vi gege|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.2
+105,North-West,2,life_goals,Avoir un travail meilleur / agréable / respecté/ Mi ɖo azɔ ɖagbe/e vivi/e nɔ si|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Vivre à l'étranger/ to ɖevo mɛ ninɔ,0.2
+106,North-West,2,age_group,31-45,0.8
+107,North-West,2,age_group,21-30,0.2
+108,North-West,2,use,user,1.0
+109,North-West,2,region,North-West,1.0
+110,North-West,2,_count,n,5.0
+111,North-West,2,_count,weighted_n,8164.534191582949
+112,Mid-South,0,age,mean,36.63529411764706
+113,Mid-South,0,gender,Homme Sunnu,0.8470588235294118
+114,Mid-South,0,gender,Femme Nyɔnu,0.15294117647058825
+115,Mid-South,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.611764705882353
+116,Mid-South,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /",0.058823529411764705
+117,Mid-South,0,occupation,Autre,0.058823529411764705
+118,Mid-South,0,religion,Traditionnelle/ Akɔta,0.5764705882352941
+119,Mid-South,0,religion,Christianisme/ Klisanwun,0.3176470588235294
+120,Mid-South,0,religion,Autre/Ðevo,0.058823529411764705
+121,Mid-South,0,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn,0.15294117647058825
+122,Mid-South,0,life_goals,Prospérité financière/ akwɛ́ ɖiɖó|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.09411764705882353
+123,Mid-South,0,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.07058823529411765
+124,Mid-South,0,age_group,31-45,0.7176470588235294
+125,Mid-South,0,age_group,21-30,0.25882352941176473
+126,Mid-South,0,age_group,16-20,0.023529411764705882
+127,Mid-South,0,use,nonuser,0.49411764705882355
+128,Mid-South,0,use,user,0.25882352941176473
+129,Mid-South,0,use,past_user,0.23529411764705882
+130,Mid-South,0,use,future_user,0.011764705882352941
+131,Mid-South,0,region,Mid-South,1.0
+132,Mid-South,0,_count,n,85.0
+133,Mid-South,0,_count,weighted_n,149069.94461177057
+134,Mid-South,1,age,mean,31.9
+135,Mid-South,1,gender,Femme Nyɔnu,1.0
+136,Mid-South,1,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.5617977528089888
+137,Mid-South,1,occupation,Artisan/ Alɔnǔwǎtɔ́,0.11235955056179775
+138,Mid-South,1,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /|Artisan/ Alɔnǔwǎtɔ́,0.07865168539325842
+139,Mid-South,1,religion,Autre/Ðevo,0.7888888888888889
+140,Mid-South,1,religion,Traditionnelle/ Akɔta,0.12222222222222222
+141,Mid-South,1,religion,Christianisme/ Klisanwun,0.05555555555555555
+142,Mid-South,1,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Une famille paisible/ Xwédo fífá ɖé .|Prospérité financière/ akwɛ́ ɖiɖó,0.022222222222222223
+143,Mid-South,1,life_goals,Une longue vie Gbɛ gaga|Prospérité financière/ akwɛ́ ɖiɖó,0.022222222222222223
+144,Mid-South,1,life_goals,Une famille paisible/ Xwédo fífá ɖé .|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.022222222222222223
+145,Mid-South,1,age_group,31-45,0.5222222222222223
+146,Mid-South,1,age_group,21-30,0.3888888888888889
+147,Mid-South,1,age_group,16-20,0.08888888888888889
+148,Mid-South,1,use,nonuser,0.4222222222222222
+149,Mid-South,1,use,past_user,0.2222222222222222
+150,Mid-South,1,use,user,0.2
+151,Mid-South,1,use,future_user,0.15555555555555556
+152,Mid-South,1,region,Mid-South,1.0
+153,Mid-South,1,_count,n,90.0
+154,Mid-South,1,_count,weighted_n,222267.91654724992
+155,Mid-South,2,age,mean,32.14705882352941
+156,Mid-South,2,gender,Homme Sunnu,1.0
+157,Mid-South,2,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.23529411764705882
+158,Mid-South,2,occupation,Autre,0.20588235294117646
+159,Mid-South,2,occupation,Artisan/ Alɔnǔwǎtɔ́,0.11764705882352941
+160,Mid-South,2,religion,Christianisme/ Klisanwun,0.9117647058823529
+161,Mid-South,2,religion,Aucune/Ðebǔ,0.058823529411764705
+162,Mid-South,2,religion,Islam / Islam,0.029411764705882353
+163,Mid-South,2,life_goals,Prospérité financière/ akwɛ́ ɖiɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn,0.23529411764705882
+164,Mid-South,2,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Prospérité financière/ akwɛ́ ɖiɖó,0.11764705882352941
+165,Mid-South,2,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Prospérité financière/ akwɛ́ ɖiɖó|Trouver un emploi/Mon Azɔ̌,0.058823529411764705
+166,Mid-South,2,age_group,31-45,0.5
+167,Mid-South,2,age_group,21-30,0.5
+168,Mid-South,2,use,nonuser,0.7352941176470589
+169,Mid-South,2,use,user,0.14705882352941177
+170,Mid-South,2,use,future_user,0.058823529411764705
+171,Mid-South,2,use,past_user,0.058823529411764705
+172,Mid-South,2,region,Mid-South,1.0
+173,Mid-South,2,_count,n,34.0
+174,Mid-South,2,_count,weighted_n,30196.156440650084
+175,South-South,0,age,mean,31.4037558685446
+176,South-South,0,gender,Femme Nyɔnu,0.9624413145539906
+177,South-South,0,gender,Homme Sunnu,0.03755868544600939
+178,South-South,0,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.5492227979274611
+179,South-South,0,occupation,Artisan/ Alɔnǔwǎtɔ́,0.08808290155440414
+180,South-South,0,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /|Autre,0.06735751295336788
+181,South-South,0,religion,Christianisme/ Klisanwun,0.863849765258216
+182,South-South,0,religion,Traditionnelle/ Akɔta,0.06572769953051644
+183,South-South,0,religion,Aucune/Ðebǔ,0.03755868544600939
+184,South-South,0,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó|Autre : veuillez préciser/ Ðevo: kɛnklɛn bo ɖɔ,0.023474178403755867
+185,South-South,0,life_goals,Des enfants bien élevés/ Vi e nɔ wa nu ganji|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.014084507042253521
+186,South-South,0,life_goals,Des enfants bien élevés/ Vi e nɔ wa nu ganji|Prospérité financière/ akwɛ́ ɖiɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.014084507042253521
+187,South-South,0,age_group,31-45,0.4835680751173709
+188,South-South,0,age_group,21-30,0.47417840375586856
+189,South-South,0,age_group,16-20,0.04225352112676056
+190,South-South,0,use,user,0.4694835680751174
+191,South-South,0,use,nonuser,0.23943661971830985
+192,South-South,0,use,past_user,0.1596244131455399
+193,South-South,0,use,future_user,0.13145539906103287
+194,South-South,0,region,South-South,1.0
+195,South-South,0,_count,n,213.0
+196,South-South,0,_count,weighted_n,66393.25514577545
+197,South-South,1,age,mean,35.03496503496503
+198,South-South,1,gender,Homme Sunnu,1.0
+199,South-South,1,occupation,Artisan/ Alɔnǔwǎtɔ́,0.22058823529411764
+200,South-South,1,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.19852941176470587
+201,South-South,1,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Autre",0.11029411764705882
+202,South-South,1,religion,Christianisme/ Klisanwun,0.6993006993006993
+203,South-South,1,religion,Traditionnelle/ Akɔta,0.11188811188811189
+204,South-South,1,religion,Aucune/Ðebǔ,0.07692307692307693
+205,South-South,1,life_goals,Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/lanmɛ ɖagbe mɛɖesunɔ tɔn|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.04195804195804196
+206,South-South,1,life_goals,Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó|Une longue vie Gbɛ gaga,0.027972027972027972
+207,South-South,1,life_goals,Prospérité financière/ akwɛ́ ɖiɖó|Une longue vie Gbɛ gaga|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.02097902097902098
+208,South-South,1,age_group,31-45,0.6993006993006993
+209,South-South,1,age_group,21-30,0.2937062937062937
+210,South-South,1,age_group,16-20,0.006993006993006993
+211,South-South,1,use,user,0.43356643356643354
+212,South-South,1,use,nonuser,0.3776223776223776
+213,South-South,1,use,future_user,0.13286713286713286
+214,South-South,1,use,past_user,0.055944055944055944
+215,South-South,1,region,South-South,1.0
+216,South-South,1,_count,n,143.0
+217,South-South,1,_count,weighted_n,71206.67154835368
+218,South-South,2,age,mean,36.16981132075472
+219,South-South,2,gender,Homme Sunnu,1.0
+220,South-South,2,occupation,Autre,0.6730769230769231
+221,South-South,2,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.07692307692307693
+222,South-South,2,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Autre",0.057692307692307696
+223,South-South,2,religion,Christianisme/ Klisanwun,0.7358490566037735
+224,South-South,2,religion,Traditionnelle/ Akɔta,0.1509433962264151
+225,South-South,2,religion,Islam / Islam,0.05660377358490566
+226,South-South,2,life_goals,Une longue vie Gbɛ gaga|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Prospérité financière/ akwɛ́ ɖiɖó,0.11320754716981132
+227,South-South,2,life_goals,Prospérité financière/ akwɛ́ ɖiɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ|Une longue vie Gbɛ gaga,0.05660377358490566
+228,South-South,2,life_goals,Une longue vie Gbɛ gaga|Prospérité financière/ akwɛ́ ɖiɖó|Une bonne santé pour les membres de ma famille/ Lanmɛ ɖagbe nu mɛ e ɖo xwendo ce mɛ lɛ,0.03773584905660377
+229,South-South,2,age_group,31-45,0.8867924528301887
+230,South-South,2,age_group,21-30,0.11320754716981132
+231,South-South,2,use,user,0.37735849056603776
+232,South-South,2,use,future_user,0.22641509433962265
+233,South-South,2,use,nonuser,0.22641509433962265
+234,South-South,2,use,past_user,0.16981132075471697
+235,South-South,2,region,South-South,1.0
+236,South-South,2,_count,n,53.0
+237,South-South,2,_count,weighted_n,47775.68395396095

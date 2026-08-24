@@ -7,6 +7,7 @@ All data is pre-aggregated (no PII).
 import streamlit as st
 import pandas as pd
 from src.data_loader import load_respondents_profile
+from src.translations import tr
 
 # Display order of variables and their labels
 VAR_ORDER = [
@@ -16,6 +17,8 @@ VAR_ORDER = [
     ("occupation",      "Occupation"),
     ("religion",        "Religion"),
     ("urban_rural", "Settlement type"),
+    ("region",          "Region"),
+    ("province",        "Province"),
 ]
 
 # Preferred category order within variables (others appended alphabetically)
@@ -23,6 +26,9 @@ CATEGORY_ORDER = {
     "use":       ["Current user", "Past user", "Future user", "Non-user"],
     "age_group": ["16-20", "21-30", "31-45"],
     "gender":    ["Femme", "Homme"],
+    # North-East = Borgou, North-West = Donga, South-South = Littoral/Ouémé/Atlantique,
+    # Mid-South = Couffo/Zou/Plateau (per user-supplied mapping, 2026-08-24)
+    "region":    ["North-East", "North-West", "South-South", "Mid-South"],
 }
 
 _MISSING = (
@@ -49,7 +55,7 @@ def _build_table(df):
         for _, row in sub.iterrows():
             rows.append({
                 "Variable":  label,
-                "Category":  row["category"],
+                "Category":  tr(row["category"]),
                 "N":         int(row["count"]),
                 "%":         f"{row['proportion'] * 100:.1f}%",
             })

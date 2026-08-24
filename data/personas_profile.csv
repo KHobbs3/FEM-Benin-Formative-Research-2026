@@ -19,7 +19,7 @@
 17,0,use,past_user,0.20594965675057209
 18,0,use,future_user,0.13272311212814644
 19,0,_count,n,437.0
-20,0,_count,weighted_n,579102.9788804722
+20,0,_count,weighted_n,598275.234436206
 21,1,age,mean,34.705882352941174
 22,1,gender,Homme Sunnu,1.0
 23,1,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.4158730158730159
@@ -39,7 +39,7 @@
 37,1,use,future_user,0.10526315789473684
 38,1,use,past_user,0.09907120743034056
 39,1,_count,n,323.0
-40,1,_count,weighted_n,389046.3828686202
+40,1,_count,weighted_n,399313.66922389425
 41,2,age,mean,31.71641791044776
 42,2,gender,Homme Sunnu,0.9552238805970149
 43,2,gender,Femme Nyɔnu,0.04477611940298507
@@ -60,4 +60,4 @@
 58,2,use,past_user,0.08955223880597014
 59,2,use,future_user,0.08955223880597014
 60,2,_count,n,67.0
-61,2,_count,weighted_n,106162.2395789103
+61,2,_count,weighted_n,105284.75212374293

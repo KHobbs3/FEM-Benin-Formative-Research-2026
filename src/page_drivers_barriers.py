@@ -12,6 +12,7 @@ from src.data_loader import (
     USER_CATEGORY_LABELS, AGE_GROUPS, GENDERS,
 )
 from src.fem_colours import PRIORITY_COLORS, FEM_PALETTE
+from src.translations import tr
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -58,21 +59,26 @@ def build_overview_chart(df, db_type, split_key="user_category", metric="prevale
         "user_category": "Prevalence (All)",
         "gender":        "GENDER: Prevalence (All)",
         "age":           "AGE_GROUP: Prevalence (All)",
+        "region":        "REGION: Prevalence (All)",
     }
     RAW_N_COL_MAP = {
         "user_category": "N (All)",
         "gender":        "GENDER: N (All)",
         "age":           "AGE_GROUP: N (All)",
+        "region":        "REGION: N (All)",
     }
     WGT_N_COL_MAP = {
         "user_category": "Weighted N (All)",
         "gender":        "GENDER: Weighted N (All)",
         "age":           "AGE_GROUP: Weighted N (All)",
+        "region":        "REGION: Weighted N (All)",
     }
     UNWGT_PREV_COL_MAP = {
         "user_category": "Unweighted Prevalence (All)",
         "gender":        "GENDER: Unweighted Prevalence (All)",
         "age":           "AGE_GROUP: Unweighted Prevalence (All)",
+        # No "REGION: Unweighted Prevalence (All)" column exists (same as urban_rural) --
+        # falls back to regular prevalence automatically, see build_prevalence_bar below.
     }
     prev_col = PREV_COL_MAP.get(split_key, "Prevalence (All)")
     data_col = {
@@ -99,8 +105,13 @@ def build_overview_chart(df, db_type, split_key="user_category", metric="prevale
         # Apply human-readable labels for user categories
         if split_key == "user_category":
             data = {USER_CATEGORY_LABELS.get(k, k): v for k, v in data.items()}
+        else:
+            # gender/age/region/urban_rural subgroup names -- translate raw
+            # gender values ("Femme Nyɔnu"/"Homme Sunnu") when English is on;
+            # tr() is a no-op for anything not in its lookup (age/region/urban_rural).
+            data = {tr(k): v for k, v in data.items()}
 
-        name     = _strip_hausa(str(row["Name"]))
+        name     = tr(_strip_hausa(str(row["Name"])))
         priority = str(row["Priority"]).strip()
         max_prev = max(data.values()) if data else 0
         records.append({
@@ -242,21 +253,25 @@ def build_prevalence_bar(row, split="user_category", metric="prevalence"):
         "user_category": "Prevalence (All)",
         "gender":        "GENDER: Prevalence (All)",
         "age":           "AGE_GROUP: Prevalence (All)",
+        "region":        "REGION: Prevalence (All)",
     }
     RAW_N_COL = {
         "user_category": "N (All)",
         "gender":        "GENDER: N (All)",
         "age":           "AGE_GROUP: N (All)",
+        "region":        "REGION: N (All)",
     }
     WGT_N_COL = {
         "user_category": "Weighted N (All)",
         "gender":        "GENDER: Weighted N (All)",
         "age":           "AGE_GROUP: Weighted N (All)",
+        "region":        "REGION: Weighted N (All)",
     }
     UNWGT_PREV_COL = {
         "user_category": "Unweighted Prevalence (All)",
         "gender":        "GENDER: Unweighted Prevalence (All)",
         "age":           "AGE_GROUP: Unweighted Prevalence (All)",
+        # No REGION equivalent -- see build_overview_chart's UNWGT_PREV_COL_MAP note.
     }
 
     prev_col = PREV_COL.get(split)
@@ -271,7 +286,7 @@ def build_prevalence_bar(row, split="user_category", metric="prevalence"):
     if split == "user_category":
         labels = [USER_CATEGORY_LABELS.get(k, k) for k in prev_data]
     else:
-        labels = list(prev_data.keys())
+        labels = [tr(k) for k in prev_data]
 
     # ── Unweighted prevalence % ───────────────────────────────────────────────
     if metric == "unweighted_prevalence":
@@ -282,7 +297,7 @@ def build_prevalence_bar(row, split="user_category", metric="prevalence"):
         if split == "user_category":
             u_labels = [USER_CATEGORY_LABELS.get(k, k) for k in unwgt_data]
         else:
-            u_labels = list(unwgt_data.keys())
+            u_labels = [tr(k) for k in unwgt_data]
         u_values = list(unwgt_data.values())
         fig = go.Figure(go.Bar(
             x=u_values,
@@ -324,7 +339,7 @@ def build_prevalence_bar(row, split="user_category", metric="prevalence"):
         if split == "user_category":
             c_labels = [USER_CATEGORY_LABELS.get(k, k) for k in count_data]
         else:
-            c_labels = list(count_data.keys())
+            c_labels = [tr(k) for k in count_data]
         c_values = list(count_data.values())
 
         color     = FEM_PALETTE[0] if metric == "raw_n" else FEM_PALETTE[2]
@@ -391,6 +406,8 @@ def build_statement_chart(row, split="user_category"):
         stmt, pcts = parse_statements(row["GENDER: Statements"])
     elif split == "age":
         stmt, pcts = parse_statements(row["AGE_GROUP: Statements"])
+    elif split == "region":
+        stmt, pcts = parse_statements(row["REGION: Statements"])
     else:
         return None, None
 
@@ -445,9 +462,14 @@ main reasons for using or not using contraception.
 - **Medium** — moderately prevalent; worth addressing in programme design
 - **Low** — less common; may be relevant for specific sub-groups
 
-**Subgroup breakdowns** (user category, gender, age group) show the prevalence of each
-item within that subgroup. Weighted prevalence uses post-stratification survey weights to
-account for differences in sampling across regions and demographics.
+**Subgroup breakdowns** (user category, gender, age group, region) show the prevalence of
+each item within that subgroup. Weighted prevalence uses post-stratification survey weights
+to account for differences in sampling across regions and demographics.
+
+**Belief-statement agreement** (shown in detail cards below) is only available for
+**barriers**, not drivers: the 62 belief statements were all written to test barrier-side
+beliefs (cost, side effects, religion, family approval, fertility desire) — none have a
+driver-side counterpart, so driver items intentionally show no statement chart.
     """)
     st.markdown("")
 
@@ -460,7 +482,7 @@ account for differences in sampling across regions and demographics.
         db_type = st.radio("Show", ["Driver", "Barrier"], horizontal=True)
     with col2:
         split_by = st.radio(
-            "Split by", ["User category", "Gender", "Age group"], horizontal=True
+            "Split by", ["User category", "Gender", "Age group", "Region"], horizontal=True
         )
     with col3:
         priority_filter = st.multiselect(
@@ -490,6 +512,7 @@ account for differences in sampling across regions and demographics.
         "User category": "user_category",
         "Gender":        "gender",
         "Age group":     "age",
+        "Region":        "region",
     }[split_by]
 
     # ── Filter ────────────────────────────────────────────────────────────────
@@ -521,7 +544,7 @@ account for differences in sampling across regions and demographics.
 
         for card_idx, (_, row) in enumerate(df.iterrows()):
             name_raw = str(row["Name"])
-            name     = _strip_hausa(name_raw)
+            name     = tr(_strip_hausa(name_raw))
             priority = str(row["Priority"]).strip()
 
             badge_color    = PRIORITY_COLORS.get(priority, "#6b7280")
@@ -552,12 +575,22 @@ account for differences in sampling across regions and demographics.
 
                 stmt, fig_stmt = build_statement_chart(row, split_key)
                 if fig_stmt:
-                    stmt_text = stmt if stmt else "Related belief statement"
+                    stmt_text = tr(stmt) if stmt else "Related belief statement"
                     st.markdown(f"*Agreement with: \"{stmt_text}\"*")
                     st.plotly_chart(
                         fig_stmt, use_container_width=True,
                         key=f"stmt_{card_idx}",
                     )
+                elif db_type == "Driver":
+                    # Not missing data -- the 62 belief statements were all written to test
+                    # barrier-side beliefs (cost, side effects, religion, family approval,
+                    # fertility-desire), so no driver reason has a matching statement to
+                    # show agreement for. Confirmed with the user (2026-08-24) rather than
+                    # left silently blank, so this doesn't read as a bug to the next viewer.
+                    st.caption(
+                        "No belief-statement data for this item — the statement bank tests "
+                        "barrier-side beliefs only, with no driver-side counterpart."
+                    )
 
-                if not fig_prev and not fig_stmt:
+                if not fig_prev and not fig_stmt and db_type != "Driver":
                     st.info("No chart data available for this item.")

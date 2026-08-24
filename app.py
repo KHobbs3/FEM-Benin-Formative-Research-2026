@@ -17,6 +17,7 @@ from src.page_personality_traits import render as render_personality_traits
 # show. Swap in real page_pp_*.py modules (ported from niger_app/src/) once
 # that data exists.
 from src.page_stubs import render_phone_pulse_stub
+from src.translations import render_toggle as render_english_toggle
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -57,10 +58,14 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ── Title ─────────────────────────────────────────────────────────────────────
-st.markdown(
-    f"<h2 style='margin-bottom:0.2rem;color:{FEM_BROWN};'>FEM Survey Analysis - Benin (2026)</h2>",
-    unsafe_allow_html=True,
-)
+title_col, toggle_col = st.columns([3, 1.3])
+with title_col:
+    st.markdown(
+        f"<h2 style='margin-bottom:0.2rem;color:{FEM_BROWN};'>FEM Survey Analysis - Benin (2026)</h2>",
+        unsafe_allow_html=True,
+    )
+with toggle_col:
+    render_english_toggle()
 
 # ── Top-level survey switcher ─────────────────────────────────────────────────
 survey = option_menu(

@@ -18,7 +18,7 @@
 16,Femme Nyɔnu,0,use,past_user,0.18604651162790697
 17,Femme Nyɔnu,0,use,future_user,0.10465116279069768
 18,Femme Nyɔnu,0,_count,n,258.0
-19,Femme Nyɔnu,0,_count,weighted_n,204168.43505551692
+19,Femme Nyɔnu,0,_count,weighted_n,213304.59116685094
 20,Femme Nyɔnu,1,age,mean,31.433734939759034
 21,Femme Nyɔnu,1,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.7538461538461538
 22,Femme Nyɔnu,1,occupation,Artisan/ Alɔnǔwǎtɔ́,0.15384615384615385
@@ -38,7 +38,7 @@
 36,Femme Nyɔnu,1,use,user,0.21686746987951808
 37,Femme Nyɔnu,1,use,future_user,0.18072289156626506
 38,Femme Nyɔnu,1,_count,n,83.0
-39,Femme Nyɔnu,1,_count,weighted_n,194316.81909224976
+39,Femme Nyɔnu,1,_count,weighted_n,204265.58969603543
 40,Femme Nyɔnu,2,age,mean,31.085714285714285
 41,Femme Nyɔnu,2,occupation,Vendeur ou petit commerçant  / Nusatɔ alo ajɔwatɔ kpɛvi /,0.4782608695652174
 42,Femme Nyɔnu,2,occupation,Artisan/ Alɔnǔwǎtɔ́,0.14492753623188406
@@ -58,7 +58,7 @@
 56,Femme Nyɔnu,2,use,future_user,0.17142857142857143
 57,Femme Nyɔnu,2,use,user,0.14285714285714285
 58,Femme Nyɔnu,2,_count,n,70.0
-59,Femme Nyɔnu,2,_count,weighted_n,164420.20805127945
+59,Femme Nyɔnu,2,_count,weighted_n,163157.2743468003
 60,Homme Sunnu,0,age,mean,33.875
 61,Homme Sunnu,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́",0.46551724137931033
 62,Homme Sunnu,0,occupation,"Fermier, agriculteur, pêcheur/ Glesí, jikpátɔ́, hwèhutɔ́|Artisan/ Alɔnǔwǎtɔ́",0.07931034482758621
@@ -78,7 +78,7 @@
 76,Homme Sunnu,0,use,past_user,0.09210526315789473
 77,Homme Sunnu,0,use,future_user,0.09210526315789473
 78,Homme Sunnu,0,_count,n,304.0
-79,Homme Sunnu,0,_count,weighted_n,396169.04701386543
+79,Homme Sunnu,0,_count,weighted_n,404167.8126061117
 80,Homme Sunnu,1,age,mean,36.483870967741936
 81,Homme Sunnu,1,occupation,Autre,0.8225806451612904
 82,Homme Sunnu,1,occupation,Artisan/ Alɔnǔwǎtɔ́,0.04838709677419355
@@ -97,7 +97,7 @@
 95,Homme Sunnu,1,use,future_user,0.16129032258064516
 96,Homme Sunnu,1,use,past_user,0.16129032258064516
 97,Homme Sunnu,1,_count,n,62.0
-98,Homme Sunnu,1,_count,weighted_n,72949.03447113799
+98,Homme Sunnu,1,_count,weighted_n,75464.39801864007
 99,Homme Sunnu,2,age,mean,33.8
 100,Homme Sunnu,2,occupation,Artisan/ Alɔnǔwǎtɔ́,0.82
 101,Homme Sunnu,2,occupation,"Dans les transports/ Ðò mɔ̌to mɛ ɔ,",0.04
@@ -116,4 +116,4 @@
 114,Homme Sunnu,2,use,future_user,0.12
 115,Homme Sunnu,2,use,past_user,0.08
 116,Homme Sunnu,2,_count,n,50.0
-117,Homme Sunnu,2,_count,weighted_n,42288.057643953136
+117,Homme Sunnu,2,_count,weighted_n,42513.98994940476
