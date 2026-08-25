@@ -28,6 +28,7 @@ SPLIT_MAP = {
     "User group": "use",
     "Gender":     "gender",
     "Age group":  "age_group",
+    "Region":     "region",
 }
 
 _MISSING = (

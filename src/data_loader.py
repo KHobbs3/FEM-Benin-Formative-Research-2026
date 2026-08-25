@@ -28,9 +28,15 @@ def load_statements_heatmap():
 
 
 # ── Access page ─────────────────────────────────────────────────────────────
+# 2026-08-24: etl_access.py now also computes a REGION split (North-East/North-West/
+# South-South/Mid-South) for stockouts, travel, and affordability -- regenerated
+# access_stockouts.csv / access_travel.csv / access_affordability.csv in benin_app/data/.
+# TODO: re-upload those 3 files to Drive and swap the IDs below.
+# (access_stockout_responses.csv and access_composite.csv are unaffected -- neither
+# loops over the split columns -- so their IDs don't need to change.)
 
 def load_access_stockouts():
-    return _load("11cM8scy_qwXIW5mHwJvwWm5mSLdiei4x", index_col=0)
+    return _load("11cM8scy_qwXIW5mHwJvwWm5mSLdiei4x", index_col=0)  # TODO: swap for region-updated file
 
 
 def load_access_stockout_responses():
@@ -38,11 +44,11 @@ def load_access_stockout_responses():
 
 
 def load_access_travel():
-    return _load("13coFVaRMukaQhIwGyvqdAFOQO_DIwl-0", index_col=0)
+    return _load("13coFVaRMukaQhIwGyvqdAFOQO_DIwl-0", index_col=0)  # TODO: swap for region-updated file
 
 
 def load_access_affordability():
-    return _load("1PV4jHHk17BdeXTwfax8Ap1oyKl5zE1Cy", index_col=0)
+    return _load("1PV4jHHk17BdeXTwfax8Ap1oyKl5zE1Cy", index_col=0)  # TODO: swap for region-updated file
 
 
 def load_access_composite():
