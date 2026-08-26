@@ -3,7 +3,6 @@
 # functions), not committed to this repo -- per the user's instruction that
 # no radio data should be pushed to GitHub. Matches any dated regeneration
 # (e.g. Benin_question_table_by_station_26_08_26.csv), not just today's.
-data/Benin_question_table_by_state_*.csv
-data/Benin_question_table_by_station_*.csv
-
+data/*
 .DS_Store
+src/__pycache__/
