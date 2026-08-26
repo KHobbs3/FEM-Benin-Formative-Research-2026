@@ -65,14 +65,16 @@ def clean_column_name(col):
 
 
 def load_radio_by_station():
-    df = _load("1OkbqLDi68k0cPYqdPorA_sn2IPfTHrLU")  # Benin_question_table_by_station_26_08_19.csv
+    df = _load("1B07CtKdW6EG_VLRf2xuTH0TFsNAEk7QO")  # Benin_question_table_by_station_26_08_26.csv
+                                                       # "1OkbqLDi68k0cPYqdPorA_sn2IPfTHrLU") - 26_08_19 version
                                                        # "1b6F3K6AaetMr86TnuYtX458ikOC7cUo2") - 26_08_18 version
     df.set_index(df.columns[0], inplace=True)
     return df
 
 
 def load_radio_by_state():
-    df = _load("1pxlnnsHf0CylXGh76y_52fUoP3HbOkwm")  # Benin_question_table_by_state_26_08_19.csv
+    df = _load("1twXCWaUAv0Lx82LZJAzwn_AbhWwPIeW2")  # Benin_question_table_by_state_26_08_26.csv
+                                                       # "1pxlnnsHf0CylXGh76y_52fUoP3HbOkwm") - 26_08_19 version
                                                        # "1NttFCzxCcloaK5CFIaVXQiL_pYsV7VYe") - 26_08_18 version
     df.set_index(df.columns[0], inplace=True)
     return df
