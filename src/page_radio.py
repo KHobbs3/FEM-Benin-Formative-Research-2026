@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 from src.data_loader import load_radio_by_state, load_radio_by_station
 import re
 import glob
+import unicodedata
 from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY, FEM_SCALE
 
 # NOTE: Niger's version of this file hardcoded a STATION_STATE / STATE_ORDER /
@@ -23,6 +24,26 @@ def _station_display(station_id):
     name = re.sub(r'^\d{4}-\d{2}-\d{2}_\d+_', '', str(station_id))
     name = re.sub(r'_GW_\d+$', '', name)
     return name.strip().title()
+
+
+# 2026-08-26: x-axis display filter, requested directly against a screenshot
+# of the full ~10-station heatmap. This is display-only -- it doesn't touch
+# the underlying data or which stations etl_radio.py's spatial join actually
+# matched respondents against (see STATION_STATE in pipeline_output/pipeline/
+# etl_radio.py for the full station->region mapping this list is drawn from).
+# Two of these (Nanto, Marantha) currently have zero matched respondents in
+# the live data, so their column renders blank -- they still get a labeled
+# tick on the x-axis rather than being dropped, since the ask was for
+# exactly these 5 stations to appear. The y-axis (answer labels / all_labels)
+# is left alone: it's still computed from every station's data, not just
+# these 5, so narrowing the x-axis doesn't also narrow the y-axis.
+STATION_DISPLAY_ORDER = [
+    ("2026-01-29_165417_Solidarité FM_GW_50", "Solidarité"),
+    ("2026-01-29_161633_deeman radio_GW_50", "Deeman (higher specs)"),
+    ("2026-01-29_161436_nanto_GW_50", "Nanto"),
+    ("2026-01-29_160356_maranatha_GW_50", "Marantha"),
+    ("2026-01-29_162016_Radio TONASSE (higher antenna)_GW_50", "Radio Tonnasse(higher specs)"),
+]
 
 
 def parse_radio_cell(cell_str):
@@ -162,10 +183,33 @@ def render_heatmap(df: pd.DataFrame, question: str, metric_type: str = "pct",
         else:
             text_matrix.append([f"{v:.0f}" if v is not None else "" for v in row_vals])
 
-    # Set dynamic zmax if needed
+    # Set dynamic zmax if needed (computed from the full, unfiltered matrix,
+    # so the color scale doesn't shift depending on which columns get shown)
     if zmax is None:
         flat_vals = [v for row_vals in matrix for v in row_vals if v is not None]
         zmax = max(flat_vals) if flat_vals else 100
+
+    # Narrow the x-axis to the 5 requested stations for display only (see
+    # STATION_DISPLAY_ORDER above) -- doesn't touch all_labels/the y-axis.
+    if not is_state_level:
+        column_display_names = [label for _, label in STATION_DISPLAY_ORDER]
+        # Match by NFC-normalized id: the accented station names as read from
+        # the data CSV come back NFD-decomposed (e.g. accented 'é' as
+        # combining-mark 'e' + U+0301), which fails a plain `==`/`in` check
+        # against the NFC-precomposed strings in STATION_DISPLAY_ORDER above.
+        normalized_columns = {unicodedata.normalize("NFC", c): i for i, c in enumerate(columns)}
+        col_indices = [
+            normalized_columns.get(unicodedata.normalize("NFC", station_id))
+            for station_id, _ in STATION_DISPLAY_ORDER
+        ]
+        matrix = [
+            [row_vals[i] if i is not None else None for i in col_indices]
+            for row_vals in matrix
+        ]
+        text_matrix = [
+            [row_text[i] if i is not None else "" for i in col_indices]
+            for row_text in text_matrix
+        ]
 
     fig = go.Figure(go.Heatmap(
         z=matrix,
