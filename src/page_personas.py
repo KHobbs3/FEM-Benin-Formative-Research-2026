@@ -325,37 +325,40 @@ def render_culture_clusters():
             "If a cluster's bars pile up in one or two regions rather than spreading "
             "across all four, that cluster's cultural profile is geographically concentrated."
         )
+        # x-axis = persona, one series per region (region composition within
+        # each persona) -- swapped from region-on-x/persona-series per the
+        # user's request, so you read across a persona to see its regional
+        # makeup instead of across a region to see which personas live there.
+        personas = list(range(n_personas))
+        persona_labels = [f"Persona {p}" for p in personas]
         traces = []
-        for i, pid in enumerate(range(n_personas)):
-            pdata = region_rows[region_rows["persona"] == pid].set_index("value")["proportion"]
-            pdata = pdata.reindex([r for r in REGIONS if r in pdata.index]).dropna()
+        for i, region in enumerate(REGIONS):
+            rdata = (
+                region_rows[region_rows["value"] == region]
+                .set_index("persona")["proportion"]
+                .reindex(personas)
+                .fillna(0)
+            )
             traces.append(go.Bar(
-                name=f"Persona {pid}",
-                x=pdata.index.astype(str),
-                y=pdata.values,
+                name=region,
+                x=persona_labels,
+                y=rdata.values,
                 marker_color=FEM_PALETTE[i % len(FEM_PALETTE)],
-                text=[f"{v*100:.0f}%" for v in pdata.values],
+                text=[f"{v*100:.0f}%" for v in rdata.values],
                 textposition="outside",
             ))
         fig = go.Figure(traces)
         fig.update_layout(
             barmode="group",
             yaxis=dict(tickformat=".0%", showgrid=False, title="% of persona"),
-            xaxis=dict(showgrid=False),
+            xaxis=dict(showgrid=False, title="Persona"),
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             margin=dict(t=20, b=40, l=10, r=10),
             height=340,
-            legend_title="Persona",
+            legend_title="Region",
         )
         st.plotly_chart(fig, use_container_width=True, key="culture_region_mix")
-
-    st.divider()
-    tab1, tab2 = st.tabs(["Deep-dive", "Comparison"])
-    with tab1:
-        render_persona_profiles(df_profile, n_personas, split_label="culture")
-    with tab2:
-        render_comparison(df_profile, n_personas, split_label="culture")
 
 
 def _render_split_tab(df_centroids_g, df_profile_g, split_label, split_col="gender"):
@@ -411,8 +414,6 @@ weighted N) is shown for each persona. Individual-level data is not stored or di
     """)
     st.markdown("")
 
-    render_culture_clusters()
-    st.divider()
     st.subheader("Personas by group")
 
     # ── Split selector: Gender, Region (4-way), or Region North/South ─────────
@@ -489,3 +490,10 @@ weighted N) is shown for each persona. Individual-level data is not stored or di
                 if df_profile_s is not None else None
             )
             _render_split_tab(c_sub, p_sub, group_label, split_col=split_col)
+
+    # Standalone culture-clustering analysis -- moved to the end of the page
+    # (2026-09-02, was above the split selector) since it's a separate
+    # analysis from the persona splits above, not another view of the same
+    # thing.
+    st.divider()
+    render_culture_clusters()
