@@ -12,7 +12,14 @@ from src.data_loader import (
     load_personas_centroids_by_region,
     load_personas_profile_by_region,
     load_personas_elbow_by_region,
+    load_personas_centroids_by_region_ns,
+    load_personas_profile_by_region_ns,
+    load_personas_elbow_by_region_ns,
+    load_culture_clusters_centroids,
+    load_culture_clusters_profile,
+    load_culture_clusters_elbow,
     REGIONS,
+    REGION_NS,
 )
 from src.translations import tr
 
@@ -59,6 +66,17 @@ def _strip_hausa(text: str) -> str:
     return text.strip().replace("|", "; ")
 
 
+_VAR_LABEL_OVERRIDES = {
+    "age_gender_combo": "Age × Gender",
+    "top_driver": "Top driver (use)",
+    "top_barrier": "Top barrier (non-use)",
+}
+
+
+def _var_label(var):
+    return _VAR_LABEL_OVERRIDES.get(var, var.replace("_", " ").title())
+
+
 def _hbar(series, title, top_n=10, key=None):
     series = series.head(top_n)
     if series is None or series.empty:
@@ -94,10 +112,13 @@ def render_elbow_plot(df_elbow, split_col="gender", key="elbow_plot"):
     label_map = GENDER_DISPLAY if split_col == "gender" else {}
     color_map = GENDER_COLORS if split_col == "gender" else {}
     split_noun = "female and male respondents" if split_col == "gender" else "each region"
+    has_chosen_k = "chosen_k" in df_elbow.columns
     st.caption(
         "Each line shows the within-cluster cost (sum of dissimilarities) for "
         f"k = 1 – 6 clusters, computed separately for {split_noun}. "
         "The 'elbow' — where the curve flattens — indicates the optimal k."
+        + (" The marked point is the k this group was actually clustered with "
+           "(auto-selected from this curve, not fixed)." if has_chosen_k else "")
     )
 
     groups = df_elbow[split_col].unique()
@@ -106,12 +127,16 @@ def render_elbow_plot(df_elbow, split_col="gender", key="elbow_plot"):
         sub = df_elbow[df_elbow[split_col] == g].sort_values("k")
         color = color_map.get(g, FEM_PALETTE[i % len(FEM_PALETTE)])
         label = tr(label_map.get(g, g))
+        chosen_k = int(sub["chosen_k"].iloc[0]) if has_chosen_k and not sub.empty else None
         fig.add_trace(go.Scatter(
             x=sub["k"], y=sub["cost"],
             mode="lines+markers",
-            name=label,
+            name=f"{label} (k={chosen_k})" if chosen_k else label,
             line=dict(color=color, width=2),
-            marker=dict(size=7),
+            marker=dict(
+                size=[14 if k == chosen_k else 7 for k in sub["k"]],
+                symbol=["star" if k == chosen_k else "circle" for k in sub["k"]],
+            ),
         ))
 
     fig.update_layout(
@@ -141,7 +166,7 @@ def render_centroid_table(df_centroids, split_label=None, split_col="gender"):
     # *other* clustering variable, e.g. "gender" is a real feature when split_col
     # is "region", not just bookkeeping.
     display.drop(columns=["persona", split_col], inplace=True, errors="ignore")
-    for col in ("occupation", "religion", "life_goals"):
+    for col in ("occupation", "religion", "life_goals", "top_driver", "top_barrier"):
         if col in display.columns:
             display[col] = display[col].apply(lambda x: tr(_strip_hausa(x)))
     if "gender" in display.columns:
@@ -185,15 +210,15 @@ def render_persona_profiles(df_profile, n_personas, split_label=None):
         var_sub = sub[sub["variable"] == var].copy()
         if var_sub.empty:
             continue
-        if var in ("occupation", "religion", "life_goals"):
+        if var in ("occupation", "religion", "life_goals", "top_driver", "top_barrier"):
             var_sub["value"] = var_sub["value"].apply(lambda x: tr(_strip_hausa(x)))
         if set(var_sub["value"].tolist()) == {"mean"}:
             val = var_sub["proportion"].iloc[0]
-            cols[i % 2].metric(var.replace("_", " ").title(), f"{val:.1f}")
+            cols[i % 2].metric(_var_label(var), f"{val:.1f}")
         else:
             s = var_sub.set_index("value")["proportion"].sort_values(ascending=False)
             with cols[i % 2]:
-                _hbar(s, var.replace("_", " ").title(),
+                _hbar(s, _var_label(var),
                       key=f"persona_{key_suffix}_{persona_id}_{var}")
 
 
@@ -205,12 +230,12 @@ def render_comparison(df_profile, n_personas, split_label=None):
     profile_vars = [v for v in df_profile["variable"].unique() if not v.startswith("_")]
     selected_var = st.selectbox(
         "Select variable", profile_vars,
-        format_func=lambda v: v.replace("_", " ").title(),
+        format_func=_var_label,
         key=f"persona_compare_var_{key_suffix}",
     )
 
     sub = df_profile[df_profile["variable"] == selected_var].copy()
-    if selected_var in ("occupation", "religion", "life_goals"):
+    if selected_var in ("occupation", "religion", "life_goals", "top_driver", "top_barrier"):
         sub["value"] = sub["value"].apply(lambda x: tr(_strip_hausa(x)))
 
     if set(sub["value"].tolist()) == {"mean"}:
@@ -244,6 +269,93 @@ def render_comparison(df_profile, n_personas, split_label=None):
         legend_title="Persona",
     )
     st.plotly_chart(fig, use_container_width=True, key=f"persona_compare_{key_suffix}")
+
+
+# ── Standalone culture clustering ────────────────────────────────────────────
+# 2026-09-02: a separate analysis from the persona splits above -- tests
+# "do respondents geographically cluster based on their culture?" by
+# clustering on religion, life goals, and top driver/barrier ONLY (region is
+# excluded from the clustering inputs), then checking whether the resulting
+# clusters concentrate in particular regions. If region were used as a
+# clustering input instead, "clusters differ by region" would be true by
+# construction rather than a real finding -- see CULTURE_CLUSTERING_VARS's
+# comment in pipeline/config.py.
+
+def render_culture_clusters():
+    df_centroids = load_culture_clusters_centroids()
+    df_profile = load_culture_clusters_profile()
+    df_elbow = load_culture_clusters_elbow()
+
+    st.subheader("Do cultural traits geographically cluster?")
+    st.caption(
+        "A separate analysis from the personas above: clusters respondents by "
+        "**religion, life goals, and their top driver/barrier only** — region is "
+        "deliberately left out of the clustering itself. The chart below then checks "
+        "whether the resulting clusters are concentrated in particular regions, or "
+        "spread evenly — that's the actual test of whether culture and geography line up."
+    )
+
+    if df_centroids is None or df_centroids.empty:
+        st.warning(
+            "Pre-aggregated culture-cluster data not found. "
+            "Run `python -m pipeline.run_pipeline --pages personas` (from pipeline_output/) "
+            "to generate it, then upload culture_clusters_centroids.csv / "
+            "culture_clusters_profile.csv / culture_clusters_elbow.csv to Drive and "
+            "wire the file IDs into src/data_loader.py."
+        )
+        return
+
+    n_personas = df_centroids["persona"].nunique()
+
+    if df_elbow is not None and not df_elbow.empty:
+        with st.expander("Elbow plot — choosing number of clusters", expanded=False):
+            render_elbow_plot(df_elbow, split_col="analysis", key="elbow_plot_culture")
+
+    render_centroid_table(df_centroids, split_col="analysis")
+
+    if df_profile is None or df_profile.empty:
+        st.warning("Culture-cluster profile data not found.")
+        return
+
+    # ── The actual geography check: region mix per cluster ────────────────────
+    region_rows = df_profile[df_profile["variable"] == "region"]
+    if not region_rows.empty:
+        st.markdown("**Region mix within each cluster**")
+        st.caption(
+            "If a cluster's bars pile up in one or two regions rather than spreading "
+            "across all four, that cluster's cultural profile is geographically concentrated."
+        )
+        traces = []
+        for i, pid in enumerate(range(n_personas)):
+            pdata = region_rows[region_rows["persona"] == pid].set_index("value")["proportion"]
+            pdata = pdata.reindex([r for r in REGIONS if r in pdata.index]).dropna()
+            traces.append(go.Bar(
+                name=f"Persona {pid}",
+                x=pdata.index.astype(str),
+                y=pdata.values,
+                marker_color=FEM_PALETTE[i % len(FEM_PALETTE)],
+                text=[f"{v*100:.0f}%" for v in pdata.values],
+                textposition="outside",
+            ))
+        fig = go.Figure(traces)
+        fig.update_layout(
+            barmode="group",
+            yaxis=dict(tickformat=".0%", showgrid=False, title="% of persona"),
+            xaxis=dict(showgrid=False),
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
+            margin=dict(t=20, b=40, l=10, r=10),
+            height=340,
+            legend_title="Persona",
+        )
+        st.plotly_chart(fig, use_container_width=True, key="culture_region_mix")
+
+    st.divider()
+    tab1, tab2 = st.tabs(["Deep-dive", "Comparison"])
+    with tab1:
+        render_persona_profiles(df_profile, n_personas, split_label="culture")
+    with tab2:
+        render_comparison(df_profile, n_personas, split_label="culture")
 
 
 def _render_split_tab(df_centroids_g, df_profile_g, split_label, split_col="gender"):
@@ -280,13 +392,18 @@ categories between observations — making it well-suited to survey responses.
 **Clustering is run separately within each group of a split** (gender, or region) so
 that within-group variation drives the clusters rather than the split variable itself.
 
-**Clustering variables:** age, occupation, religion, and life goals (plus gender itself,
-when splitting by region — gender isn't dropped there since it varies within a region).
+**Clustering variables:** age, occupation, religion, life goals, top driver (main reason
+for using contraception, among users), and top barrier (main reason for not using, among
+non-users) — plus gender itself, when splitting by region, since gender isn't dropped there
+the way it is for the gender split.
 
-**Configuration:** 3 clusters per group, initialised using the Cao method (which selects
-starting centroids based on category frequency distributions to reduce sensitivity to
-random starting points), with 5 independent runs to improve stability. Results are fully
-reproducible (fixed random seed).
+**Configuration:** initialised using the Cao method (which selects starting centroids
+based on category frequency distributions to reduce sensitivity to random starting
+points), with 5 independent runs to improve stability. Results are fully reproducible
+(fixed random seed). The gender split and overall clustering use a fixed 3 clusters;
+region splits (both 4-way and North/South) instead auto-select k per region from that
+region's own elbow curve (2 vs. 3+ clusters is a real difference between regions, not
+just noise — see the elbow plot below).
 
 **Output:** Each persona represents the modal respondent within a cluster — the
 combination of attribute values that best characterises that group. Cluster size (N and
@@ -294,9 +411,21 @@ weighted N) is shown for each persona. Individual-level data is not stored or di
     """)
     st.markdown("")
 
-    # ── Split selector: Gender or Region ────────────────────────────────────────
-    split_choice = st.radio("Split personas by", ["Gender", "Region"], horizontal=True)
-    split_col = "gender" if split_choice == "Gender" else "region"
+    render_culture_clusters()
+    st.divider()
+    st.subheader("Personas by group")
+
+    # ── Split selector: Gender, Region (4-way), or Region North/South ─────────
+    split_choice = st.radio(
+        "Split personas by",
+        ["Gender", "Region", "Region (North/South)"],
+        horizontal=True,
+    )
+    split_col = {
+        "Gender": "gender",
+        "Region": "region",
+        "Region (North/South)": "region_ns",
+    }[split_choice]
 
     if split_col == "gender":
         df_centroids_s = load_personas_centroids_by_gender()
@@ -304,16 +433,31 @@ weighted N) is shown for each persona. Individual-level data is not stored or di
         df_elbow       = load_personas_elbow()
         label_map      = GENDER_DISPLAY
         missing_msg    = _MISSING
-    else:
+        region_order   = None
+    elif split_col == "region":
         df_centroids_s = load_personas_centroids_by_region()
         df_profile_s   = load_personas_profile_by_region()
         df_elbow       = load_personas_elbow_by_region()
         label_map      = {}
+        region_order   = REGIONS
         missing_msg = (
             "Pre-aggregated region-split persona data not found. "
             "Run `python -m pipeline.run_pipeline --pages personas` (from pipeline_output/) "
             "to generate it, then upload personas_centroids_by_region.csv / "
             "personas_profile_by_region.csv / personas_elbow_by_region.csv to Drive and "
+            "wire the file IDs into src/data_loader.py."
+        )
+    else:  # region_ns
+        df_centroids_s = load_personas_centroids_by_region_ns()
+        df_profile_s   = load_personas_profile_by_region_ns()
+        df_elbow       = load_personas_elbow_by_region_ns()
+        label_map      = {}
+        region_order   = REGION_NS
+        missing_msg = (
+            "Pre-aggregated North/South-split persona data not found. "
+            "Run `python -m pipeline.run_pipeline --pages personas` (from pipeline_output/) "
+            "to generate it, then upload personas_centroids_by_region_ns.csv / "
+            "personas_profile_by_region_ns.csv / personas_elbow_by_region_ns.csv to Drive and "
             "wire the file IDs into src/data_loader.py."
         )
 
@@ -328,10 +472,12 @@ weighted N) is shown for each persona. Individual-level data is not stored or di
 
     # ── Split tabs ────────────────────────────────────────────────────────────
     groups_in_data = df_centroids_s[split_col].unique().tolist()
-    if split_col == "region":
-        # Prefer the canonical North-East/North-West/South-South/Mid-South order
-        groups_in_data = [g for g in REGIONS if g in groups_in_data] + \
-                         [g for g in groups_in_data if g not in REGIONS]
+    if region_order:
+        # Prefer the canonical region order over whatever order they appear
+        # in the data (North-East/North-West/South-South/Mid-South, or
+        # North/South).
+        groups_in_data = [g for g in region_order if g in groups_in_data] + \
+                         [g for g in groups_in_data if g not in region_order]
     tab_labels = [tr(label_map.get(g, g)) for g in groups_in_data]
     tabs = st.tabs(tab_labels)
 

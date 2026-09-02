@@ -190,6 +190,70 @@ def load_personas_elbow_by_region():
     return _load("1OPQPHSV1cgZJfHCf3h2LznN3iCoeOY68", index_col=0)
 
 
+# 2-way North/South region split (added 2026-09-02) -- North = North-East +
+# North-West, South = South-South + Mid-South (REGION_TO_NORTH_SOUTH in
+# pipeline/config.py). Cluster count is auto-selected per group from its own
+# elbow curve rather than fixed, unlike the splits above -- see chosen_k in
+# personas_elbow_by_region_ns.csv.
+# TODO(Benin): not yet uploaded to Drive -- these 3 files need generating
+# (pipeline --pages personas, already done locally as of 2026-09-02) and
+# uploading, then the placeholder IDs below need to be filled in. Until then
+# these return None and the page shows its normal "data not found" message.
+_PERSONAS_REGION_NS_IDS = {
+    "centroids": "1uhs6xhGtNDS3857jx1NDIphFylq-hvl4",
+    "profile":   "1zo5kG8ekGkxvC2WDagus5i0n8lDsYUjn",
+    "elbow":     "1wwmg4Rb05Z9BCPfdVDp1GuvoYeGKTTNZ",
+}
+
+
+def load_personas_centroids_by_region_ns():
+    if not _PERSONAS_REGION_NS_IDS["centroids"]:
+        return None
+    return _load(_PERSONAS_REGION_NS_IDS["centroids"], index_col=0)
+
+
+def load_personas_profile_by_region_ns():
+    if not _PERSONAS_REGION_NS_IDS["profile"]:
+        return None
+    return _load(_PERSONAS_REGION_NS_IDS["profile"], index_col=0)
+
+
+def load_personas_elbow_by_region_ns():
+    if not _PERSONAS_REGION_NS_IDS["elbow"]:
+        return None
+    return _load(_PERSONAS_REGION_NS_IDS["elbow"], index_col=0)
+
+
+# Standalone culture clustering (religion, life goals, top driver/barrier --
+# region deliberately excluded as a clustering input, see
+# CULTURE_CLUSTERING_VARS in pipeline/config.py) -- added 2026-09-02 to test
+# whether cultural traits geographically concentrate. Same upload status as
+# the North/South split above.
+_CULTURE_CLUSTERS_IDS = {
+    "centroids": "1Pjthr9l-QbVGSx1xtav6RwDJAcIA4ecf",
+    "profile":   "1E4vNkqnXjnDmwSO6jrwj-rz6-lb6GH0m",
+    "elbow":     "1KOKmRi-wF9VUS5LANHf2aA0sn4RPsfaE",
+}
+
+
+def load_culture_clusters_centroids():
+    if not _CULTURE_CLUSTERS_IDS["centroids"]:
+        return None
+    return _load(_CULTURE_CLUSTERS_IDS["centroids"], index_col=0)
+
+
+def load_culture_clusters_profile():
+    if not _CULTURE_CLUSTERS_IDS["profile"]:
+        return None
+    return _load(_CULTURE_CLUSTERS_IDS["profile"], index_col=0)
+
+
+def load_culture_clusters_elbow():
+    if not _CULTURE_CLUSTERS_IDS["elbow"]:
+        return None
+    return _load(_CULTURE_CLUSTERS_IDS["elbow"], index_col=0)
+
+
 # ── Drivers & barriers ──────────────────────────────────────────────────────
 # Unlike the pages above, this doesn't come from pipeline_output/'s ETL
 # modules -- it's produced by table_analysis/03_driver_barrier_table_w_counts.ipynb
@@ -278,3 +342,8 @@ PROVINCE_TO_REGION = {
     "Couffo": "Mid-South", "Zou": "Mid-South", "Plateau": "Mid-South",
 }
 REGIONS = ["North-East", "North-West", "South-South", "Mid-South"]
+
+# 2-way North/South grouping (2026-09-02), mirrors REGION_TO_NORTH_SOUTH /
+# NORTH_SOUTH_REGIONS in pipeline/config.py: North = North-East + North-West,
+# South = South-South + Mid-South.
+REGION_NS = ["North", "South"]
