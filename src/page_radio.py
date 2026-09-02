@@ -6,6 +6,7 @@ import re
 import glob
 import unicodedata
 from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY, FEM_SCALE
+from src.translations import tr
 
 # NOTE: Niger's version of this file hardcoded a STATION_STATE / STATE_ORDER /
 # STATION_NAMES lookup for its ~24 stations. That data doesn't exist for
@@ -87,9 +88,15 @@ def get_station_columns(df: pd.DataFrame) -> list:
     """
     stations = set()
     for col in df.columns:
-        # Remove suffixes to get base name
+        # Remove suffixes to get base name. "_shared_n"/"_total_n" must be
+        # checked before "_n" -- they also end in "_n", so the generic _n
+        # branch would otherwise strip only 2 chars and mangle the name.
         if col.endswith("_state"):
             stations.add(col[:-6])  # Remove "_state"
+        elif col.endswith("_shared_n"):
+            stations.add(col[:-9])  # Remove "_shared_n"
+        elif col.endswith("_total_n"):
+            stations.add(col[:-8])  # Remove "_total_n"
         elif col.endswith("_wn"):
             stations.add(col[:-3])
         elif col.endswith("_n"):
@@ -160,8 +167,10 @@ def render_heatmap(df: pd.DataFrame, question: str, metric_type: str = "pct",
         st.info(f"No data meets the minimum threshold of {min_threshold} {threshold_type}. Try lowering it.")
         return
 
-    # Y-axis: answer labels (NO transformation)
-    display_names = all_labels
+    # Y-axis: answer labels, translated when the "Show in English" toggle
+    # is on (falls back to the original French for anything not in
+    # radio_translations.csv, e.g. free-text station names/figures).
+    display_names = [tr(l) for l in all_labels]
 
     # X-axis: column display names
     if is_state_level:
@@ -191,6 +200,7 @@ def render_heatmap(df: pd.DataFrame, question: str, metric_type: str = "pct",
 
     # Narrow the x-axis to the 5 requested stations for display only (see
     # STATION_DISPLAY_ORDER above) -- doesn't touch all_labels/the y-axis.
+    overlap_notes = []
     if not is_state_level:
         column_display_names = [label for _, label in STATION_DISPLAY_ORDER]
         # Match by NFC-normalized id: the accented station names as read from
@@ -210,6 +220,28 @@ def render_heatmap(df: pd.DataFrame, question: str, metric_type: str = "pct",
             [row_text[i] if i is not None else "" for i in col_indices]
             for row_text in text_matrix
         ]
+
+        # 2026-08-27: a respondent inside overlapping coverage areas is now
+        # counted toward EVERY station they fall within (see
+        # build_radio_table's docstring in etl_radio.py), not just the
+        # nearest one -- requested explicitly, on the condition that the
+        # double-counting is made visible rather than silent. This collects
+        # each displayed station's total/shared respondent counts so the
+        # caption below can say so plainly.
+        overlap_notes = []
+        for i, (_, label) in zip(col_indices, STATION_DISPLAY_ORDER):
+            if i is None:
+                continue
+            station_id = columns[i]
+            total = row.get(f"{station_id}_total_n")
+            shared = row.get(f"{station_id}_shared_n")
+            if pd.notna(total) and pd.notna(shared) and int(total) > 0:
+                total, shared = int(total), int(shared)
+                overlap_notes.append(
+                    f"**{label}**: {total} respondents"
+                    + (f", {shared} ({shared/total:.0%}) also counted under other overlapping stations"
+                       if shared > 0 else ", none shared with another station")
+                )
 
     fig = go.Figure(go.Heatmap(
         z=matrix,
@@ -236,6 +268,16 @@ def render_heatmap(df: pd.DataFrame, question: str, metric_type: str = "pct",
         font=dict(size=11),
     )
     st.plotly_chart(fig, use_container_width=True)
+
+    if overlap_notes:
+        with st.expander("Respondents counted under more than one station"):
+            st.caption(
+                "Station coverage areas overlap, so a respondent inside more than one "
+                "station's simulated coverage area counts toward each of them here "
+                "rather than being assigned to a single 'nearest' station."
+            )
+            for note in overlap_notes:
+                st.markdown(f"- {note}")
 
 
 def render(df=None):

@@ -106,6 +106,19 @@ def load_fp_nonuse_reasons():
     return _load("1Lc6ZF6f-5HvgS4bU3txy0fAs-q03s1P4", index_col=0)
 
 
+# 2026-09-02: new output from etl_family_planning.py, not yet uploaded to
+# Drive. Run `python -m pipeline.run_pipeline --pages family_planning` (from
+# pipeline_output/) to regenerate benin_app/data/fp_unmet.csv, upload it to
+# the same Drive folder as the other fp_*.csv files, and paste its file ID
+# below in place of the placeholder. Returns None (rather than raising) until
+# then, so the page shows its "data not found" message instead of crashing.
+def load_fp_unmet():
+    try:
+        return _load("1Kc7wfvb62C3D426l02h6mDoWzmNE3dvq", index_col=0)
+    except Exception:
+        return None
+
+
 # ── Personality page ──────────────────────────────────────────────────────────
 
 def load_personality_life_goals():

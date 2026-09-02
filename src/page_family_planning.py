@@ -22,6 +22,7 @@ from src.data_loader import (
     load_fp_reason_use,
     load_fp_intent,
     load_fp_nonuse_reasons,
+    load_fp_unmet,
 )
 
 FEM_PALETTE = [FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY]
@@ -171,6 +172,52 @@ def _overall_series(df_long, label_col="label", value_col="proportion", question
     return df_long[mask].set_index(label_col)[value_col].sort_values(ascending=False)
 
 
+def _mcpr_value(df_funnel, split_col="use", group_val="all"):
+    """Baseline modern CPR for one subgroup: % currently using a method
+    (Q: are you doing anything to avoid pregnancy right now?) whose method
+    (Q: which one?) is a modern/effective one -- see effective_use /
+    MODERN_METHOD_KEYS in etl_family_planning.py. Every split's "all" group
+    covers the full sample, so the default args give the page-wide figure.
+    """
+    if df_funnel is None or df_funnel.empty:
+        return None
+    row = df_funnel[(df_funnel["split"] == split_col) & (df_funnel["group"] == group_val)]
+    if row.empty:
+        return None
+    val = row.iloc[0].get("effective_use")
+    return val if pd.notna(val) else None
+
+
+def _unmet_bar_by_group(df_unmet, split_col, key):
+    sub = df_unmet[(df_unmet["split"] == split_col) & (df_unmet["group"] != "all")]
+    if sub.empty:
+        return
+    sub = sub.sort_values("unmet_need", ascending=False)
+    fig = go.Figure()
+    fig.add_bar(
+        name="Unmet need", x=sub["group"].astype(str), y=sub["unmet_need"],
+        marker_color=FEM_BROWN,
+        text=[f"{v*100:.0f}%" for v in sub["unmet_need"]], textposition="outside",
+    )
+    if sub["unmet_demand"].notna().any():
+        fig.add_bar(
+            name="Unmet demand", x=sub["group"].astype(str), y=sub["unmet_demand"],
+            marker_color=FEM_ORANGE,
+            text=[f"{v*100:.0f}%" for v in sub["unmet_demand"]], textposition="outside",
+        )
+    fig.update_layout(
+        barmode="group",
+        yaxis=dict(tickformat=".0%", showgrid=False, title="% of respondents"),
+        xaxis=dict(showgrid=False),
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
+        margin=dict(t=20, b=40, l=10, r=10),
+        height=340,
+        legend_title=split_col,
+    )
+    st.plotly_chart(fig, use_container_width=True, key=key)
+
+
 # ── Funnel ────────────────────────────────────────────────────────────────────
 
 def render_funnel(df_funnel, split_col):
@@ -208,22 +255,31 @@ def render_funnel(df_funnel, split_col):
         return
 
     row = sub.iloc[0]
+    stages = ["Aware of methods", "Ever used", "Currently using"]
     values = [
         (row.get("aware",       0) or 0) * 100,
         (row.get("ever_used",   0) or 0) * 100,
         (row.get("current_use", 0) or 0) * 100,
     ]
+    # 2026-08-27: "Currently using" counts anyone doing *anything* to avoid
+    # pregnancy, including less-effective traditional methods (withdrawal,
+    # calendar method, etc.) -- add a narrower stage for modern/effective
+    # methods specifically, so that gap is visible rather than implied.
+    effective_val = row.get("effective_use")
+    if pd.notna(effective_val):
+        stages.append("Using an effective method")
+        values.append(effective_val * 100)
 
     if all(v == 0 for v in values):
         st.info("Funnel data is all zeros for this selection — check pipeline output.")
         return
 
     fig = go.Figure(go.Funnel(
-        y=["Aware of methods", "Ever used", "Currently using"],
+        y=stages,
         x=values,
         textinfo="value+percent initial",
         texttemplate="%{value:.1f}%",
-        marker_color=[FEM_ORANGE, FEM_BROWN, FEM_NAVY],
+        marker_color=[FEM_ORANGE, FEM_BROWN, FEM_NAVY, FEM_STEEL][:len(stages)],
         connector=dict(line=dict(color=FEM_TAUPE, width=2)),
     ))
     fig.update_layout(
@@ -233,9 +289,52 @@ def render_funnel(df_funnel, split_col):
         paper_bgcolor="rgba(0,0,0,0)",
     )
     st.plotly_chart(fig, use_container_width=True, key="fp_funnel")
+    if pd.notna(effective_val):
+        st.caption(
+            "\"Currently using\" includes traditional/less-effective methods "
+            "(withdrawal, calendar method, etc.); \"Using an effective method\" "
+            "counts modern methods only (pills, IUD, implants, injectables, "
+            "condoms, and similar)."
+        )
 
 
 # ── Section renderers ─────────────────────────────────────────────────────────
+
+def render_unmet(df_unmet, df_funnel, split_col):
+    st.subheader("Unmet need & unmet demand")
+    st.caption(
+        "**Unmet need** — wants to delay her next pregnancy by a year or more, "
+        "or wants no more children, but isn't currently using any method "
+        "(traditional methods still count as \"using\" here, the same "
+        "treatment as the \"Currently using\" funnel stage). **Unmet demand** "
+        "is the narrower cut within that group: women who also say they're "
+        "interested in or open to using contraception in future — grounding "
+        "the estimate in stated preference rather than assumed need."
+    )
+    if df_unmet is None or df_unmet.empty:
+        st.warning(_MISSING)
+        return
+
+    overall = df_unmet[(df_unmet["split"] == split_col) & (df_unmet["group"] == "all")]
+    if not overall.empty:
+        row = overall.iloc[0]
+        mcpr = _mcpr_value(df_funnel, split_col, "all")
+        cols = st.columns(3)
+        cols[0].metric("Unmet need", f"{row['unmet_need']*100:.1f}%")
+        if pd.notna(row.get("unmet_demand")):
+            cols[1].metric("Unmet demand", f"{row['unmet_demand']*100:.1f}%")
+        if mcpr is not None and pd.notna(row.get("unmet_need")):
+            total_demand = mcpr + row["unmet_need"]
+            if total_demand:
+                cols[2].metric(
+                    "Demand satisfied (modern methods)",
+                    f"{mcpr / total_demand * 100:.1f}%",
+                    help="Baseline mCPR ÷ (mCPR + unmet need).",
+                )
+
+    st.markdown("**By split**")
+    _unmet_bar_by_group(df_unmet, split_col, key=f"fp_unmet_{split_col}")
+
 
 def render_awareness_use(df_funnel, df_timing, df_reason, split_col):
     st.subheader("Awareness & use")
@@ -338,10 +437,30 @@ def render():
     df_reason  = load_fp_reason_use()
     df_intent  = load_fp_intent()
     df_nonuse  = load_fp_nonuse_reasons()
+    df_unmet   = load_fp_unmet()
+
+    mcpr = _mcpr_value(df_funnel)
+    if mcpr is not None:
+        st.metric(
+            "Baseline modern contraceptive prevalence rate (mCPR)",
+            f"{mcpr * 100:.1f}%",
+            help=(
+                "Two questions combined: (1) currently using anything to avoid "
+                "pregnancy, and (2) which method — restricted to modern/"
+                "effective methods (sterilisation, implants, pills, IUD, "
+                "injectables, condoms, ring, patch, vaginal barrier methods, "
+                "emergency pills). Excludes withdrawal, abstinence, calendar/"
+                "standard-days methods, and LAM."
+            ),
+        )
+    else:
+        st.warning(_MISSING)
 
     split_by  = st.radio("Split all charts by", list(SPLIT_MAP.keys()), horizontal=True)
     split_col = SPLIT_MAP[split_by]
 
+    st.divider()
+    render_unmet(df_unmet, df_funnel, split_col)
     st.divider()
     render_awareness_use(df_funnel, df_timing, df_reason, split_col)
     st.divider()

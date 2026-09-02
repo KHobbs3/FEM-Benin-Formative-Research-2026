@@ -96,6 +96,18 @@ def _load_driver_barrier_dict():
         return {}
 
 
+@st.cache_data(show_spinner=False)
+def _load_radio_dict():
+    # 2026-08-27: radio page's choice-list answers (media type, radio_when,
+    # etc.) -- keyed on the French-only label left after etl_radio.py's
+    # strip_fon() runs, same convention as the other tables here.
+    try:
+        df = pd.read_csv(_DATA_DIR / "radio_translations.csv")
+        return dict(zip(df["label_fr"], df["label_en"]))
+    except Exception:
+        return {}
+
+
 def _combined_dict():
     d = {}
     d.update(OCCUPATION_EN)
@@ -104,6 +116,7 @@ def _combined_dict():
     d.update(GENDER_RAW_EN)
     d.update(_load_statement_dict())
     d.update(_load_driver_barrier_dict())
+    d.update(_load_radio_dict())
     return d
 
 
