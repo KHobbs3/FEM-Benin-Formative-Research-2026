@@ -255,9 +255,20 @@ def render_funnel(df_funnel, split_col):
         return
 
     row = sub.iloc[0]
-    stages = ["Aware of methods", "Ever used", "Currently using"]
-    values = [
-        (row.get("aware",       0) or 0) * 100,
+    stages = ["Aware of methods"]
+    values = [(row.get("aware", 0) or 0) * 100]
+
+    # 2026-09-03: stricter awareness check -- "Aware of methods" is a plain
+    # self-reported yes/no; this confirms the "yes" by checking whether the
+    # respondent actually named a real modern method in the XLSForm's own
+    # conditional follow-up question, rather than just trusting the yes/no.
+    aware_modern_val = row.get("aware_modern_method")
+    if pd.notna(aware_modern_val):
+        stages.append("...and named a modern method")
+        values.append(aware_modern_val * 100)
+
+    stages += ["Ever used", "Currently using"]
+    values += [
         (row.get("ever_used",   0) or 0) * 100,
         (row.get("current_use", 0) or 0) * 100,
     ]
@@ -279,7 +290,7 @@ def render_funnel(df_funnel, split_col):
         x=values,
         textinfo="value+percent initial",
         texttemplate="%{value:.1f}%",
-        marker_color=[FEM_ORANGE, FEM_BROWN, FEM_NAVY, FEM_STEEL][:len(stages)],
+        marker_color=[FEM_ORANGE, FEM_TAUPE, FEM_BROWN, FEM_NAVY, FEM_STEEL][:len(stages)],
         connector=dict(line=dict(color=FEM_TAUPE, width=2)),
     ))
     fig.update_layout(
@@ -289,12 +300,39 @@ def render_funnel(df_funnel, split_col):
         paper_bgcolor="rgba(0,0,0,0)",
     )
     st.plotly_chart(fig, use_container_width=True, key="fp_funnel")
-    if pd.notna(effective_val):
-        st.caption(
-            "\"Currently using\" includes traditional/less-effective methods "
-            "(withdrawal, calendar method, etc.); \"Using an effective method\" "
-            "counts modern methods only (pills, IUD, implants, injectables, "
-            "condoms, and similar)."
+
+    with st.expander("How each stage is calculated"):
+        st.markdown(
+            "All stages are weighted (`combined_weight_adjusted`) shares of **every** "
+            "respondent in the selected group — not just those who answered a given "
+            "question — so a respondent skipped past a question by the survey's own "
+            "skip logic still counts in the denominator, just not in that stage's "
+            "numerator.\n\n"
+            "- **Aware of methods** — `birth_spacing`: *\"Connaissez-vous des méthodes "
+            "efficaces pour espacer les naissances ?\"* (\"Do you know of effective "
+            "methods to space births?\") — self-reported Yes/No.\n"
+            "- **...and named a modern method** — `known_contraceptive_options`: the "
+            "survey's own conditional follow-up, only asked of respondents who said "
+            "Yes above — *\"Si oui, quelles méthodes contraceptives connaissez-vous ?\"* "
+            "(\"If yes, which contraceptive methods do you know?\", pick-all-that-apply). "
+            "This stage is the share who named **at least one modern/effective method** "
+            "there — i.e. confirms the self-reported \"yes\" against an actual named "
+            "method, rather than trusting it at face value.\n"
+            "- **Ever used** — `ever_use`: *\"Avez-vous déjà utilisé une méthode pour "
+            "espacer les naissances ?\"* (\"Have you ever used a method to space "
+            "births?\") — Yes/No.\n"
+            "- **Currently using** — `current_use`: *\"Au cours des six derniers mois, "
+            "avez-vous utilisé une méthode de contraception ?\"* (\"In the last six "
+            "months, have you used a contraceptive method?\") — Yes/No. Includes "
+            "traditional/less-effective methods (withdrawal, calendar method, etc.).\n"
+            "- **Using an effective method** — `current_use_methods`: the follow-up "
+            "listing which specific method(s) — share who named at least one modern "
+            "method there, same \"confirm the self-report\" logic as the awareness "
+            "stage above.\n\n"
+            "\"Modern/effective method\" = sterilisation, implants, pills, IUD, "
+            "injectables, condoms, vaginal ring/patch, vaginal barrier methods, or "
+            "emergency contraception — excludes withdrawal, abstinence, the calendar "
+            "method, standard days method, and LAM."
         )
 
 

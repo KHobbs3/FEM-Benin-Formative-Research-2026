@@ -153,7 +153,31 @@ def render_elbow_plot(df_elbow, split_col="gender", key="elbow_plot"):
 
 # ── Section renderers ─────────────────────────────────────────────────────────
 
-def render_centroid_table(df_centroids, split_label=None, split_col="gender"):
+def _top_real_value(df_profile, persona_id, col):
+    """Best non-'Unknown' value for one persona/column from its profile
+    breakdown (top-3 by share), or None if it's genuinely all-Unknown.
+
+    Needed because top_driver/top_barrier only apply to half the sample each
+    (top_driver=users only, top_barrier=non-users only) -- k-modes' centroid
+    for that column is a legitimate joint-optimization mode across all 7
+    clustering variables, but for a column this fragmented (dozens of
+    specific reasons, each a small slice) 'Unknown' can win that slot even
+    when the persona's own profile shows more informative real signal in its
+    top values. The centroid table should surface that instead.
+    """
+    if df_profile is None or df_profile.empty:
+        return None
+    sub = df_profile[
+        (df_profile["persona"] == persona_id) &
+        (df_profile["variable"] == col) &
+        (df_profile["value"] != "Unknown")
+    ]
+    if sub.empty:
+        return None
+    return sub.sort_values("proportion", ascending=False)["value"].iloc[0]
+
+
+def render_centroid_table(df_centroids, df_profile=None, split_label=None, split_col="gender"):
     st.subheader("Persona summary")
     st.caption(
         "Each row is a cluster centroid — the representative values for that persona. "
@@ -161,6 +185,17 @@ def render_centroid_table(df_centroids, split_label=None, split_col="gender"):
     )
 
     display = df_centroids.copy()
+    # top_driver/top_barrier: prefer the persona's top real (non-"Unknown")
+    # value from its profile breakdown over the raw centroid -- see
+    # _top_real_value's docstring for why the centroid alone can be
+    # "Unknown" even when real signal exists.
+    for col in ("top_driver", "top_barrier"):
+        if col in display.columns and "persona" in display.columns:
+            display[col] = display.apply(
+                lambda row: _top_real_value(df_profile, row["persona"], col) or row[col],
+                axis=1,
+            )
+
     # Drop "persona" (just the row index) and the split column itself (constant
     # within this table, already shown by the tab it's under) -- but keep any
     # *other* clustering variable, e.g. "gender" is a real feature when split_col
@@ -311,7 +346,7 @@ def render_culture_clusters():
         with st.expander("Elbow plot — choosing number of clusters", expanded=False):
             render_elbow_plot(df_elbow, split_col="analysis", key="elbow_plot_culture")
 
-    render_centroid_table(df_centroids, split_col="analysis")
+    render_centroid_table(df_centroids, df_profile=df_profile, split_col="analysis")
 
     if df_profile is None or df_profile.empty:
         st.warning("Culture-cluster profile data not found.")
@@ -363,7 +398,7 @@ def render_culture_clusters():
 
 def _render_split_tab(df_centroids_g, df_profile_g, split_label, split_col="gender"):
     n_personas = df_centroids_g["persona"].nunique()
-    render_centroid_table(df_centroids_g, split_label=split_label, split_col=split_col)
+    render_centroid_table(df_centroids_g, df_profile=df_profile_g, split_label=split_label, split_col=split_col)
     st.divider()
     if df_profile_g is not None and not df_profile_g.empty:
         tab1, tab2 = st.tabs(["Deep-dive", "Comparison"])
