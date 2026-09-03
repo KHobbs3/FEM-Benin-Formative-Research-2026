@@ -188,6 +188,22 @@ def _mcpr_value(df_funnel, split_col="use", group_val="all"):
     return val if pd.notna(val) else None
 
 
+def _total_cpr_value(df_funnel, split_col="use", group_val="all"):
+    """Total contraceptive prevalence rate (any method, modern + traditional)
+    -- the funnel's current_use stage. Needed for the official DHS Demand
+    Satisfied formula (2026-09-03): mCPR / (total CPR + unmet need) --
+    NOT mCPR / (mCPR + unmet need), which silently drops traditional-method
+    users from the denominator even though they're correctly excluded from
+    the unmet-need numerator (their need counts as "met")."""
+    if df_funnel is None or df_funnel.empty:
+        return None
+    row = df_funnel[(df_funnel["split"] == split_col) & (df_funnel["group"] == group_val)]
+    if row.empty:
+        return None
+    val = row.iloc[0].get("current_use")
+    return val if pd.notna(val) else None
+
+
 def _unmet_bar_by_group(df_unmet, split_col, key):
     sub = df_unmet[(df_unmet["split"] == split_col) & (df_unmet["group"] != "all")]
     if sub.empty:
@@ -357,17 +373,30 @@ def render_unmet(df_unmet, df_funnel, split_col):
     if not overall.empty:
         row = overall.iloc[0]
         mcpr = _mcpr_value(df_funnel, split_col, "all")
+        total_cpr = _total_cpr_value(df_funnel, split_col, "all")
         cols = st.columns(3)
         cols[0].metric("Unmet need", f"{row['unmet_need']*100:.1f}%")
         if pd.notna(row.get("unmet_demand")):
             cols[1].metric("Unmet demand", f"{row['unmet_demand']*100:.1f}%")
-        if mcpr is not None and pd.notna(row.get("unmet_need")):
-            total_demand = mcpr + row["unmet_need"]
+        if mcpr is not None and total_cpr is not None and pd.notna(row.get("unmet_need")):
+            # Official DHS formula: mCPR / (total CPR + unmet need), NOT
+            # mCPR / (mCPR + unmet need) -- total CPR (current_use) includes
+            # traditional-method users, who are correctly excluded from the
+            # unmet-need numerator (their need counts as "met") but need to
+            # stay in this denominator or they vanish from demand entirely.
+            total_demand = total_cpr + row["unmet_need"]
             if total_demand:
                 cols[2].metric(
                     "Demand satisfied (modern methods)",
                     f"{mcpr / total_demand * 100:.1f}%",
-                    help="Baseline mCPR ÷ (mCPR + unmet need).",
+                    help=(
+                        "mCPR ÷ (total CPR [any method] + unmet need) — official DHS "
+                        "\"demand satisfied by modern methods\" formula. Total CPR "
+                        f"here is {total_cpr*100:.1f}% (vs. {mcpr*100:.1f}% mCPR alone) "
+                        "since traditional-method users count toward total demand "
+                        "being met, even though their method isn't classified as "
+                        "\"modern.\""
+                    ),
                 )
 
     st.markdown("**By split**")
