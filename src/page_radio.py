@@ -32,16 +32,18 @@ def _station_display(station_id):
 # the underlying data or which stations etl_radio.py's spatial join actually
 # matched respondents against (see STATION_STATE in pipeline_output/pipeline/
 # etl_radio.py for the full station->region mapping this list is drawn from).
-# Two of these (Nanto, Marantha) currently have zero matched respondents in
-# the live data, so their column renders blank -- they still get a labeled
-# tick on the x-axis rather than being dropped, since the ask was for
-# exactly these 5 stations to appear. The y-axis (answer labels / all_labels)
-# is left alone: it's still computed from every station's data, not just
-# these 5, so narrowing the x-axis doesn't also narrow the y-axis.
+# One of these (Marantha) currently has zero matched respondents in the live
+# data, so its column renders blank -- it still gets a labeled tick on the
+# x-axis rather than being dropped, since the ask was for these stations to
+# appear. The y-axis (answer labels / all_labels) is left alone: it's still
+# computed from every station's data, not just these, so narrowing the
+# x-axis doesn't also narrow the y-axis.
+# 2026-09-04: Nanto dropped -- no fieldwork was conducted in Atacora (the
+# province its coverage polygon sits in), so it can never have respondents;
+# unlike Marantha, this isn't a data gap worth surfacing, it's out of scope.
 STATION_DISPLAY_ORDER = [
     ("2026-01-29_165417_Solidarité FM_GW_50", "Solidarité"),
     ("2026-01-29_161633_deeman radio_GW_50", "Deeman (higher specs)"),
-    ("2026-01-29_161436_nanto_GW_50", "Nanto"),
     ("2026-01-29_160356_maranatha_GW_50", "Marantha"),
     ("2026-01-29_162016_Radio TONASSE (higher antenna)_GW_50", "Radio Tonnasse(higher specs)"),
 ]

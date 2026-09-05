@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import re
 import plotly.graph_objects as go
 import plotly.express as px
 from src.fem_colours import FEM_ORANGE, FEM_BROWN, FEM_TAUPE, FEM_STEEL, FEM_NAVY, FEM_PALETTE
@@ -44,6 +45,38 @@ GENDER_COLORS = {
 
 # ── Chart helpers ─────────────────────────────────────────────────────────────
 
+# 2026-09-04: Fon uses IPA Extensions letters (ɖ, ɔ, ɛ, ɥ, ...) that never
+# appear in French, so the true French/Fon boundary is the LAST '/' before
+# the first such character -- not simply the first '/' in the string. Some
+# choice labels' French half contains its own slash (e.g. life_goals value 6,
+# "Une bonne/meilleure santé personnelle/ Lanmɛ ɖagbe/..."), and splitting on
+# the first '/' truncated those to "Une bonne", silently dropping the rest of
+# that item and anything pipe-joined after it -- this is what a persona's
+# top_driver showing "...|Une bonne" as if it were a complete value turned
+# out to be. Same fix needed in etl_personas.py's _strip_fon (the copy that
+# builds top_driver/top_barrier before this ever renders); the copies in
+# etl_family_planning.py and page_drivers_barriers.py carry the same naive
+# split and may have the same latent bug on other choice lists.
+_FON_CHAR_RE = re.compile(r"[ɐ-ʯ]")
+
+
+def _split_french_fon(item: str) -> str:
+    """French half of ONE bilingual 'French/Fon' label (already pipe-split)."""
+    m = _FON_CHAR_RE.search(item)
+    if not m:
+        # No Fon-specific character found -- fall back to the old behavior
+        # rather than guess.
+        if "/" in item:
+            french = item.split("/", 1)[0].strip()
+            return french if french else item.strip()
+        return item.strip()
+    boundary = item.rfind("/", 0, m.start())
+    if boundary == -1:
+        return item.strip()
+    french = item[:boundary].strip()
+    return french if french else item.strip()
+
+
 def _strip_hausa(text: str) -> str:
     """Return only the French part of bilingual 'French/Fon' labels (Benin's
     order -- first segment, not last)."""
@@ -53,17 +86,7 @@ def _strip_hausa(text: str) -> str:
     if "|" in text:
         parts = text.split("|")
         return "|".join(_strip_hausa(p) for p in parts)
-    if "/" in text:
-        split = text.split("/", 1)
-        if len(split) == 2:
-            french = split[0].strip()
-            return french if french else text.strip()
-    else:
-        split = text.split(" / ", 1)
-        if len(split) == 2:
-            french = split[0].strip()
-            return french if french else text.strip()
-    return text.strip().replace("|", "; ")
+    return _split_french_fon(text)
 
 
 _VAR_LABEL_OVERRIDES = {
