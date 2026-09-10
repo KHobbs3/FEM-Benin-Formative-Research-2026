@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def _stub_card(title, description, fields):
+def stub_card(title, description, fields):
     st.markdown(f"""
     <div style="background:#fafafa;border:1.5px dashed #d1d5db;border-radius:10px;padding:1.5rem;margin-bottom:1rem;">
         <p style="font-size:1rem;font-weight:600;color:#374151;margin:0 0 0.4rem;">{title} — pending data</p>
@@ -17,7 +17,7 @@ def render_phone_pulse_stub(page_name: str):
     data_loader.py's "Phone Pulse pages" note."""
     st.header(f"Phone Pulse — {page_name}")
     st.caption("No phone pulse data has been collected for Benin yet.")
-    _stub_card(
+    stub_card(
         page_name,
         "This section will populate once a phone pulse follow-up survey is fielded and its "
         "ETL pipeline is built (mirroring niger_app/src/page_pp_*.py and pipeline_output's "

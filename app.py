@@ -11,6 +11,14 @@ from src.page_access import render as render_access
 from src.page_family_planning import render as render_family_planning
 from src.page_personality_traits import render as render_personality_traits
 
+# 2026-09-10: pulled out of the Phone Pulse tab and promoted to a top-level
+# "home page" -- frames the whole survey program (baseline + phone pulse
+# follow-ups) as one time series, viewed cross-sectionally or
+# longitudinally. See page_baseline_followup.py's module docstring-equivalent
+# comment for the reasoning; still stub content until a follow-up wave and
+# its ETL exist, same as the rest of Phone Pulse below.
+from src.page_baseline_followup import render as render_baseline_followup
+
 # Phone Pulse pages -- Benin has not fielded a phone pulse follow-up survey
 # yet (see data_loader.py's "Phone Pulse pages" note), so this whole section
 # renders stub cards rather than importing ~10 page modules with nothing to
@@ -58,7 +66,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ── Title ─────────────────────────────────────────────────────────────────────
-title_col, toggle_col = st.columns([3, 1.3])
+title_col, toggle_col, data_col = st.columns([3, 1.3, 0.3])
 with title_col:
     st.markdown(
         f"<h2 style='margin-bottom:0.2rem;color:{FEM_BROWN};'>FEM Survey Analysis - Benin (2026)</h2>",
@@ -66,12 +74,26 @@ with title_col:
     )
 with toggle_col:
     render_english_toggle()
+with data_col:
+    # Link to the raw survey data on Google Drive -- icon-only, top-right,
+    # so it doesn't compete with the title/toggle for attention.
+    st.markdown(
+        """<div style="text-align:right;padding-top:8px;">
+        <a href="https://drive.google.com/drive/folders/1zWyzDleBkptm4MDg9cO5oATNthpxODX5?usp=drive_link"
+           target="_blank" rel="noopener noreferrer" title="Survey data (Google Drive)"
+           style="text-decoration:none;font-size:24px;">🗃️</a>
+        </div>""",
+        unsafe_allow_html=True,
+    )
 
 # ── Top-level survey switcher ─────────────────────────────────────────────────
+# "Baseline vs. Follow-up" is first/default -- it's the program-wide home
+# page (cross-sectional + longitudinal time series), landed on before
+# drilling into either survey's own detail pages.
 survey = option_menu(
     menu_title=None,
-    options=["Formative Research", "Phone Pulse"],
-    icons=["journal-text", "telephone-fill"],
+    options=["Baseline vs. Follow-up", "Formative Research", "Phone Pulse"],
+    icons=["graph-up-arrow", "journal-text", "telephone-fill"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",
@@ -87,9 +109,15 @@ survey = option_menu(
 st.markdown("")  # breathing room
 
 # ══════════════════════════════════════════════════════════════════════════════
+# BASELINE VS. FOLLOW-UP -- home page; cross-sectional/longitudinal time series
+# ══════════════════════════════════════════════════════════════════════════════
+if survey == "Baseline vs. Follow-up":
+    render_baseline_followup()
+
+# ══════════════════════════════════════════════════════════════════════════════
 # FORMATIVE RESEARCH
 # ══════════════════════════════════════════════════════════════════════════════
-if survey == "Formative Research":
+elif survey == "Formative Research":
     selected = option_menu(
         menu_title=None,
         options=[
@@ -151,7 +179,6 @@ elif survey == "Phone Pulse":
         options=[
             "Respondents",
             "Campaign Exposure",
-            "Baseline vs Follow-up",
             "Family Planning",
             "Attitudes",
             "Radio",
@@ -163,7 +190,6 @@ elif survey == "Phone Pulse":
         icons=[
             "bar-chart-fill",
             "broadcast",
-            "arrow-left-right",
             "house-heart-fill",
             "chat-quote-fill",
             "speaker-fill",
